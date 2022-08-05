@@ -4,31 +4,34 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <div className="navigation">
-      <div>
+    <nav className="navigation">
+      <ul className="nav-items">
+      <li>
         <Image src="/Swerve_Icon.png" alt="logo" width={50} height={50} />
-      </div>
-      <div>
+      </li>
+      <li>
         <Link href="/">
           <a>Home</a>
         </Link>
-      </div>
-      <div>
+      </li>
+      <li>
         <Link href="/About">
           <a>About</a>
         </Link>
-      </div>
-      <div>
+      </li>
+      <li>
         <Link href="/Contact">
           <a>Contact Us</a>
         </Link>
-      </div>
-      <div>
+      </li>
+      <li>
         <Link href="/Download">
           <a>Download the App</a>
         </Link>
-      </div>
-    </div>
+      </li>
+      </ul>
+      
+    </nav>
   );
 };
 
