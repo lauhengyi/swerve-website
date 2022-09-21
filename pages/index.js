@@ -10,12 +10,13 @@ export default function Home() {
         <title>Swerve</title>
         <link rel="icon" href="/swerve_icon.png" />
       </Head>
-      <body className={styles.body}>
+      <main className={styles.main}>
         <Navbar />
-        <main className={styles.container}>
+        <span className={styles.circle} />
+        <div className={styles.container}>
           <h1 className={styles.title}>SWERVE</h1>
-        </main>
-      </body>
+        </div>
+      </main>
     </div>
   );
 }

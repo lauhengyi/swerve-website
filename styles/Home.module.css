@@ -1,6 +1,5 @@
-.body {
+.main {
   height: 100vh;
-  width: 100vw;
   background-image: linear-gradient(45deg, #ffb800, #faff01);
 }
 
@@ -18,10 +17,27 @@
   z-index: 2;
 }
 
+@keyframes expandCircle {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 70%;
+    height: 70%;
+  }
+}
+
 .circle {
+  border-radius: 50%;
+  background-color: #f6f6f6;
+
   position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   z-index: 1;
   overflow: hidden;
-  width: 10%;
-  height: 10%;
+
+  animation: expandCircle 1s ease-in-out forwards;
 }
