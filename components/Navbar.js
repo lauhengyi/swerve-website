@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
   return (
-    <div className="navigation">
-      <div>
-        <Image src="/Swerve_Icon.png" alt="logo" width={50} height={50} />
+    <div className={styles.navigation}>
+      <div className={styles.logo}>
+        <Image src="/swerve_logo.svg" alt="logo" width={50} height={50} />
       </div>
       <div>
         <Link href="/">
