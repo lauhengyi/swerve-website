@@ -1,5 +1,5 @@
 .logo {
-  transition: rotate 0.5s;
+  transition: rotate 0.5s ease-in-out 0.2s;
 }
 
 .logo:hover {
