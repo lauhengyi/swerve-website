@@ -13,7 +13,10 @@ export default function Home() {
       <main className={styles.main}>
         <Navbar />
         <section className={styles.hero}>
-          <span className={styles.title}>SWERVE</span>
+          <span className={`${styles.title} ${styles.blur}`}>SWERVE</span>
+          <span className={styles.background}>
+            <span className={styles.title}>SWERVE</span>
+          </span>
           <span className={styles.circle}>
             <span className={styles.title}>SWERVE</span>
           </span>
