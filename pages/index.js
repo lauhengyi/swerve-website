@@ -12,10 +12,12 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        <span className={styles.circle} />
-        <div className={styles.container}>
-          <h1 className={styles.title}>SWERVE</h1>
-        </div>
+        <section className={styles.hero}>
+          <span className={styles.title}>SWERVE</span>
+          <div className={styles.circle}>
+            <span className={styles.title}>SWERVE</span>
+          </div>
+        </section>
       </main>
     </div>
   );
