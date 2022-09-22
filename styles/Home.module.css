@@ -1,11 +1,15 @@
 .main {
   min-height: 100vh;
-  background-image: linear-gradient(45deg, #ffb800, #faff01);
+  background-image: linear-gradient(
+    45deg,
+    var(--swerve-orange),
+    var(--swerve-yellow)
+  );
 }
 
 .hero {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: absolute;
   overflow: hidden;
   color: #ff3d00;
@@ -13,6 +17,9 @@
 
 .title {
   position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
 
   font-variation-settings: 'wght' 600;
   font-size: 14rem;
@@ -21,28 +28,22 @@
 }
 
 .circle {
-  border-radius: 50%;
-  background-color: #f6f6f6;
-  color: #452e2e;
-
   position: absolute;
-  bottom: -30%;
-  right: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 1;
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--pure-white);
+  color: var(--pure-black);
+  z-index: 2;
 
-  animation: expandCircle 0.7s ease-in-out forwards;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
 }
 
-@keyframes expandCircle {
-  0% {
-    width: 0%;
-    height: 0%;
+@keyframes circle-in-center {
+  from {
+    clip-path: circle(0% at bottom);
   }
-  100% {
-    width: 90%;
-    height: 110%;
+  to {
+    clip-path: circle(60% at bottom);
   }
 }

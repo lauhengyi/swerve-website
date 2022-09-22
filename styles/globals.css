@@ -3,6 +3,14 @@
   src: url(../fonts/Inter-VariableFont.ttf) format('truetype');
 }
 
+:root {
+  /* Color Scheme */
+  --swerve-orange: #ffb800;
+  --swerve-yellow: #faff01;
+  --pure-white: #f6f6f6;
+  --pure-black: #452e2e;
+}
+
 html,
 body {
   padding: 0;

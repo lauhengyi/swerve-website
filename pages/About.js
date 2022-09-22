@@ -1,5 +1,14 @@
+import styles from '../styles/About.module.css';
+
 const About = () => {
-  return <h1>About Us</h1>;
+  return (
+    <section className={styles.section}>
+      <span className={styles.sliding}>SWERVE</span>
+      <span className={styles.wrapper}>
+        <span className={styles.sliding}>SWERVE</span>
+      </span>
+    </section>
+  );
 };
 
 export default About;

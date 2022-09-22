@@ -14,9 +14,9 @@ export default function Home() {
         <Navbar />
         <section className={styles.hero}>
           <span className={styles.title}>SWERVE</span>
-          <div className={styles.circle}>
+          <span className={styles.circle}>
             <span className={styles.title}>SWERVE</span>
-          </div>
+          </span>
         </section>
       </main>
     </div>
