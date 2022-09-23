@@ -24,7 +24,7 @@
   );
   z-index: 1;
 
-  animation: 1.8s cubic-bezier(0.25, 1, 0.3, 1) wipe both;
+  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe both;
   animation-delay: 1s;
 }
 
@@ -40,16 +40,15 @@
 }
 
 .blur {
-  color: transparent;
   animation: 1s ease-in unblur both;
 }
 
 @keyframes unblur {
-  0% {
-    text-shadow: 0 0 49px var(--pure-black);
+  from {
+    filter: blur(50px);
   }
-  100% {
-    text-shadow: 0 0 0px var(--pure-black);
+  to {
+    filter: blur(0);
   }
 }
 
@@ -70,7 +69,7 @@
     clip-path: circle(0% at bottom);
   }
   to {
-    clip-path: circle(125% at bottom);
+    clip-path: circle(150% at bottom);
   }
 }
 
@@ -79,7 +78,7 @@
     clip-path: circle(0% at bottom);
   }
   to {
-    clip-path: circle(55% at bottom);
+    clip-path: circle(80vh at bottom);
   }
 }
 
@@ -88,7 +87,7 @@
   display: flex;
   width: 42vh;
   height: 40%;
-  bottom: 30%;
+  bottom: 31%;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 3;
@@ -99,15 +98,21 @@
   width: 15vh;
   position: absolute;
   left: 0;
+  animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
+  animation-delay: 1.3s;
 }
 .phone2 {
   height: 40vh;
   width: 15vh;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   top: 30%;
   z-index: 1;
+  animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
+  animation-delay: 1.4s;
 }
 .phone3 {
   height: 40vh;
@@ -115,4 +120,37 @@
   position: absolute;
   right: 0;
   top: 10%;
+  animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
+  animation-delay: 1.5s;
+}
+
+@keyframes slideup {
+  from {
+    transform: translate(0, 200%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 2rem;
+  color: var(--pure-black);
+  z-index: 3;
+  animation: fade-in 0.7s ease-in-out both;
+  animation-delay: 2.5s;
+}
+
+@keyframes fade-in {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

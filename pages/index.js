@@ -47,6 +47,7 @@ export default function Home() {
               />
             </div>
           </div>
+          <p className={styles.caption}>Connecting merchants to customers</p>
         </section>
       </main>
     </div>
