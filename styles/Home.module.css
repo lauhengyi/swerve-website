@@ -34,7 +34,7 @@
   left: 50%;
   transform: translate(-50%, 0);
 
-  font-variation-settings: 'wght' 600;
+  font-variation-settings: 'wght' 800;
   font-size: 14rem;
   white-space: nowrap;
 }
@@ -81,4 +81,38 @@
   to {
     clip-path: circle(55% at bottom);
   }
+}
+
+.phones {
+  position: absolute;
+  display: flex;
+  width: 42vh;
+  height: 40%;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+}
+
+.phone1 {
+  height: 40vh;
+  width: 15vh;
+  position: absolute;
+  left: 0;
+}
+.phone2 {
+  height: 40vh;
+  width: 15vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 30%;
+  z-index: 1;
+}
+.phone3 {
+  height: 40vh;
+  width: 15vh;
+  position: absolute;
+  right: 0;
+  top: 10%;
 }
