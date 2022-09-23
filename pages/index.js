@@ -47,7 +47,9 @@ export default function Home() {
               />
             </div>
           </div>
-          <p className={styles.caption}>Connecting merchants to customers</p>
+          <div className={styles.container}>
+            <p className={styles.caption}>Connecting merchants to customers</p>
+          </div>
         </section>
       </main>
     </div>
