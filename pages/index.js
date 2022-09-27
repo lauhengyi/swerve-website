@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
+import { gsap } from 'gsap';
 
 export default function Home() {
+  let el = useRef();
+  let q = 
   return (
     <div>
       <Head>
@@ -21,8 +24,8 @@ export default function Home() {
           <span className={styles.circle}>
             <span className={styles.title}>SWERVE</span>
           </span>
-          <div className={styles.phones}>
-            <div className={styles.phone1}>
+          <div className={styles.displayPhoneContainer}>
+            <div className={`${styles.displayPhone} ${styles.phone1}`}>
               <Image
                 src="/phones/1.svg"
                 alt="phone1"
@@ -30,7 +33,7 @@ export default function Home() {
                 objectFit="contain"
               />
             </div>
-            <div className={styles.phone2}>
+            <div className={`${styles.displayPhone} ${styles.phone2}`}>
               <Image
                 src="/phones/2.svg"
                 alt="phone1"
@@ -38,7 +41,7 @@ export default function Home() {
                 objectFit="contain"
               />
             </div>
-            <div className={styles.phone3}>
+            <div className={`${styles.displayPhone} ${styles.phone3}`}>
               <Image
                 src="/phones/3.svg"
                 alt="phone1"

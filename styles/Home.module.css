@@ -82,7 +82,7 @@
   }
 }
 
-.phones {
+.displayPhoneContainer {
   position: absolute;
   display: flex;
   width: 42vh;
@@ -93,18 +93,18 @@
   z-index: 3;
 }
 
-.phone1 {
+.displayPhone {
   height: 40vh;
   width: 15vh;
   position: absolute;
+}
+
+.phone1 {
   left: 0;
   animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
   animation-delay: 1.3s;
 }
 .phone2 {
-  height: 40vh;
-  width: 15vh;
-  position: absolute;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -115,9 +115,6 @@
   animation-delay: 1.4s;
 }
 .phone3 {
-  height: 40vh;
-  width: 15vh;
-  position: absolute;
   right: 0;
   top: 10%;
   animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
