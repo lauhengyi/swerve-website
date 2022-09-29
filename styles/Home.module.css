@@ -24,8 +24,8 @@
   );
   z-index: 1;
 
-  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe both;
-  animation-delay: 1s;
+  --clip: 150%;
+  clip-path: circle(var(--clip) at bottom);
 }
 
 .title {
@@ -37,19 +37,9 @@
   font-variation-settings: 'wght' 800;
   font-size: min(14rem, 20vw);
   white-space: nowrap;
-}
 
-.blur {
-  animation: 1s ease-in unblur both;
-}
-
-@keyframes unblur {
-  from {
-    filter: blur(50px);
-  }
-  to {
-    filter: blur(0);
-  }
+  --blur: 0;
+  filter: blur(var(--blur));
 }
 
 .circle {
@@ -60,26 +50,8 @@
   background-color: var(--pure-white);
   z-index: 2;
 
-  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
-  animation-delay: 1.3s;
-}
-
-@keyframes wipe {
-  from {
-    clip-path: circle(0% at bottom);
-  }
-  to {
-    clip-path: circle(150% at bottom);
-  }
-}
-
-@keyframes circle-in-center {
-  from {
-    clip-path: circle(0% at bottom);
-  }
-  to {
-    clip-path: circle(80vh at bottom);
-  }
+  --clip: 0;
+  clip-path: circle(var(--clip) at bottom);
 }
 
 .displayPhoneContainer {
@@ -101,8 +73,6 @@
 
 .phone1 {
   left: 0;
-  animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
-  animation-delay: 1.3s;
 }
 .phone2 {
   left: 0;
@@ -111,23 +81,10 @@
   margin-right: auto;
   top: 30%;
   z-index: 1;
-  animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
-  animation-delay: 1.4s;
 }
 .phone3 {
   right: 0;
   top: 10%;
-  animation: slideup 2.5s cubic-bezier(0.25, 1, 0.3, 1) both;
-  animation-delay: 1.5s;
-}
-
-@keyframes slideup {
-  from {
-    transform: translate(0, 200%);
-  }
-  to {
-    transform: translate(0, 0);
-  }
 }
 
 .container {
@@ -143,17 +100,7 @@
   font-size: 2rem;
   color: var(--pure-black);
   z-index: 3;
-
-  animation: fade-in 0.7s ease-in-out both;
-  animation-delay: 2.5s;
-}
-
-@keyframes fade-in {
-  from {
-    filter: blur(10px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  opacity: 1;
+  --blur: 0;
+  filter: blur(var(--blur));
 }
