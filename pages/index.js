@@ -4,17 +4,35 @@ import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import heroLoading from '../animations/heroLoading';
 import heroScroll from '../animations/heroScroll';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   let el = useRef();
   let q = gsap.utils.selector(el);
   useEffect(() => {
-    let loadingAnimation = heroLoading(q);
-    if (!loadingAnimation.isActive()) {
-      gsap.timeline().add(heroScroll(q));
-    }
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: q(`.${styles.hero}`),
+          scrub: 1,
+          pin: true,
+          start: 'top top',
+          end: '2000',
+          snap: {
+            snapTo: 'labels',
+            duration: 3,
+            ease: 'linear',
+            inertia: false,
+          },
+        },
+      })
+      .add(heroLoading(q))
+      .addLabel('heroScroll')
+      .add(heroScroll(q));
   });
   return (
     <div ref={el}>
