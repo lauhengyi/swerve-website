@@ -3,10 +3,12 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
+import MapVector from '../components/MapVector';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import heroLoading from '../animations/heroLoading';
 import heroScroll from '../animations/heroScroll';
+import mapScroll from '../animations/mapScroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +34,8 @@ export default function Home() {
       })
       .add(heroLoading(q))
       .addLabel('heroScroll')
-      .add(heroScroll(q));
+      .add(heroScroll(q))
+      .add(mapScroll(q));
   });
   return (
     <div ref={el}>
@@ -78,6 +81,9 @@ export default function Home() {
           </div>
           <div className={styles.container}>
             <p className={styles.caption}>Connecting merchants to customers</p>
+          </div>
+          <div className={styles.map}>
+            <MapVector />
           </div>
         </section>
       </main>

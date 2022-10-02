@@ -1,8 +1,5 @@
 import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function heroScroll(q) {
   return gsap
