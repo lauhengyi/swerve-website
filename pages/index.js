@@ -23,7 +23,7 @@ export default function Home() {
           scrub: 1,
           pin: true,
           start: 'top top',
-          end: '2000',
+          end: '3000',
           snap: {
             snapTo: 'labels',
             duration: 3,
@@ -35,7 +35,7 @@ export default function Home() {
       .add(heroLoading(q))
       .addLabel('heroScroll')
       .add(heroScroll(q))
-      .add(mapScroll(q));
+      .add(mapScroll(q), '-=0.5');
   });
   return (
     <div ref={el}>
