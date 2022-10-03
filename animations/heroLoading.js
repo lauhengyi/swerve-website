@@ -38,7 +38,7 @@ export default function heroLoading(q) {
       '<',
     )
     .fromTo(
-      q(`.${styles.caption}`),
+      q(`.${styles.captionContainer} .${styles.caption}`),
       { '--blur': '10px', opacity: 0 },
       { '--blur': '0', opacity: 1, duration: 1 },
       '-=0.8',

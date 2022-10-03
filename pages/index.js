@@ -25,7 +25,7 @@ export default function Home() {
           start: 'top top',
           end: '3000',
           snap: {
-            snapTo: 'labels',
+            snapTo: 'labelsDirectional',
             duration: 3,
             ease: 'linear',
             inertia: false,
@@ -35,7 +35,8 @@ export default function Home() {
       .add(heroLoading(q))
       .addLabel('heroScroll')
       .add(heroScroll(q))
-      .add(mapScroll(q), '-=0.5');
+      .add(mapScroll(q))
+      .addLabel('mapScroll');
   });
   return (
     <div ref={el}>
@@ -46,12 +47,19 @@ export default function Home() {
       <main className={styles.main}>
         <Navbar />
         <section className={styles.hero}>
-          <span className={styles.title}>SWERVE</span>
+          <h1 className={styles.title}>SWERVE</h1>
           <span className={styles.background}>
-            <span className={styles.title}>SWERVE</span>
+            <h1 className={styles.title}>SWERVE</h1>
           </span>
           <span className={styles.circle}>
-            <span className={styles.title}>SWERVE</span>
+            <h1 className={styles.title}>SWERVE</h1>
+            <div className={styles.mapTextContainer}>
+              <h1 className={styles.header}>Get on the map</h1>
+              <p className={styles.caption}>
+                Make your promotions seen by the people who wants them most
+              </p>
+            </div>
+            <MapVector />
           </span>
           <div className={styles.displayPhoneContainer}>
             <div className={`${styles.displayPhone} ${styles.phone1}`}>
@@ -79,11 +87,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={styles.container}>
+          <div className={styles.captionContainer}>
             <p className={styles.caption}>Connecting merchants to customers</p>
-          </div>
-          <div className={styles.map}>
-            <MapVector />
           </div>
         </section>
       </main>

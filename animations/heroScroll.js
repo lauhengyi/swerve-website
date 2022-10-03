@@ -17,7 +17,7 @@ export default function heroScroll(q) {
       '<',
     )
     .to(
-      q(`.${styles.caption}`),
+      q(`.${styles.captionContainer} .${styles.caption}`),
       { '--blur': '10px', opacity: 0, duration: 1.5 },
       '<',
     );
