@@ -27,21 +27,19 @@
   padding: 0.5rem;
 }
 
-.navigation a {
-  background-image: linear-gradient(#d99a5a, #d99a5a);
-  background-size: 0% 0.1em;
-  background-position-y: 100%;
-  background-position-x: 100%;
-  background-repeat: no-repeat;
-}
-
 .navigation a p {
   white-space: nowrap;
   display: inline-block;
   color: white;
   font-size: 1.2rem;
   font-variation-settings: 'wght' 500;
-  margin-left: 1px;
+}
+
+.navigation a span {
+  background-color: white;
+  display: block;
+  height: 0.15rem;
+  width: 0%;
 }
 
 @media all and (max-width: 800px) {
