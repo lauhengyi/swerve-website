@@ -17,7 +17,7 @@ export default function NavbarButton({ text, href }) {
           rotation: 0,
         },
         {
-          rotation: 45,
+          rotation: 30,
           stagger: {
             amount: 0.2,
           },
@@ -33,19 +33,14 @@ export default function NavbarButton({ text, href }) {
 
     animationEnd.current = gsap
       .timeline({ ease: 'power4.inOut', paused: true })
-      .fromTo(
-        q('p'),
-        { rotation: 45 },
-        {
-          rotation: 0,
-          stagger: { amount: 0.2 },
-          duration: 0.1,
-          immediateRender: false,
-        },
-      )
-      .fromTo(
+      .to(q('p'), {
+        rotation: 0,
+        stagger: { amount: 0.2 },
+        duration: 0.1,
+        immediateRender: false,
+      })
+      .to(
         q('span'),
-        { xPercent: 0 },
         {
           xPercent: 100,
           duration: 0.3,
