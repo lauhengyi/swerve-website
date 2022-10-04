@@ -11,6 +11,7 @@ import mapScroll from '../animations/mapScroll';
 
 import Navbar from '../components/Navbar';
 import MapScene from '../components/MapScene';
+import BalloonTransitionScene from '../components/BalloonTransitionScene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +57,7 @@ export default function Home() {
           <span className={styles.circle}>
             <h1 className={styles.title}>SWERVE</h1>
             <MapScene />
+            <BalloonTransitionScene />
           </span>
           <div className={styles.displayPhoneContainer}>
             <div className={`${styles.displayPhone} ${styles.phone1}`}>
