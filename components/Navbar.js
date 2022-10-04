@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import NavbarButton from './NavbarButton';
 import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
@@ -9,26 +9,12 @@ const Navbar = () => {
       <div className={styles.logo}>
         <Image src="/swerve_logo.svg" alt="logo" width={50} height={50} />
       </div>
-      <div>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </div>
-      <div>
-        <Link href="/About">
-          <a>About</a>
-        </Link>
-      </div>
-      <div>
-        <Link href="/Contact">
-          <a>Contact Us</a>
-        </Link>
-      </div>
-      <div>
-        <Link href="/Download">
-          <a>Download the App</a>
-        </Link>
-      </div>
+      <ul>
+        <NavbarButton text="Home" href="/" />
+        <NavbarButton text="About" href="/About" />
+        <NavbarButton text="Contact" href="/Contact" />
+        <NavbarButton text="Download" href="/Download" />
+      </ul>
     </div>
   );
 };

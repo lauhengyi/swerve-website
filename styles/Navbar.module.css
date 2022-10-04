@@ -1,6 +1,5 @@
 .logo {
   transition: rotate 0.5s ease-in-out 0.4s;
-  background-color: #1565c0;
 }
 
 .logo:hover {
@@ -14,19 +13,35 @@
   position: fixed;
 
   list-style: none;
-  margin: 0.5rem;
   z-index: 100;
 }
 
-.navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: white;
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 
-.navigation a:hover {
-  background: #1565c0;
+.navigation li {
+  display: inline;
+  padding: 0.5rem;
+}
+
+.navigation a {
+  background-image: linear-gradient(#d99a5a, #d99a5a);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+}
+
+.navigation a p {
+  white-space: nowrap;
+  display: inline-block;
+  color: white;
+  font-size: 1.2rem;
+  font-variation-settings: 'wght' 500;
+  margin-left: 1px;
 }
 
 @media all and (max-width: 800px) {
