@@ -10,7 +10,7 @@ export default function NavbarButton({ text, href }) {
 
   useEffect(() => {
     animationStart.current = gsap
-      .timeline({ ease: 'power2.out', paused: true })
+      .timeline({ ease: 'power4.inOut', paused: true })
       .fromTo(
         q('p'),
         {
@@ -26,13 +26,13 @@ export default function NavbarButton({ text, href }) {
       )
       .fromTo(
         q('span'),
-        { width: '0%' },
-        { width: '100%', duration: 0.3, ease: 'linear' },
+        { width: '0%', xPercent: 0 },
+        { width: '100%', xPercent: 0, duration: 0.3, ease: 'linear' },
         '<',
       );
 
     animationEnd.current = gsap
-      .timeline({ ease: 'power2.out', paused: true })
+      .timeline({ ease: 'power4.inOut', paused: true })
       .fromTo(
         q('p'),
         { rotation: 45 },
@@ -45,14 +45,18 @@ export default function NavbarButton({ text, href }) {
       )
       .fromTo(
         q('span'),
-        { width: '100%' },
-        { width: '0', duration: 0.3, ease: 'linear', immediateRender: false },
+        { xPercent: 0 },
+        {
+          xPercent: 100,
+          duration: 0.3,
+          ease: 'linear',
+          immediateRender: false,
+        },
         '<',
       );
   });
 
   const handleOnEnter = () => {
-    console.log('hi');
     animationStart.current.restart();
   };
 

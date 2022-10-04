@@ -27,6 +27,11 @@
   padding: 0.5rem;
 }
 
+.navigation li a {
+  overflow: hidden;
+  display: inline-block;
+}
+
 .navigation a p {
   white-space: nowrap;
   display: inline-block;
