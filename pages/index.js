@@ -2,13 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
-import MapVector from '../components/MapVector';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 import heroLoading from '../animations/heroLoading';
 import heroScroll from '../animations/heroScroll';
 import mapScroll from '../animations/mapScroll';
+
+import Navbar from '../components/Navbar';
+import MapScene from '../components/MapScene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,13 +55,7 @@ export default function Home() {
           </span>
           <span className={styles.circle}>
             <h1 className={styles.title}>SWERVE</h1>
-            <div className={styles.mapTextContainer}>
-              <h1 className={styles.header}>Get on the map</h1>
-              <p className={styles.caption}>
-                Make your promotions seen by the people who wants them most
-              </p>
-            </div>
-            <MapVector />
+            <MapScene />
           </span>
           <div className={styles.displayPhoneContainer}>
             <div className={`${styles.displayPhone} ${styles.phone1}`}>
