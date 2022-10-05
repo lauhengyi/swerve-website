@@ -4,7 +4,7 @@ import MapVector from './MapVector';
 
 export default function MapScene() {
   return (
-    <>
+    <div className={styles.mapScene}>
       <div className={styles.mapTextContainer}>
         <h1 className={styles.header}>Get on the map</h1>
         <p className={styles.caption}>
@@ -12,6 +12,6 @@ export default function MapScene() {
         </p>
       </div>
       <MapVector />
-    </>
+    </div>
   );
 }

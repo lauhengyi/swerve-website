@@ -124,6 +124,10 @@
 }
 
 /* Map */
+.mapScene {
+  --wipe: 0%;
+  clip-path: inset(0 0 var(--wipe) 0);
+}
 
 .mapTextContainer {
   position: absolute;

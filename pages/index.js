@@ -37,11 +37,12 @@ export default function Home() {
         },
       })
       .add(heroLoading(q))
-      .addLabel('heroScroll')
+      .addLabel('heroScene')
       .add(heroScroll(q))
       .add(mapScroll(q))
-      .addLabel('mapScroll')
-      .add(balloonTransition(q));
+      .addLabel('mapScene')
+      .add(balloonTransition(q))
+      .addLabel('balloonScene');
   });
   return (
     <div ref={el}>
