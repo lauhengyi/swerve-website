@@ -11,6 +11,18 @@ export default function BalloonTransitionScene() {
       <BalloonVector />
       <BalloonVector />
       <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
+      <BalloonVector />
     </>
   );
 }

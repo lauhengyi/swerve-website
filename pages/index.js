@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import heroLoading from '../animations/heroLoading';
 import heroScroll from '../animations/heroScroll';
 import mapScroll from '../animations/mapScroll';
+import balloonTransition from '../animations/balloonTransition';
 
 import Navbar from '../components/Navbar';
 import MapScene from '../components/MapScene';
@@ -39,7 +40,8 @@ export default function Home() {
       .addLabel('heroScroll')
       .add(heroScroll(q))
       .add(mapScroll(q))
-      .addLabel('mapScroll');
+      .addLabel('mapScroll')
+      .add(balloonTransition(q));
   });
   return (
     <div ref={el}>
