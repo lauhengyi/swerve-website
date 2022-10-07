@@ -160,10 +160,6 @@
   fill: var(--grey);
 }
 
-.buildings > rect:hover {
-  fill: var(--accent-red);
-}
-
 /* Balloons */
 
 .balloonVector {

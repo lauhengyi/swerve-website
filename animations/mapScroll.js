@@ -1,9 +1,13 @@
 import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
+import mapSceneAnimation from './mapSceneAnimation';
 
 export default function mapScroll(q) {
   return gsap
-    .timeline({ default: { ease: 'power2.inOut' } })
+    .timeline({
+      default: { ease: 'power2.inOut' },
+      onComplete: () => mapSceneAnimation(q),
+    })
     .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 5 })
     .fromTo(
       q(`.${styles.buildings} > rect`),
