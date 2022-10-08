@@ -12,7 +12,14 @@ export default function mapScroll(q) {
     .fromTo(
       q(`.${styles.buildings} > rect`),
       { opacity: 0, scale: 1.5, y: 100 },
-      { opacity: 1, scale: 1, y: 0, duration: 1, stagger: 0.01, ease: 'back' },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        stagger: { amount: 4.5 },
+        ease: 'back',
+      },
       '<',
     )
     .fromTo(

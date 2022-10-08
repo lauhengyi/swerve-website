@@ -44,7 +44,7 @@
 
 .header {
   font-variation-settings: 'wght' 500;
-  font-size: min(6rem, 11vw);
+  font-size: min(7rem, 10vw);
   color: var(--pure-black);
   white-space: nowrap;
   text-align: center;
@@ -127,20 +127,22 @@
 .mapScene {
   --wipe: 0%;
   clip-path: inset(0 0 var(--wipe) 0);
+  display: grid;
+  position: relative;
 }
 
 .mapTextContainer {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 8%;
-  width: min(40rem, 75vw);
+  width: min(52rem, 84vw);
   z-index: 3;
 }
 
 .mapVector {
-  place-self: center;
   height: 110vh;
   fill: none;
+  place-self: center;
 }
 
 .mapLine {
@@ -149,6 +151,7 @@
 .mapLineMain {
   stroke-dasharray: 2350px;
   stroke-dashoffset: 2350px;
+  stroke: var(--pure-black);
 }
 
 .mapLineSecondary {

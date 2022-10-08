@@ -30,9 +30,8 @@ export default function Home() {
           end: '3000',
           snap: {
             snapTo: 'labelsDirectional',
-            duration: 3,
             ease: 'linear',
-            inertia: false,
+            duration: { min: 3, max: 5 },
           },
         },
       })

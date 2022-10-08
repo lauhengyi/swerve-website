@@ -11,9 +11,7 @@ export default function balloonTransition(q) {
         y: '0vh',
         yPercent: -100,
         duration: 1,
-        stagger: {
-          each: 0.1,
-        },
+        stagger: 0.1,
       },
     )
     .fromTo(
