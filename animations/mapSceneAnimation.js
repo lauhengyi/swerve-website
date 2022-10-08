@@ -18,8 +18,13 @@ export default function mapSceneAnimation(q) {
     const dropper = droppers.pop();
     isAnimating[index] = true;
 
-    const dropperX = parseInt(building.attributes.x.value) - 20;
-    const dropperY = parseInt(building.attributes.y.value) - 90;
+    const buildingWidth = building.attributes.width.value;
+    const buildingHeight = building.attributes.height.value;
+    console.log({ buildingWidth, buildingHeight });
+    const dropperX =
+      parseInt(building.attributes.x.value) - 33.5 + buildingWidth / 2;
+    const dropperY =
+      parseInt(building.attributes.y.value) - 94 + buildingHeight / 2;
 
     gsap
       .timeline({ delay: gsap.utils.random(0, 2) })
