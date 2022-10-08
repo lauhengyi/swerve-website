@@ -31,7 +31,8 @@ export default function Home() {
           snap: {
             snapTo: 'labelsDirectional',
             ease: 'linear',
-            duration: { min: 3, max: 5 },
+            inertia: false,
+            duration: { min: 2, max: 3 },
           },
         },
       })

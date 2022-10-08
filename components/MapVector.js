@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function MapVector() {
+  const numberOfDroppers = 15;
   return (
     <svg
       className={styles.mapVector}
@@ -740,7 +741,6 @@ export default function MapVector() {
           transform="rotate(9.98769 636.856 811)"
           fill="#D9D9D9"
         />
-        <rect x="644" y="827" width="5" height="1" fill="#D9D9D9" />
         <rect
           x="629.94"
           y="853"
@@ -1655,6 +1655,41 @@ export default function MapVector() {
         <rect x="1519" y="939" width="37" height="18" fill="#D9D9D9" />
         <rect x="1459" y="951" width="23" height="21" fill="#D9D9D9" />
       </g>
+      {
+        // Adding droppers
+        [...Array(numberOfDroppers)].map((_, i) => (
+          <svg
+            key={i}
+            width="67"
+            height="94"
+            viewBox="0 0 67 94"
+            fill="none"
+            className={styles.dropper}
+            x="500"
+            y="500"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse
+              cx="33.5"
+              cy="33.3353"
+              rx="33.5"
+              ry="33.3353"
+              fill="white"
+            />
+            <path
+              d="M33.6107 94L14.9568 50.5264L52.2647 50.5264L33.6107 94Z"
+              fill="white"
+            />
+            <ellipse
+              cx="33.4446"
+              cy="33.3904"
+              rx="28.6826"
+              ry="28.5416"
+              fill="#ADFF00"
+            />
+          </svg>
+        ))
+      }
     </svg>
   );
 }

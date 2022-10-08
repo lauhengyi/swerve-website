@@ -3,10 +3,12 @@ import styles from '../styles/Home.module.css';
 import mapSceneAnimation from './mapSceneAnimation';
 
 export default function mapScroll(q) {
+  let mapSceneAnimationID = null;
   return gsap
     .timeline({
       default: { ease: 'power2.inOut' },
-      onComplete: () => mapSceneAnimation(q),
+      onReverseComplete: () => clearInterval(mapSceneAnimationID),
+      onComplete: () => clearInterval(mapSceneAnimationID),
     })
     .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 5 })
     .fromTo(
@@ -25,7 +27,15 @@ export default function mapScroll(q) {
     .fromTo(
       q(`.${styles.mapTextContainer} .${styles.header}`),
       { opacity: 0, '--blur': '20px' },
-      { opacity: 1, '--blur': '0', duration: 1 },
+      {
+        opacity: 1,
+        '--blur': '0',
+        duration: 1,
+
+        onComplete: () => {
+          mapSceneAnimationID = mapSceneAnimation(q);
+        },
+      },
       '<',
     )
     .fromTo(

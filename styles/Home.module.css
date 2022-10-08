@@ -163,6 +163,10 @@
   fill: var(--grey);
 }
 
+.dropper {
+  opacity: 0;
+}
+
 /* Balloons */
 
 .balloonVector {
