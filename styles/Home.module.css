@@ -325,3 +325,45 @@
   height: 30vw;
   left: 20%;
 }
+
+/* Catelog */
+.catelog {
+  width: 25%;
+  height: 100%;
+  background-color: var(--pure-white);
+  border-radius: 1.5rem;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: #c8c8c8;
+}
+
+.catelogInnerContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem;
+}
+
+.catelogWindow {
+  background-color: var(--grey);
+  height: 15rem;
+}
+
+.catelogName {
+  font-size: 2rem;
+  font-variation-settings: 'wght' 500;
+  margin-top: 1rem;
+  color: var(--pure-black);
+}
+
+.catelogPrice {
+  font-size: 2rem;
+  font-variation-settings: 'wght' 700;
+  color: var(--pure-black);
+}
+
+.catelogDescription {
+  height: 1rem;
+  background-color: var(--grey);
+  margin-top: 0.5rem;
+}
