@@ -1,11 +1,27 @@
 import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
+import balloonSceneAnimation from './balloonSceneAnimation';
 
 export default function balloonTransition(q) {
+  let balloonSceneAnimationID = null;
+
+  const runAnimation = () => {
+    if (balloonSceneAnimationID === null) {
+      balloonSceneAnimationID = balloonSceneAnimation(q);
+    }
+  };
+  const stopAnimation = () => {
+    clearInterval(balloonSceneAnimationID);
+    balloonSceneAnimationID = null;
+  };
+
   return gsap
-    .timeline()
+    .timeline({
+      onComplete: runAnimation,
+      onReverseComplete: stopAnimation,
+    })
     .fromTo(
-      q(`.${styles.balloonVector}`),
+      q(`.${styles.balloonTransition} .${styles.balloonVector}`),
       { y: '100vh', yPercent: 0 },
       {
         y: '0vh',
