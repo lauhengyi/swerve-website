@@ -13,6 +13,7 @@ import balloonTransition from '../animations/balloonTransition';
 import Navbar from '../components/Navbar';
 import MapScene from '../components/MapScene';
 import BalloonTransitionScene from '../components/BalloonTransitionScene';
+import BalloonScene from '../components/BalloonScene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,6 +60,7 @@ export default function Home() {
           </span>
           <span className={styles.circle}>
             <h1 className={styles.title}>SWERVE</h1>
+            <BalloonScene />
             <MapScene />
             <BalloonTransitionScene />
           </span>

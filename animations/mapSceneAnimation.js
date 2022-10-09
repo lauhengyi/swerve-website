@@ -18,9 +18,9 @@ export default function mapSceneAnimation(q) {
     const dropper = droppers.pop();
     isAnimating[index] = true;
 
+    // Properly position the dropper based on building's position and dimensions
     const buildingWidth = building.attributes.width.value;
     const buildingHeight = building.attributes.height.value;
-    console.log({ buildingWidth, buildingHeight });
     const dropperX =
       parseInt(building.attributes.x.value) - 33.5 + buildingWidth / 2;
     const dropperY =
@@ -73,6 +73,5 @@ export default function mapSceneAnimation(q) {
         },
         '<',
       );
-    console.log('work');
   }, 500);
 }

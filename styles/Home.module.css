@@ -37,6 +37,7 @@
   font-variation-settings: 'wght' 800;
   font-size: min(14rem, 20vw);
   white-space: nowrap;
+  z-index: 1;
 
   --blur: 0;
   filter: blur(var(--blur));
@@ -65,6 +66,14 @@
 
   --clip: 0;
   clip-path: circle(var(--clip) at bottom);
+}
+
+.sceneContainer {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  position: absolute;
 }
 
 /* Phones */
@@ -127,15 +136,21 @@
 .mapScene {
   --wipe: 0%;
   clip-path: inset(0 0 var(--wipe) 0);
+
+  background-color: var(--pure-white);
+}
+
+.mapContainer {
   display: grid;
   position: relative;
+  overflow: visible;
 }
 
 .mapTextContainer {
   position: absolute;
   top: 20%;
   left: 8%;
-  width: min(52rem, 84vw);
+  width: min-content;
   z-index: 3;
 }
 
@@ -169,6 +184,15 @@
 }
 
 /* Balloons */
+.balloonScene {
+}
+
+.balloonTextContainer {
+  top: 20%;
+  left: 8%;
+  width: min(52rem, 84vw);
+  background-color: aqua;
+}
 
 .balloonVector {
   position: absolute;
