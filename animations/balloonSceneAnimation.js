@@ -19,6 +19,7 @@ export default function balloonSceneAnimation(q) {
       { y: '100vh', xPercent: gsap.utils.random(-30, 30), yPercent: 0 },
       {
         y: '0vh',
+        xPercent: gsap.utils.random(-30, 30),
         yPercent: -100,
         duration: gsap.utils.random(3, 8),
         onComplete: () => {
