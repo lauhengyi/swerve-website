@@ -4,11 +4,23 @@ import mapSceneAnimation from './mapSceneAnimation';
 
 export default function mapScroll(q) {
   let mapSceneAnimationID = null;
+
+  const runAnimation = () => {
+    if (mapSceneAnimationID === null) {
+      mapSceneAnimationID = mapSceneAnimation(q);
+    }
+  };
+
+  const stopAnimation = () => {
+    clearInterval(mapSceneAnimationID);
+    mapSceneAnimationID = null;
+  };
+
   return gsap
     .timeline({
       default: { ease: 'power2.inOut' },
-      onReverseComplete: () => clearInterval(mapSceneAnimationID),
-      onComplete: () => clearInterval(mapSceneAnimationID),
+      onReverseComplete: () => stopAnimation,
+      onComplete: () => stopAnimation,
     })
     .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 5 })
     .fromTo(
@@ -32,9 +44,7 @@ export default function mapScroll(q) {
         '--blur': '0',
         duration: 1,
 
-        onComplete: () => {
-          mapSceneAnimationID = mapSceneAnimation(q);
-        },
+        onComplete: runAnimation,
       },
       '<',
     )

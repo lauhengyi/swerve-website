@@ -2,10 +2,10 @@ import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
 
 export default function mapSceneAnimation(q) {
+  console.log('Running mapSceneAnimation');
   const buildings = q(`.${styles.buildings} > rect`);
   const droppers = q(`.${styles.dropper}`);
   const isAnimating = Array(buildings.length).fill(false);
-  console.log('called');
 
   return setInterval(() => {
     let index = Math.floor(Math.random() * buildings.length);
