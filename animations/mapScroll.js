@@ -19,8 +19,8 @@ export default function mapScroll(q) {
   return gsap
     .timeline({
       default: { ease: 'power2.inOut' },
-      onReverseComplete: () => stopAnimation,
-      onComplete: () => stopAnimation,
+      onReverseComplete: stopAnimation,
+      onComplete: stopAnimation,
     })
     .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 5 })
     .fromTo(

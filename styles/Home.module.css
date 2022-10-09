@@ -67,6 +67,10 @@
   clip-path: circle(var(--clip) at bottom);
 }
 
+.circle .title {
+  z-index: 3;
+}
+
 .sceneContainer {
   width: 100vw;
   height: 100vh;
