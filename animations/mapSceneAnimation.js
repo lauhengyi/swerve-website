@@ -63,7 +63,7 @@ export default function mapSceneAnimation(q) {
         dropper,
         {
           attr: {
-            y: dropperY,
+            y: dropperY - 50,
           },
           opacity: 0,
           duration: 1,
