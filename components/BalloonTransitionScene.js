@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 
 export default function BalloonTransitionScene() {
   return (
-    <div className={styles.balloonTransition}>
+    <div className={styles.transitionContainer}>
       <BalloonVector />
       <BalloonVector />
       <BalloonVector />

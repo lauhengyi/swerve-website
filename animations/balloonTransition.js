@@ -21,7 +21,7 @@ export default function balloonTransition(q) {
       onReverseComplete: stopAnimation,
     })
     .fromTo(
-      q(`.${styles.balloonTransition} .${styles.balloonVector}`),
+      q(`.${styles.transitionContainer} .${styles.balloonVector}`),
       { y: '100vh', yPercent: 0 },
       {
         y: '0vh',

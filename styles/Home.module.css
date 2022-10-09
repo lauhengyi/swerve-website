@@ -66,7 +66,6 @@
   --clip: 0;
   clip-path: circle(var(--clip) at bottom);
 }
-
 .circle .title {
   z-index: 3;
 }
@@ -77,6 +76,12 @@
   display: grid;
   place-content: center;
   position: absolute;
+}
+
+.transitionContainer {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
 }
 
 /* Phones */
@@ -226,103 +231,97 @@
   position: relative;
 }
 
-.balloonTransition {
-  position: absolute;
-  width: 100%;
-  z-index: 4;
-}
-
-.balloonTransition .balloonVector:nth-last-of-type(1) {
+.transitionContainer .balloonVector:nth-last-of-type(1) {
   height: 250vw;
   right: 10%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(2) {
+.transitionContainer .balloonVector:nth-last-of-type(2) {
   height: 200vw;
   left: 30%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(3) {
+.transitionContainer .balloonVector:nth-last-of-type(3) {
   height: 150vw;
   right: 50%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(4) {
+.transitionContainer .balloonVector:nth-last-of-type(4) {
   height: 150vw;
   left: 25%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(5) {
+.transitionContainer .balloonVector:nth-last-of-type(5) {
   height: 110vw;
   right: 10%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(6) {
+.transitionContainer .balloonVector:nth-last-of-type(6) {
   height: 110vw;
   left: 30%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(7) {
+.transitionContainer .balloonVector:nth-last-of-type(7) {
   height: 100vw;
   left: 20%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(8) {
+.transitionContainer .balloonVector:nth-last-of-type(8) {
   height: 100vw;
   right: 40%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(9) {
+.transitionContainer .balloonVector:nth-last-of-type(9) {
   height: 80vw;
   right: 20%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(10) {
+.transitionContainer .balloonVector:nth-last-of-type(10) {
   height: 80vw;
   left: 20%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(11) {
+.transitionContainer .balloonVector:nth-last-of-type(11) {
   height: 70vw;
   left: 35%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(12) {
+.transitionContainer .balloonVector:nth-last-of-type(12) {
   height: 70vw;
   right: 45%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(13) {
+.transitionContainer .balloonVector:nth-last-of-type(13) {
   height: 50vw;
   left: 10%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(14) {
+.transitionContainer .balloonVector:nth-last-of-type(14) {
   height: 50vw;
   right: 45%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(15) {
+.transitionContainer .balloonVector:nth-last-of-type(15) {
   height: 40vw;
   right: 20%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(16) {
+.transitionContainer .balloonVector:nth-last-of-type(16) {
   height: 40vw;
   left: 25%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(17) {
+.transitionContainer .balloonVector:nth-last-of-type(17) {
   height: 30vw;
   right: 30%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(18) {
+.transitionContainer .balloonVector:nth-last-of-type(18) {
   height: 30vw;
   left: 15%;
 }
 
-.balloonTransition .balloonVector:nth-last-of-type(19) {
+.transitionContainer .balloonVector:nth-last-of-type(19) {
   height: 30vw;
   left: 20%;
 }
