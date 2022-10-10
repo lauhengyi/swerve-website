@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 export default function CatelogVector({ name, price, source }) {
@@ -8,7 +9,9 @@ export default function CatelogVector({ name, price, source }) {
   return (
     <div className={styles.catelog}>
       <div className={styles.catelogInnerContainer}>
-        <div className={styles.catelogWindow} />
+        <div className={styles.catelogWindow}>
+          <Image src={'/catelogItems/box.svg'} layout="fill" />
+        </div>
         <h1 className={styles.catelogName}>hellow there</h1>
         <h2 className={styles.catelogPrice}>$50</h2>
         <span
