@@ -48,12 +48,6 @@ const catelogItems = [
   },
 
   {
-    name: 'Spatula',
-    price: 10.0,
-    source: '/catelogItems/spatula.svg',
-  },
-
-  {
     name: 'Kitchen Roller',
     price: 7.0,
     source: '/catelogItems/kitchen_roller.svg',

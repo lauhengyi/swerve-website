@@ -80,8 +80,10 @@
 
 .transitionContainer {
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 4;
+  display: grid;
 }
 
 /* Phones */
@@ -194,6 +196,8 @@
 
 /* Balloons */
 .balloonScene {
+  --wipe: 0%;
+  clip-path: inset(var(--wipe) 0);
 }
 
 .boundingContainer {
@@ -335,6 +339,19 @@
   border-width: 0.5vh;
   border-style: solid;
   border-color: #c8c8c8;
+}
+
+.catelogRowGroup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transform-origin: center;
+  width: 125vh;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .catelogRow {
