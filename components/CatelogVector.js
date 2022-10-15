@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import catelogItems from './content/catelogItems';
 
 export default function CatelogVector() {
-  const lengthOfDescription = Math.floor(Math.random() * 150) + 51;
-  const length1 = lengthOfDescription > 100 ? 100 : lengthOfDescription;
-  const length2 = lengthOfDescription <= 100 ? 0 : lengthOfDescription - 100;
-  const catelogItem =
-    catelogItems[Math.floor(Math.random() * catelogItems.length)];
+  const [catelogItem, setCatelogItem] = useState(catelogItems[0]);
+  const [length1, setLength1] = useState(50);
+  const [length2, setLength2] = useState(0);
+
+  useEffect(() => {
+    setCatelogItem(
+      catelogItems[Math.floor(Math.random() * catelogItems.length)],
+    );
+
+    const lengthOfDescription = Math.floor(Math.random() * 150) + 51;
+    setLength1(lengthOfDescription > 100 ? 100 : lengthOfDescription);
+    setLength2(lengthOfDescription <= 100 ? 0 : lengthOfDescription - 100);
+  }, []);
   return (
     <div className={styles.catelog}>
       <div className={styles.catelogInnerContainer}>
