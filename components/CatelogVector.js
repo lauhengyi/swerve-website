@@ -1,19 +1,30 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import catelogItems from './content/catelogItems';
 
-export default function CatelogVector({ name, price, source }) {
+export default function CatelogVector() {
   const lengthOfDescription = Math.floor(Math.random() * 150) + 51;
   const length1 = lengthOfDescription > 100 ? 100 : lengthOfDescription;
   const length2 = lengthOfDescription <= 100 ? 0 : lengthOfDescription - 100;
+  const catelogItem =
+    catelogItems[Math.floor(Math.random() * catelogItems.length)];
   return (
     <div className={styles.catelog}>
       <div className={styles.catelogInnerContainer}>
         <div className={styles.catelogWindow}>
-          <Image src={'/catelogItems/box.svg'} layout="fill" />
+          <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+            <Image
+              className={styles.catelogImage}
+              src={catelogItem.source}
+              alt={catelogItem.name}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </div>
-        <h1 className={styles.catelogName}>hellow there</h1>
-        <h2 className={styles.catelogPrice}>$50</h2>
+        <h1 className={styles.catelogName}>{catelogItem.name}</h1>
+        <h2 className={styles.catelogPrice}>{`$${catelogItem.price}`}</h2>
         <span
           className={styles.catelogDescription}
           style={{ width: `${length1}%` }}

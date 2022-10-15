@@ -5,7 +5,16 @@ import CatelogVector from './CatelogVector';
 export default function CatelogTransitionScene() {
   return (
     <div className={styles.transitionContainer}>
-      <CatelogVector />
+      <div className={styles.catelogRow}>
+        <CatelogVector />
+        <CatelogVector />
+        <CatelogVector />
+        <CatelogVector />
+        <CatelogVector />
+        <CatelogVector />
+        <CatelogVector />
+        <CatelogVector />
+      </div>
     </div>
   );
 }
