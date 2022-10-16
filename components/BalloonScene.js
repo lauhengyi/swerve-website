@@ -19,7 +19,10 @@ export default function BalloonScene() {
       <div className={styles.boundingContainer}>
         <div className={styles.balloonTextContainer}>
           <h1 className={styles.header}>Good deals come and go</h1>
-          <p className={styles.caption}>We help you catch them as they come</p>
+          <p className={styles.caption}>
+            We help you catch them{' '}
+            <span className={styles.accentText}>as they come</span>
+          </p>
         </div>
         <div className={styles.balloonHoldingContainer}>
           {balloonText.map((text, index) => (
