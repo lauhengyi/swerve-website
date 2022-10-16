@@ -31,12 +31,12 @@ export default function Home() {
           pin: true,
           start: 'top top',
           end: '8000',
-          snap: {
-            snapTo: 'labelsDirectional',
-            ease: 'linear',
-            inertia: false,
-            duration: { min: 2, max: 3 },
-          },
+          // snap: {
+          //   snapTo: 'labelsDirectional',
+          //   ease: 'linear',
+          //   inertia: false,
+          //   duration: { min: 2, max: 3 },
+          // },
         },
       })
       .add(heroLoading(q))

@@ -10,8 +10,10 @@ export default function CatelogVector() {
 
   useEffect(() => {
     setCatelogItem(
-      catelogItems[Math.floor(Math.random() * catelogItems.length)],
+      // catelogItems[Math.floor(Math.random() * catelogItems.length)],
+      catelogItems[20],
     );
+    console.log(catelogItem);
 
     const lengthOfDescription = Math.floor(Math.random() * 150) + 51;
     setLength1(lengthOfDescription > 100 ? 100 : lengthOfDescription);

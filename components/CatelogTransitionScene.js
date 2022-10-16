@@ -4,9 +4,21 @@ import CatelogVector from './CatelogVector';
 
 export default function CatelogTransitionScene() {
   const numberOfItemsPerRow = 60;
+  const merchantText = 'MERCHANT';
+  const customerText = 'CUSTOMER';
   return (
     <div className={styles.transitionContainer}>
       <span className={styles.catelogTransitionBackground} />
+      {/* <div classname={`${styles.catelogtext} ${styles.merchant}`}>
+        {[...merchanttext].map((l, i) => (
+          <p key={i}>{l}</p>
+        ))}
+      </div> */}
+      <div className={`${styles.catelogText} ${styles.customer}`}>
+        {[...customerText].map((l, i) => (
+          <p key={i}>{l}</p>
+        ))}
+      </div>
       <div className={styles.catelogRowGroup}>
         <div className={styles.catelogRow}>
           {[...Array(numberOfItemsPerRow)].map((_, index) => (
