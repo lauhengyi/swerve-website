@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from '../styles/Home.module.css';
-import CatelogVector from './CatelogVector';
+import CatalogVector from './CatalogVector';
 
-export default function CatelogTransitionScene() {
+export default function CatalogTransitionScene() {
   const numberOfItemsPerRow = 60;
   const merchantText = 'MERCHANT';
   const customerText = 'CUSTOMER';
@@ -22,12 +22,12 @@ export default function CatelogTransitionScene() {
       <div className={styles.catelogRowGroup}>
         <div className={styles.catelogRow}>
           {[...Array(numberOfItemsPerRow)].map((_, index) => (
-            <CatelogVector key={index} />
+            <CatalogVector key={index} />
           ))}
         </div>
         <div className={styles.catelogRow}>
           {[...Array(numberOfItemsPerRow)].map((_, index) => (
-            <CatelogVector key={index} />
+            <CatalogVector key={index} />
           ))}
         </div>
       </div>

@@ -14,7 +14,7 @@ import Navbar from '../components/Navbar';
 import MapScene from '../components/MapScene';
 import BalloonTransitionScene from '../components/BalloonTransitionScene';
 import BalloonScene from '../components/BalloonScene';
-import CatelogTransitionScene from '../components/CatelogTransitionScene';
+import CatalogTransitionScene from '../components/CatalogTransitionScene';
 import catelogTransition from '../animations/catelogTransition';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -66,7 +66,7 @@ export default function Home() {
             <BalloonScene />
             <MapScene />
             <BalloonTransitionScene />
-            <CatelogTransitionScene />
+            <CatalogTransitionScene />
           </span>
           <div className={styles.displayPhoneContainer}>
             <div className={`${styles.displayPhone} ${styles.phone1}`}>
