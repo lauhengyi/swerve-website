@@ -403,49 +403,25 @@
 
 .catelogText {
   position: absolute;
-  background-color: green;
   left: 50%;
-  transform: translate(-50%);
-  font-size: 10vh;
+  font-size: min(14vw, 20vh);
   font-variation-settings: 'wght' 900;
 }
 
 .catelogText p {
-  position: absolute;
+  /* position: absolute; */
   display: inline;
-  background-color: aqua;
-}
-
-.merchant {
   color: white;
 }
 
-.catelogText p:nth-of-type(2) {
-  transform: translateX(8vh);
+.customer {
+  top: 10vh;
+  transform: translate(-50%, -50vh);
 }
 
-.catelogText p:nth-of-type(3) {
-  transform: translateX(16vh);
-}
-
-.catelogText p:nth-of-type(4) {
-  transform: translateX(24vh);
-}
-
-.catelogText p:nth-of-type(5) {
-  transform: translateX(32vh);
-}
-
-.catelogText p:nth-of-type(6) {
-  transform: translateX(40vh);
-}
-
-.catelogText p:nth-of-type(7) {
-  transform: translateX(48vh);
-}
-
-.catelogText p:nth-of-type(8) {
-  transform: translateX(56vh);
+.merchant {
+  bottom: 10vh;
+  transform: translate(-50%, 50vh);
 }
 
 .catelogInnerContainer {

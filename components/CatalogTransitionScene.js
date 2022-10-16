@@ -9,11 +9,11 @@ export default function CatalogTransitionScene() {
   return (
     <div className={styles.transitionContainer}>
       <span className={styles.catelogTransitionBackground} />
-      {/* <div classname={`${styles.catelogtext} ${styles.merchant}`}>
-        {[...merchanttext].map((l, i) => (
+      <div className={`${styles.catelogText} ${styles.merchant}`}>
+        {[...merchantText].map((l, i) => (
           <p key={i}>{l}</p>
         ))}
-      </div> */}
+      </div>
       <div className={`${styles.catelogText} ${styles.customer}`}>
         {[...customerText].map((l, i) => (
           <p key={i}>{l}</p>
