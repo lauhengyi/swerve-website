@@ -72,7 +72,7 @@ const catalogItems = [
   {
     name: 'Clock',
     price: 30.0,
-    source: '/catalogItems/lock.svg',
+    source: '/catalogItems/clock.svg',
   },
   {
     name: 'Pencil',
