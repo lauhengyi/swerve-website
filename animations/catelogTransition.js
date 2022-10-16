@@ -8,7 +8,23 @@ export default function catelogTransition(q) {
   const mainMovements = gsap
     .timeline()
     .to(q(`.${styles.catelogRowGroup}`), { width: '20vh', duration: 3 })
-    .to(q(`.${styles.catelogRowGroup}`), { rotate: 0, duration: 3 }, '+=2');
+    .to(
+      q(`.${styles.catelogTransitionBackground}`),
+      {
+        '--wipe': '1%',
+        duration: 3,
+      },
+      '<+=0.3',
+    )
+    .to(q(`.${styles.catelogRowGroup}`), { rotate: 0, duration: 3 }, '+=2')
+    .to(
+      q(`.${styles.catelogTransitionBackground}`),
+      {
+        '--rotate': '90deg',
+        duration: 3,
+      },
+      '<',
+    );
   return gsap
     .timeline()
     .fromTo(

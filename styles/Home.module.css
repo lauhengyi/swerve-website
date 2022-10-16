@@ -351,12 +351,31 @@
   transform-origin: center;
   width: 125vh;
   transform-origin: center;
-  transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 .catelogRow {
   display: flex;
   flex-direction: column;
+}
+
+.catelogTransitionBackground {
+  --merchant-color: red;
+  --customer-color: blue;
+  --wipe: 50%;
+  --rotate: 0deg;
+  height: 100%;
+  width: 100%;
+  /* Gradient made so that wipe will open from inside out */
+  background-image: linear-gradient(
+    var(--rotate),
+    var(--merchant-color) 0%,
+    var(--merchant-color) calc(50% - var(--wipe)),
+    transparent calc(50% - var(--wipe)),
+    transparent calc(var(--wipe) + 50%),
+    var(--customer-color) calc(var(--wipe) + 50%),
+    var(--customer-color) 100%
+  );
 }
 
 .catelogInnerContainer {

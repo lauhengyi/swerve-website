@@ -6,6 +6,7 @@ export default function CatelogTransitionScene() {
   const numberOfItemsPerRow = 60;
   return (
     <div className={styles.transitionContainer}>
+      <span className={styles.catelogTransitionBackground} />
       <div className={styles.catelogRowGroup}>
         <div className={styles.catelogRow}>
           {[...Array(numberOfItemsPerRow)].map((_, index) => (

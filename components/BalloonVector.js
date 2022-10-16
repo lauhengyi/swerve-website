@@ -4,8 +4,8 @@ import styles from '../styles/Home.module.css';
 export default function BalloonVector({ text }) {
   const [fill, setFill] = useState('none');
 
-  const colors = ['C2FB1F', 'FF764A', '6DE5FF', 'C21FFB', '581FFB', 'FBF21F'];
   useEffect(() => {
+    const colors = ['C2FB1F', 'FF764A', '6DE5FF', 'C21FFB', '581FFB', 'FBF21F'];
     const index = Math.floor(Math.random() * colors.length);
     setFill(`#${colors[index]}`);
   }, []);
