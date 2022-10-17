@@ -403,25 +403,43 @@
 
 .catelogText {
   position: absolute;
-  left: 50%;
+  display: block;
   font-size: min(14vw, 20vh);
   font-variation-settings: 'wght' 900;
+  width: max-content;
+  white-space: nowrap;
+  background-color: aqua;
 }
 
 .catelogText p {
-  /* position: absolute; */
-  display: inline;
+  position: relative;
+  display: inline-block;
+  width: auto;
   color: white;
 }
 
 .customer {
+  right: 10%;
   top: 10vh;
-  transform: translate(-50%, -50vh);
+  transform: translate(0, -50vh);
+  background-color: blue;
 }
 
 .merchant {
+  left: 10%;
   bottom: 10vh;
-  transform: translate(-50%, 50vh);
+  transform: translate(0, 50vh);
+  background-color: red;
+}
+
+.catelogText p:nth-of-type(1) {
+  position: absolute;
+  background-color: inherit;
+  padding-right: 0vh;
+  z-index: 5;
+}
+
+.catelogText p.anchor {
 }
 
 .catelogInnerContainer {
