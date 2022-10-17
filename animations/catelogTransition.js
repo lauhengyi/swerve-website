@@ -18,15 +18,24 @@ export default function catelogTransition(q) {
     .to(
       q(`.${styles.catelogText} p:nth-of-type(1)`),
       {
-        paddingRight: '3vh',
+        padding: '0 3vh',
         duration: 3,
       },
       '<',
+    )
+    .to(
+      q(`.${styles.catelogText} p:not(:nth-of-type(1)):not(.${styles.anchor})`),
+      { height: 'auto', duration: 3, ease: 'back.out' },
     );
 
   // Add all animations that is not the sliding animation to the timeline
   const mainMovements = gsap
     .timeline()
+    // This is to make the text look normal for some reason
+    .to(
+      q(`.${styles.catelogText} p:not(:nth-of-type(1)):not(.${styles.anchor})`),
+      { width: 'auto', duration: 0 },
+    )
     .to(q(`.${styles.catelogRowGroup}`), { width: '20vh', duration: 3 })
     .to(q(`.${styles.catelogText}`), { translateY: '0vh', duration: 3 }, '<')
     .to(

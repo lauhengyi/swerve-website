@@ -414,7 +414,6 @@
 .catelogText p {
   position: relative;
   display: inline-block;
-  width: auto;
   color: white;
 }
 
@@ -435,7 +434,7 @@
 .catelogText p:nth-of-type(1) {
   position: absolute;
   background-color: inherit;
-  padding-right: 0vh;
+  padding: 0vh;
   z-index: 5;
 }
 
