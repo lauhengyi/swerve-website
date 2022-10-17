@@ -6,8 +6,8 @@ export default function CatalogTransitionScene() {
   const numberOfItemsPerRow = 60;
   return (
     <div className={styles.transitionContainer}>
-      <span className={styles.catelogTransitionBackground} />
-      <div className={`${styles.catelogText} ${styles.customer}`}>
+      <span className={styles.catalogTransitionBackground} />
+      <div className={`${styles.catalogText} ${styles.customer}`}>
         <p>C</p>
         <p>C</p>
         <p>U</p>
@@ -18,7 +18,7 @@ export default function CatalogTransitionScene() {
         <p>E</p>
         <p className={styles.anchor}>R</p>
       </div>
-      <div className={`${styles.catelogText} ${styles.merchant}`}>
+      <div className={`${styles.catalogText} ${styles.merchant}`}>
         <p className={styles.anchor}>M</p>
         <p>M</p>
         <p>E</p>
@@ -29,13 +29,13 @@ export default function CatalogTransitionScene() {
         <p>N</p>
         <p>T</p>
       </div>
-      <div className={styles.catelogRowGroup}>
-        <div className={styles.catelogRow}>
+      <div className={styles.catalogRowGroup}>
+        <div className={styles.catalogRow}>
           {[...Array(numberOfItemsPerRow)].map((_, index) => (
             <CatalogVector key={index} />
           ))}
         </div>
-        <div className={styles.catelogRow}>
+        <div className={styles.catalogRow}>
           {[...Array(numberOfItemsPerRow)].map((_, index) => (
             <CatalogVector key={index} />
           ))}

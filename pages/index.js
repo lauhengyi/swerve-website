@@ -15,7 +15,7 @@ import MapScene from '../components/MapScene';
 import BalloonTransitionScene from '../components/BalloonTransitionScene';
 import BalloonScene from '../components/BalloonScene';
 import CatalogTransitionScene from '../components/CatalogTransitionScene';
-import catelogTransition from '../animations/catelogTransition';
+import catalogTransition from '../animations/catalogTransition';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,7 +46,7 @@ export default function Home() {
       .addLabel('mapScene')
       .add(balloonTransition(q))
       .addLabel('balloonScene')
-      .add(catelogTransition(q));
+      .add(catalogTransition(q));
   });
   return (
     <div ref={el}>

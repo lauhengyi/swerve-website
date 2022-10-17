@@ -18,12 +18,12 @@ export default function CatalogVector() {
     setLength2(lengthOfDescription <= 100 ? 0 : lengthOfDescription - 100);
   }, []);
   return (
-    <div className={styles.catelog}>
-      <div className={styles.catelogInnerContainer}>
-        <div className={styles.catelogWindow}>
+    <div className={styles.catalog}>
+      <div className={styles.catalogInnerContainer}>
+        <div className={styles.catalogWindow}>
           <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             <Image
-              className={styles.catelogImage}
+              className={styles.catalogImage}
               src={catalogItem.source}
               alt={catalogItem.name}
               layout="fill"
@@ -31,14 +31,14 @@ export default function CatalogVector() {
             />
           </div>
         </div>
-        <h1 className={styles.catelogName}>{catalogItem.name}</h1>
-        <h2 className={styles.catelogPrice}>{`$${catalogItem.price}`}</h2>
+        <h1 className={styles.catalogName}>{catalogItem.name}</h1>
+        <h2 className={styles.catalogPrice}>{`$${catalogItem.price}`}</h2>
         <span
-          className={styles.catelogDescription}
+          className={styles.catalogDescription}
           style={{ width: `${length1}%` }}
         />
         <span
-          className={styles.catelogDescription}
+          className={styles.catalogDescription}
           style={{ width: `${length2}%` }}
         />
       </div>
