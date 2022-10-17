@@ -18,14 +18,15 @@ export default function catalogTransition(q) {
     .to(
       q(`.${styles.catalogText} p:nth-of-type(1)`),
       {
-        padding: '0 3vh',
+        padding: '0 3vh 0 0',
         duration: 3,
       },
       '<',
     )
+    .to(q(`.${styles.catalogText}`), { flexDirection: 'column', duration: 0 })
     .to(
       q(`.${styles.catalogText} p:not(:nth-of-type(1)):not(.${styles.anchor})`),
-      { height: 'auto', duration: 3, ease: 'back.out' },
+      { height: '10vh', duration: 3 },
     );
 
   // Add all animations that is not the sliding animation to the timeline

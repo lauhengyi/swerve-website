@@ -403,7 +403,7 @@
 
 .catalogText {
   position: absolute;
-  display: block;
+  display: flex;
   font-size: min(14vw, 20vh);
   font-variation-settings: 'wght' 900;
   width: max-content;
@@ -415,6 +415,7 @@
   position: relative;
   display: inline-block;
   color: white;
+  height: 0;
 }
 
 .customer {
@@ -426,7 +427,7 @@
 
 .merchant {
   left: 10%;
-  bottom: 10vh;
+  bottom: 30vh;
   transform: translate(0, 50vh);
   background-color: red;
 }
@@ -434,6 +435,7 @@
 .catalogText p:nth-of-type(1) {
   position: absolute;
   background-color: inherit;
+  height: auto;
   padding: 0vh;
   z-index: 5;
 }
