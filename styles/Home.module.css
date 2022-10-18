@@ -93,7 +93,7 @@
   display: flex;
   width: 42vh;
   height: 40%;
-  bottom: 31%;
+  bottom: 37%;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 3;
@@ -124,7 +124,7 @@
 /* Caption */
 
 .captionContainer {
-  top: 85%;
+  top: 80%;
   position: absolute;
   z-index: 3;
   display: flex;
