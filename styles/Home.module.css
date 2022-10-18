@@ -427,7 +427,7 @@
 
 .merchant {
   left: 10%;
-  bottom: 30vh;
+  bottom: 10vh;
   transform: translate(0, 50vh);
   background-color: red;
 }
@@ -441,6 +441,7 @@
 }
 
 .catalogText p.anchor {
+  height: auto;
 }
 
 .catalogInnerContainer {

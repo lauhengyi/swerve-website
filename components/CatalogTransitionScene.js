@@ -19,7 +19,7 @@ export default function CatalogTransitionScene() {
         <p className={styles.anchor}>R</p>
       </div>
       <div className={`${styles.catalogText} ${styles.merchant}`}>
-        <p className={styles.anchor}>M</p>
+        <p>M</p>
         <p>M</p>
         <p>E</p>
         <p>R</p>
@@ -27,7 +27,7 @@ export default function CatalogTransitionScene() {
         <p>H</p>
         <p>A</p>
         <p>N</p>
-        <p>T</p>
+        <p className={styles.anchor}>T</p>
       </div>
       <div className={styles.catalogRowGroup}>
         <div className={styles.catalogRow}>

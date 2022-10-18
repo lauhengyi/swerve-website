@@ -25,19 +25,19 @@ export default function Home() {
   useEffect(() => {
     gsap
       .timeline({
-        scrollTrigger: {
-          trigger: q(`.${styles.hero}`),
-          scrub: 1,
-          pin: true,
-          start: 'top top',
-          end: '8000',
-          // snap: {
-          //   snapTo: 'labelsDirectional',
-          //   ease: 'linear',
-          //   inertia: false,
-          //   duration: { min: 2, max: 3 },
-          // },
-        },
+        // scrollTrigger: {
+        //   trigger: q(`.${styles.hero}`),
+        //   scrub: 1,
+        //   pin: true,
+        //   start: 'top top',
+        //   end: '8000',
+        //   // snap: {
+        //   //   snapTo: 'labelsDirectional',
+        //   //   ease: 'linear',
+        //   //   inertia: false,
+        //   //   duration: { min: 2, max: 3 },
+        //   // },
+        // },
       })
       .add(heroLoading(q))
       .addLabel('heroScene')
@@ -46,7 +46,8 @@ export default function Home() {
       .addLabel('mapScene')
       .add(balloonTransition(q))
       .addLabel('balloonScene')
-      .add(catalogTransition(q));
+      .add(catalogTransition(q))
+      .play('mapScene');
   });
   return (
     <div ref={el}>
