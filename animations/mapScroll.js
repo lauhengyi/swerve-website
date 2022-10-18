@@ -22,7 +22,7 @@ export default function mapScroll(q) {
       onReverseComplete: stopAnimation,
       onComplete: stopAnimation,
     })
-    .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 5 })
+    .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 4 })
     .fromTo(
       q(`.${styles.buildings} > rect`),
       { opacity: 0, scale: 1.5, y: 100 },
@@ -31,7 +31,7 @@ export default function mapScroll(q) {
         scale: 1,
         y: 0,
         duration: 1,
-        stagger: { amount: 4.5 },
+        stagger: { amount: 3 },
         ease: 'back',
       },
       '<',

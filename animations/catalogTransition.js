@@ -34,7 +34,7 @@ export default function catalogTransition(q) {
     );
 
   // Add all animations that is not the sliding animation to the timeline
-  const closingDuration = 1.2;
+  const closingDuration = 1.5;
   const rotatingDuration = 1;
   const mainMovements = gsap
     .timeline()
@@ -79,11 +79,11 @@ export default function catalogTransition(q) {
   // Custom ease for the sliding animation
   const slideEase = CustomEase.create(
     'custom',
-    'M0,0 C0,0 0.588,0.96 0.588,0.96 0.644,1.056 0.58,1 1,1 ',
+    'M0,0,C0,0,0.644,0.89,0.644,0.89,0.75,1.038,0.95,1.012,1,1',
   );
 
   const amountToSlide = 150;
-  const slideDuration = 10;
+  const slideDuration = 5;
   return gsap
     .timeline()
     .fromTo(
