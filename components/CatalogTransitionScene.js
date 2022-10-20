@@ -11,27 +11,27 @@ export default function CatalogTransitionScene() {
     <div
       className={`${styles.transitionContainer} ${styles.catalogTransition}`}
     >
+      <div className={styles.catalogItemContainer}>
+        <CatalogItemVector index={1} />
+        <CatalogItemVector index={2} />
+        <CatalogItemVector index={3} />
+        <CatalogItemVector index={4} />
+        <CatalogItemVector index={5} />
+        <CatalogItemVector index={6} />
+        <CatalogItemVector index={7} />
+        <CatalogItemVector index={8} />
+      </div>
       <span className={styles.catalogTransitionBackground}>
-        <div className={styles.catalogItemContainer}>
-          <CatalogItemVector index={1} />
-          <CatalogItemVector index={2} />
-          <CatalogItemVector index={3} />
-          <CatalogItemVector index={4} />
-          <CatalogItemVector index={5} />
-          <CatalogItemVector index={6} />
-          <CatalogItemVector index={7} />
-          <CatalogItemVector index={8} />
+        <div className={styles.catalogCoinContainer}>
+          <CatalogCoinVector />
+          <CatalogCoinVector />
+          <CatalogCoinVector />
+          <CatalogCoinVector />
+          <CatalogCoinVector />
+          <CatalogCoinVector />
+          <CatalogCoinVector />
+          <CatalogCoinVector />
         </div>
-        {/* <div className={styles.catalogCoinContainer}>
-          <CatalogCoinVector />
-          <CatalogCoinVector />
-          <CatalogCoinVector />
-          <CatalogCoinVector />
-          <CatalogCoinVector />
-          <CatalogCoinVector />
-          <CatalogCoinVector />
-          <CatalogCoinVector />
-        </div> */}
       </span>
       <div className={`${styles.catalogText} ${styles.customer}`}>
         <p>C</p>

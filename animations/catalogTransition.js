@@ -75,28 +75,32 @@ export default function catalogTransition(q) {
       },
       '<',
     )
-    // .to(q(`.${styles.catalogCoinContainer} .${styles.catalogItem}`), {
-    //   keyframes: {
-    //     '0%': { x: '35vw', rotate: '0deg', opacity: 0 },
-    //     '20%': { opacity: 1 },
-    //     '80%': { opacity: 1 },
-    //     '100%': { x: '-35vw', rotate: 360, opacity: 0 },
-    //   },
-    //   stagger: 0.3,
-    //   duration: 1,
-    //   ease: 'power2.inOut',
-    // })
-    .to(q(`.${styles.catalogItemContainer} .${styles.catalogItem}`), {
+    .to(q(`.${styles.catalogCoinContainer} .${styles.catalogItem}`), {
       keyframes: {
-        '0%': { x: '-35vw', rotate: '0deg', opacity: 0 },
-        '30%': { opacity: 1 },
-        '70%': { opacity: 1 },
-        '100%': { x: '35vw', rotate: 360, opacity: 0 },
+        '0%': { x: '35vw', rotate: '0deg', opacity: 0 },
+        '20%': { opacity: 1 },
+        '80%': { opacity: 1 },
+        '100%': { x: '-35vw', rotate: 360, opacity: 0 },
       },
       stagger: 0.3,
       duration: 1.5,
       ease: 'power2.inOut',
-    });
+    })
+    .to(
+      q(`.${styles.catalogItemContainer} .${styles.catalogItem}`),
+      {
+        keyframes: {
+          '0%': { x: '-35vw', rotate: '0deg', opacity: 0 },
+          '30%': { opacity: 1 },
+          '70%': { opacity: 1 },
+          '100%': { x: '35vw', rotate: 360, opacity: 0 },
+        },
+        stagger: 0.3,
+        duration: 1.5,
+        ease: 'power2.inOut',
+      },
+      '<+=0.5',
+    );
 
   // Custom ease for the sliding animation
   const slideEase = CustomEase.create(

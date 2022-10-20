@@ -486,21 +486,30 @@
 }
 
 .catalogItemContainer {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 100vh;
+  z-index: 1;
 }
 
 .catalogCoinContainer {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 100vh;
+  z-index: 1;
 }
 
 .catalogItem {
+  display: block;
+  width: 10vh;
   height: 10vh;
-  display: inline;
   opacity: 0;
 }
