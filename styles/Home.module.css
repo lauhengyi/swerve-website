@@ -354,37 +354,12 @@
 }
 
 /* Catalog */
-.catalog {
-  width: 10vh;
-  height: 12.5vh;
-  background-color: var(--pure-white);
-  border-radius: 0.5vh;
-  border-width: 0.5vh;
-  border-style: solid;
-  border-color: #c8c8c8;
-}
-
-.catalogRowGroup {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  transform-origin: center;
-  width: 125vh;
-  transform-origin: center;
-  transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-.catalogRow {
-  display: flex;
-  flex-direction: column;
+.catalogTransition {
+  --merchant-color: rgb(255, 0, 234);
+  --customer-color: rgb(46, 112, 253);
 }
 
 .catalogTransitionBackground {
-  --merchant-color: red;
-  --customer-color: blue;
   --wipe: 50%;
   --rotate: 0deg;
   height: 100%;
@@ -422,14 +397,14 @@
   right: 10%;
   top: 10vh;
   transform: translate(0, -50vh);
-  background-color: blue;
+  background-color: var(--customer-color);
 }
 
 .merchant {
   left: 10%;
   bottom: 10vh;
   transform: translate(0, 50vh);
-  background-color: red;
+  background-color: var(--merchant-color);
 }
 
 .catalogText p:nth-of-type(1) {
@@ -444,17 +419,45 @@
   height: auto;
 }
 
+.catalog {
+  width: 8vh;
+  height: 10vh;
+  background-color: var(--pure-white);
+  border-radius: 0.5vh;
+  border-width: 0.35vh;
+  border-style: solid;
+  border-color: #c8c8c8;
+}
+
+.catalogRowGroup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transform-origin: center;
+  width: 125vh;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.catalogRow {
+  display: flex;
+  flex-direction: column;
+}
+
 .catalogInnerContainer {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 1vh;
+  padding: 0.5vh;
 }
 
 .catalogWindow {
   background-color: var(--grey);
-  height: 6vh;
-  padding: 0.5vh;
+  height: 5vh;
+  padding: 0.3vh;
 }
 
 .catalogImage {
@@ -464,20 +467,40 @@
 }
 
 .catalogName {
-  font-size: 1vh;
+  font-size: 0.8vh;
   font-variation-settings: 'wght' 500;
   margin-top: 0.5vh;
   color: var(--pure-black);
 }
 
 .catalogPrice {
-  font-size: 1vh;
+  font-size: 0.8vh;
   font-variation-settings: 'wght' 700;
   color: var(--pure-black);
 }
 
 .catalogDescription {
-  height: 0.35vh;
+  height: 0.3vh;
   background-color: var(--grey);
   margin-top: 0.2vh;
+}
+
+.catalogItemContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.catalogCoinContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.catalogItem {
+  height: 10vh;
+  display: inline;
+  opacity: 0;
 }

@@ -44,7 +44,7 @@ export default function catalogTransition(q) {
       { width: 'auto', duration: 0 },
     )
     .to(q(`.${styles.catalogRowGroup}`), {
-      width: '20vh',
+      width: '15vh',
       duration: closingDuration,
     })
     .to(
@@ -74,7 +74,29 @@ export default function catalogTransition(q) {
         ease: 'power4.inOut',
       },
       '<',
-    );
+    )
+    // .to(q(`.${styles.catalogCoinContainer} .${styles.catalogItem}`), {
+    //   keyframes: {
+    //     '0%': { x: '35vw', rotate: '0deg', opacity: 0 },
+    //     '20%': { opacity: 1 },
+    //     '80%': { opacity: 1 },
+    //     '100%': { x: '-35vw', rotate: 360, opacity: 0 },
+    //   },
+    //   stagger: 0.3,
+    //   duration: 1,
+    //   ease: 'power2.inOut',
+    // })
+    .to(q(`.${styles.catalogItemContainer} .${styles.catalogItem}`), {
+      keyframes: {
+        '0%': { x: '-35vw', rotate: '0deg', opacity: 0 },
+        '30%': { opacity: 1 },
+        '70%': { opacity: 1 },
+        '100%': { x: '35vw', rotate: 360, opacity: 0 },
+      },
+      stagger: 0.3,
+      duration: 1.5,
+      ease: 'power2.inOut',
+    });
 
   // Custom ease for the sliding animation
   const slideEase = CustomEase.create(

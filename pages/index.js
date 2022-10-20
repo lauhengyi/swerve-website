@@ -46,7 +46,8 @@ export default function Home() {
       .addLabel('mapScene')
       .add(balloonTransition(q))
       .addLabel('balloonScene')
-      .add(catalogTransition(q));
+      .add(catalogTransition(q))
+      .addLabel('CatalogScene');
   });
   return (
     <div ref={el}>

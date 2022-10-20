@@ -3,19 +3,21 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import catalogItems from './content/catalogItems';
 
-export default function CatalogVector() {
+export default function CatalogVector({ index, lengthOfDescription }) {
   const [catalogItem, setCatalogItem] = useState(catalogItems[0]);
   const [length1, setLength1] = useState(50);
   const [length2, setLength2] = useState(0);
 
   useEffect(() => {
-    setCatalogItem(
-      catalogItems[Math.floor(Math.random() * catalogItems.length)],
-    );
+    const currIndex = index ?? Math.floor(Math.random() * catalogItems.length);
+    setCatalogItem(catalogItems[currIndex]);
 
-    const lengthOfDescription = Math.floor(Math.random() * 150) + 51;
-    setLength1(lengthOfDescription > 100 ? 100 : lengthOfDescription);
-    setLength2(lengthOfDescription <= 100 ? 0 : lengthOfDescription - 100);
+    const currLengthOfDescription =
+      lengthOfDescription ?? Math.floor(Math.random() * 150) + 51;
+    setLength1(currLengthOfDescription > 100 ? 100 : currLengthOfDescription);
+    setLength2(
+      currLengthOfDescription <= 100 ? 0 : currLengthOfDescription - 100,
+    );
   }, []);
   return (
     <div className={styles.catalog}>
