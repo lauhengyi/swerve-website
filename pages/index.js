@@ -9,13 +9,13 @@ import heroLoading from '../animations/heroLoading';
 import heroScroll from '../animations/heroScroll';
 import mapScroll from '../animations/mapScroll';
 import balloonTransition from '../animations/balloonTransition';
-
-import Navbar from '../components/Navbar';
-import MapScene from '../components/MapScene';
-import BalloonTransitionScene from '../components/BalloonTransitionScene';
-import BalloonScene from '../components/BalloonScene';
-import CatalogTransitionScene from '../components/CatalogTransitionScene';
 import catalogTransition from '../animations/catalogTransition';
+
+import Navbar from '../components/navbar/Navbar';
+import MapScene from '../components/mapScene/MapScene';
+import BalloonTransitionScene from '../components/balloonScene/BalloonTransitionScene';
+import BalloonScene from '../components/balloonScene/BalloonScene';
+import CatalogTransitionScene from '../components/catalogScene/CatalogTransitionScene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +30,7 @@ export default function Home() {
           scrub: 1,
           pin: true,
           start: 'top top',
-          end: '8000',
+          end: '12000',
           snap: {
             snapTo: 'labelsDirectional',
             ease: 'linear',
@@ -47,8 +47,7 @@ export default function Home() {
       .add(balloonTransition(q))
       .addLabel('balloonScene')
       .add(catalogTransition(q))
-      .addLabel('CatalogScene')
-      .play('balloonScene');
+      .addLabel('CatalogScene');
   });
   return (
     <div ref={el}>

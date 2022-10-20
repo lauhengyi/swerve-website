@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import catalogItems from './content/catalogItems';
+import styles from '../../styles/Home.module.css';
+import catalogItems from '../content/catalogItems';
 
 export default function CatalogVector({ index, lengthOfDescription }) {
   const [catalogItem, setCatalogItem] = useState(catalogItems[0]);

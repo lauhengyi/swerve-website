@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import CatalogVector from './CatalogVector';
 import CatalogItemVector from './CatalogItemVector';
 import CatalogCoinVector from './CatalogCoinVector';

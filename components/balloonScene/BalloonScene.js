@@ -1,6 +1,6 @@
 import React from 'react';
 import BalloonVector from './BalloonVector';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 
 export default function BalloonScene() {
   const balloonText = [

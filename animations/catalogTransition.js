@@ -76,6 +76,7 @@ export default function catalogTransition(q) {
       },
       '<',
     )
+    .to(q(`.${styles.balloonScene}`), { visibility: 'hidden', duration: 0 })
     .to(
       q(`.${styles.catalogCoinContainer} .${styles.catalogItem}`),
       {
