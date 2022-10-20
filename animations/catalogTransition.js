@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 
 export default function catalogTransition(q) {
   const collapsingDuration = 1;
+
   const textCollapsing = gsap
     .timeline()
     .to(
@@ -44,7 +45,7 @@ export default function catalogTransition(q) {
       { width: 'auto', duration: 0 },
     )
     .to(q(`.${styles.catalogRowGroup}`), {
-      width: '15vh',
+      width: '16vh',
       duration: closingDuration,
     })
     .to(
@@ -75,17 +76,21 @@ export default function catalogTransition(q) {
       },
       '<',
     )
-    .to(q(`.${styles.catalogCoinContainer} .${styles.catalogItem}`), {
-      keyframes: {
-        '0%': { x: '35vw', rotate: '0deg', opacity: 0 },
-        '20%': { opacity: 1 },
-        '80%': { opacity: 1 },
-        '100%': { x: '-35vw', rotate: 360, opacity: 0 },
+    .to(
+      q(`.${styles.catalogCoinContainer} .${styles.catalogItem}`),
+      {
+        keyframes: {
+          '0%': { x: '35vw', rotate: '0deg', opacity: 0 },
+          '20%': { opacity: 1 },
+          '80%': { opacity: 1 },
+          '100%': { x: '-35vw', rotate: 360, opacity: 0 },
+        },
+        stagger: 0.3,
+        duration: 2,
+        ease: 'power2.inOut',
       },
-      stagger: 0.3,
-      duration: 1.5,
-      ease: 'power2.inOut',
-    })
+      '+=0.5',
+    )
     .to(
       q(`.${styles.catalogItemContainer} .${styles.catalogItem}`),
       {
@@ -96,7 +101,7 @@ export default function catalogTransition(q) {
           '100%': { x: '35vw', rotate: 360, opacity: 0 },
         },
         stagger: 0.3,
-        duration: 1.5,
+        duration: 2,
         ease: 'power2.inOut',
       },
       '<+=0.5',
@@ -108,15 +113,17 @@ export default function catalogTransition(q) {
     'M0,0,C0,0,0.644,0.89,0.644,0.89,0.75,1.038,0.95,1.012,1,1',
   );
 
-  const amountToSlide = 150;
+  const amountToSlide = 300;
   const slideDuration = 5;
+  const openingDuration = 1.5;
+  const openingEase = 'power2.in';
   return gsap
     .timeline()
     .fromTo(
       q(`.${styles.catalogRow}:nth-of-type(1)`),
       { y: `-${amountToSlide}vh` },
       {
-        y: `${amountToSlide}vh`,
+        y: `0vh`,
         duration: slideDuration,
         ease: slideEase,
       },
@@ -124,8 +131,59 @@ export default function catalogTransition(q) {
     .fromTo(
       q(`.${styles.catalogRow}:nth-of-type(2)`),
       { y: `${amountToSlide}vh` },
-      { y: `-${amountToSlide}vh`, duration: slideDuration, ease: slideEase },
+      { y: `0vh`, duration: slideDuration, ease: slideEase },
       '<',
     )
-    .add(mainMovements, '<');
+    .add(mainMovements, '<')
+    .fromTo(
+      q(`.${styles.catalogRow}:nth-of-type(1)`),
+      { y: `0vh` },
+      {
+        y: `${amountToSlide}vh`,
+        duration: slideDuration,
+        ease: 'power1.in',
+      },
+    )
+    .fromTo(
+      q(`.${styles.catalogRow}:nth-of-type(2)`),
+      { y: `0vh` },
+      { y: `-${amountToSlide}vh`, duration: slideDuration, ease: 'power1.in' },
+      '<',
+    )
+    .to(
+      q(`.${styles.catalogRowGroup}`),
+      {
+        width: '125vw',
+        duration: openingDuration,
+        ease: openingEase,
+      },
+      '<+=1',
+    )
+    .to(
+      q(`.${styles.customer}`),
+      {
+        translateX: '50vw',
+        duration: openingDuration,
+        ease: openingEase,
+      },
+      '<',
+    )
+    .to(
+      q(`.${styles.merchant}`),
+      {
+        translateX: '-50vw',
+        duration: openingDuration,
+        ease: openingEase,
+      },
+      '<',
+    )
+    .to(
+      q(`.${styles.catalogTransitionBackground}`),
+      {
+        '--wipe': '50%',
+        duration: openingDuration,
+        ease: openingEase,
+      },
+      '<-=0.1',
+    );
 }

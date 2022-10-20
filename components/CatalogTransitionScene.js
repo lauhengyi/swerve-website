@@ -5,8 +5,7 @@ import CatalogItemVector from './CatalogItemVector';
 import CatalogCoinVector from './CatalogCoinVector';
 
 export default function CatalogTransitionScene() {
-  const numberOfItems1 = 30;
-  const numberOfItems2 = 30;
+  const numberOfItemsBetween = 35;
   return (
     <div
       className={`${styles.transitionContainer} ${styles.catalogTransition}`}
@@ -57,9 +56,9 @@ export default function CatalogTransitionScene() {
       </div>
       <div className={styles.catalogRowGroup}>
         <div className={styles.catalogRow}>
-          {/* {[...Array(numberOfItems2)].map((_, index) => (
+          {[...Array(numberOfItemsBetween)].map((_, index) => (
             <CatalogVector key={index} />
-          ))} */}
+          ))}
           <CatalogVector index={1} />
           <CatalogVector index={2} />
           <CatalogVector index={3} />
@@ -68,12 +67,12 @@ export default function CatalogTransitionScene() {
           <CatalogVector index={6} />
           <CatalogVector index={7} />
           <CatalogVector index={8} />
-          {[...Array(numberOfItems1)].map((_, index) => (
+          {[...Array(numberOfItemsBetween)].map((_, index) => (
             <CatalogVector key={index} />
           ))}
         </div>
         <div className={styles.catalogRow}>
-          {[...Array(numberOfItems1)].map((_, index) => (
+          {[...Array(numberOfItemsBetween)].map((_, index) => (
             <CatalogVector key={index} />
           ))}
           <CatalogVector index={1} />
@@ -84,9 +83,9 @@ export default function CatalogTransitionScene() {
           <CatalogVector index={6} />
           <CatalogVector index={7} />
           <CatalogVector index={8} />
-          {/* {[...Array(numberOfItems2)].map((_, index) => (
+          {[...Array(numberOfItemsBetween)].map((_, index) => (
             <CatalogVector key={index} />
-          ))} */}
+          ))}
         </div>
       </div>
     </div>

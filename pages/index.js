@@ -31,12 +31,12 @@ export default function Home() {
           pin: true,
           start: 'top top',
           end: '8000',
-          // snap: {
-          //   snapTo: 'labelsDirectional',
-          //   ease: 'linear',
-          //   inertia: false,
-          //   duration: { min: 2, max: 3 },
-          // },
+          snap: {
+            snapTo: 'labelsDirectional',
+            ease: 'linear',
+            inertia: false,
+            duration: { min: 2, max: 3 },
+          },
         },
       })
       .add(heroLoading(q))
@@ -47,7 +47,8 @@ export default function Home() {
       .add(balloonTransition(q))
       .addLabel('balloonScene')
       .add(catalogTransition(q))
-      .addLabel('CatalogScene');
+      .addLabel('CatalogScene')
+      .play('balloonScene');
   });
   return (
     <div ref={el}>
