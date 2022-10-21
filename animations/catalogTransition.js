@@ -160,7 +160,7 @@ export default function catalogTransition(q) {
     .to(
       q(`.${styles.catalogRowGroup}`),
       {
-        width: '125vw',
+        width: 'calc(100vw + 20vh)',
         duration: openingDuration,
         ease: openingEase,
       },
@@ -191,6 +191,6 @@ export default function catalogTransition(q) {
         duration: openingDuration,
         ease: openingEase,
       },
-      '<-=0.1',
+      '<-=0.05',
     );
 }
