@@ -13,11 +13,8 @@ export default function CatalogTransitionScene() {
 
   useEffect(() => {
     setCatalogItemsIndexes(
-      [...catalogItemIndexes].map(() =>
-        Math.floor(Math.random() * catalogItems.length),
-      ),
+      [...Array(8)].map(() => Math.floor(Math.random() * catalogItems.length)),
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
