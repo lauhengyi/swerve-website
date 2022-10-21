@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Home.module.css';
 import CatalogVector from './CatalogVector';
 import CatalogItemVector from './CatalogItemVector';
 import CatalogCoinVector from './CatalogCoinVector';
+import catalogItems from '../content/catalogItems';
 
 export default function CatalogTransitionScene() {
   const numberOfItemsBetween = 35;
+  const [catalogItemIndexes, setCatalogItemsIndexes] = useState([
+    0, 1, 2, 3, 4, 5, 6, 7,
+  ]);
+
+  useEffect(() => {
+    setCatalogItemsIndexes(
+      [...catalogItemIndexes].map(() =>
+        Math.floor(Math.random() * catalogItems.length),
+      ),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div
       className={`${styles.transitionContainer} ${styles.catalogTransition}`}
     >
       <div className={styles.catalogItemContainer}>
-        <CatalogItemVector index={1} />
-        <CatalogItemVector index={2} />
-        <CatalogItemVector index={3} />
-        <CatalogItemVector index={4} />
-        <CatalogItemVector index={5} />
-        <CatalogItemVector index={6} />
-        <CatalogItemVector index={7} />
-        <CatalogItemVector index={8} />
+        {catalogItemIndexes.map((index, i) => (
+          <CatalogItemVector index={index} key={i} />
+        ))}
       </div>
       <span className={styles.catalogTransitionBackground}>
         <div className={styles.catalogCoinContainer}>
@@ -56,35 +65,25 @@ export default function CatalogTransitionScene() {
       </div>
       <div className={styles.catalogRowGroup}>
         <div className={styles.catalogRow}>
-          {[...Array(numberOfItemsBetween)].map((_, index) => (
-            <CatalogVector key={index} />
+          {[...Array(numberOfItemsBetween)].map((_, i) => (
+            <CatalogVector key={i} />
           ))}
-          <CatalogVector index={1} />
-          <CatalogVector index={2} />
-          <CatalogVector index={3} />
-          <CatalogVector index={4} />
-          <CatalogVector index={5} />
-          <CatalogVector index={6} />
-          <CatalogVector index={7} />
-          <CatalogVector index={8} />
-          {[...Array(numberOfItemsBetween)].map((_, index) => (
-            <CatalogVector key={index} />
+          {catalogItemIndexes.map((index, i) => (
+            <CatalogVector index={index} key={i} />
+          ))}
+          {[...Array(numberOfItemsBetween)].map((_, i) => (
+            <CatalogVector key={i} />
           ))}
         </div>
         <div className={styles.catalogRow}>
-          {[...Array(numberOfItemsBetween)].map((_, index) => (
-            <CatalogVector key={index} />
+          {[...Array(numberOfItemsBetween)].map((_, i) => (
+            <CatalogVector key={i} />
           ))}
-          <CatalogVector index={1} />
-          <CatalogVector index={2} />
-          <CatalogVector index={3} />
-          <CatalogVector index={4} />
-          <CatalogVector index={5} />
-          <CatalogVector index={6} />
-          <CatalogVector index={7} />
-          <CatalogVector index={8} />
-          {[...Array(numberOfItemsBetween)].map((_, index) => (
-            <CatalogVector key={index} />
+          {catalogItemIndexes.map((index, i) => (
+            <CatalogVector index={index} key={i} />
+          ))}
+          {[...Array(numberOfItemsBetween)].map((_, i) => (
+            <CatalogVector key={i} />
           ))}
         </div>
       </div>

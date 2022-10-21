@@ -18,7 +18,7 @@ export default function CatalogVector({ index, lengthOfDescription }) {
     setLength2(
       currLengthOfDescription <= 100 ? 0 : currLengthOfDescription - 100,
     );
-  }, []);
+  }, [index, lengthOfDescription]);
   return (
     <div className={styles.catalog}>
       <div className={styles.catalogInnerContainer}>

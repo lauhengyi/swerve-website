@@ -114,25 +114,27 @@ export default function catalogTransition(q) {
     'M0,0,C0,0,0.644,0.89,0.644,0.89,0.75,1.038,0.95,1.012,1,1',
   );
 
-  const amountToSlide = 300;
-  const slideDuration = 5;
+  const amountToSlide1 = 300;
+  const slideDuration1 = 5;
+  const slideDuration2 = 3;
+  const amountToSlide2 = amountToSlide1 * (slideDuration2 / slideDuration1);
   const openingDuration = 1.5;
   const openingEase = 'power2.in';
   return gsap
     .timeline()
     .fromTo(
       q(`.${styles.catalogRow}:nth-of-type(1)`),
-      { y: `-${amountToSlide}vh` },
+      { y: `-${amountToSlide1}vh` },
       {
         y: `0vh`,
-        duration: slideDuration,
+        duration: slideDuration1,
         ease: slideEase,
       },
     )
     .fromTo(
       q(`.${styles.catalogRow}:nth-of-type(2)`),
-      { y: `${amountToSlide}vh` },
-      { y: `0vh`, duration: slideDuration, ease: slideEase },
+      { y: `${amountToSlide1}vh` },
+      { y: `0vh`, duration: slideDuration1, ease: slideEase },
       '<',
     )
     .add(mainMovements, '<')
@@ -140,15 +142,19 @@ export default function catalogTransition(q) {
       q(`.${styles.catalogRow}:nth-of-type(1)`),
       { y: `0vh` },
       {
-        y: `${amountToSlide}vh`,
-        duration: slideDuration,
+        y: `${amountToSlide2}vh`,
+        duration: slideDuration2,
         ease: 'power1.in',
       },
     )
     .fromTo(
       q(`.${styles.catalogRow}:nth-of-type(2)`),
       { y: `0vh` },
-      { y: `-${amountToSlide}vh`, duration: slideDuration, ease: 'power1.in' },
+      {
+        y: `-${amountToSlide2}vh`,
+        duration: slideDuration2,
+        ease: 'power1.in',
+      },
       '<',
     )
     .to(

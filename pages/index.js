@@ -16,6 +16,7 @@ import MapScene from '../components/mapScene/MapScene';
 import BalloonTransitionScene from '../components/balloonScene/BalloonTransitionScene';
 import BalloonScene from '../components/balloonScene/BalloonScene';
 import CatalogTransitionScene from '../components/catalogScene/CatalogTransitionScene';
+import CatalogScene from '../components/catalogScene/CatalogScene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,6 +67,7 @@ export default function Home() {
             <h1 className={styles.title}>SWERVE</h1>
             <BalloonScene />
             <MapScene />
+            <CatalogScene />
             <BalloonTransitionScene />
             <CatalogTransitionScene />
           </span>
