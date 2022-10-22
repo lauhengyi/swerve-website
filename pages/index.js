@@ -65,9 +65,9 @@ export default function Home() {
           </span>
           <span className={styles.circle}>
             <h1 className={styles.title}>SWERVE</h1>
+            <CatalogScene />
             <BalloonScene />
             <MapScene />
-            <CatalogScene />
             <BalloonTransitionScene />
             <CatalogTransitionScene />
           </span>
