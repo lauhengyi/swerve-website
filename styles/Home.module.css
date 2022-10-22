@@ -30,12 +30,12 @@
 
 .title {
   position: absolute;
-  top: 5%;
+  top: 4vh;
   left: 50%;
   transform: translate(-50%, 0);
 
   font-variation-settings: 'wght' 800;
-  font-size: min(14rem, 20vw);
+  font-size: min(18rem, 20vw);
   white-space: nowrap;
   z-index: 1;
 
@@ -93,7 +93,7 @@
   display: flex;
   width: 42vh;
   height: 40%;
-  bottom: 37%;
+  bottom: 35%;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 3;
@@ -354,7 +354,7 @@
   left: 20%;
 }
 
-/* Catalog */
+/* Catalog Transition*/
 .catalogTransition {
   --merchant-color: #f96f5d;
   --customer-color: #2589bd;
@@ -428,16 +428,6 @@
   height: auto;
 }
 
-.catalog {
-  width: 8vh;
-  height: 10vh;
-  background-color: var(--pure-white);
-  border-radius: 0.5vh;
-  border-width: 0.35vh;
-  border-style: solid;
-  border-color: #c8c8c8;
-}
-
 .catalogRowGroup {
   position: absolute;
   left: 50%;
@@ -449,6 +439,46 @@
   width: 125vh;
   transform-origin: center;
   transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.catalogItemContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 100vh;
+  z-index: 1;
+}
+
+.catalogCoinContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 100vh;
+  z-index: 1;
+}
+
+.catalogItem {
+  display: block;
+  width: 10vh;
+  height: 10vh;
+  opacity: 0;
+}
+
+/* Catalog Vector */
+.catalog {
+  width: 8vh;
+  height: 10vh;
+  background-color: var(--pure-white);
+  border-radius: 0.5vh;
+  border-width: 0.35vh;
+  border-style: solid;
+  border-color: #c8c8c8;
 }
 
 .catalogRow {
@@ -494,33 +524,10 @@
   margin-top: 0.2vh;
 }
 
-.catalogItemContainer {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  left: 50%;
-  transform: translate(-50%, 0);
-  height: 100vh;
-  z-index: 1;
-}
-
-.catalogCoinContainer {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  left: 50%;
-  transform: translate(-50%, 0);
-  height: 100vh;
-  z-index: 1;
-}
-
-.catalogItem {
+/* Catalog Scene */
+.catalogScene {
+  background-color: green;
   display: block;
-  width: 10vh;
-  height: 10vh;
-  opacity: 0;
 }
 
 .catalogPanningRow {
@@ -528,6 +535,16 @@
 }
 
 .catalogPanningRow .catalog {
-  margin-left: 9vh;
+  margin-right: 9vh;
   scale: 2;
+}
+
+.catalogPanningContainer {
+  bottom: 20%;
+  left: 15vw;
+  position: absolute;
+  width: fit-content;
+  align-items: center;
+  height: fit-content;
+  background-color: #2589bd;
 }

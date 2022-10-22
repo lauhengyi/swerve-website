@@ -26,7 +26,7 @@ export default function heroLoading(q) {
         '--clip:': '0%',
       },
       {
-        '--clip': '80vh',
+        '--clip': '90vh',
         duration: 2,
       },
       '<+0.2',
