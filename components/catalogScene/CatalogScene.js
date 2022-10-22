@@ -42,20 +42,23 @@ export default function CatalogScene() {
         { opacity: 1, y: '0vh', duration: 1 },
         '<',
       );
-  }, [catalogs]);
+  }, [catalogs, q]);
 
   return (
     <div ref={el} className={`${styles.sceneContainer} ${styles.catalogScene}`}>
-      <div className={styles.catalogPanningContainer}>
-        <div className={styles.catalogPanningRow}>
-          {catalogs.map((values, i) => (
-            <CatalogVector
-              index={values.index}
-              lengthOfDescription={values.lengthOfDescription}
-              key={i}
-            />
-          ))}
-        </div>
+      <div className={styles.catalogTextContainer}>
+        <h1 className={styles.header}>
+          Look through the catalog of shops in your area...
+        </h1>
+      </div>
+      <div className={styles.catalogPanningRow}>
+        {catalogs.map((values, i) => (
+          <CatalogVector
+            index={values.index}
+            lengthOfDescription={values.lengthOfDescription}
+            key={i}
+          />
+        ))}
       </div>
     </div>
   );
