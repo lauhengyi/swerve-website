@@ -189,8 +189,8 @@ export default function catalogTransition(q) {
       {
         '--wipe': '50%',
         duration: openingDuration,
-        ease: openingEase,
+        ease: 'power2.in',
       },
-      '<-=0.05',
+      '<-=0.03',
     );
 }

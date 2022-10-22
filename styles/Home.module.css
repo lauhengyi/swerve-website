@@ -195,6 +195,7 @@
 }
 
 .mapLine {
+  width: auto;
 }
 
 .mapLineMain {
@@ -220,6 +221,7 @@
 /* Balloons */
 .balloonScene {
   visibility: visible;
+  background-color: var(--pure-white);
 }
 
 .boundingContainer {
@@ -354,8 +356,8 @@
 
 /* Catalog */
 .catalogTransition {
-  --merchant-color: rgb(255, 0, 234);
-  --customer-color: rgb(46, 112, 253);
+  --merchant-color: #f96f5d;
+  --customer-color: #2589bd;
 }
 
 .catalogTransitionBackground {
@@ -404,6 +406,14 @@
   bottom: 10vh;
   transform: translate(0, 50vh);
   background-color: var(--merchant-color);
+}
+
+.customer p {
+  color: #ffbc0a;
+}
+
+.merchant p {
+  color: #523a34;
 }
 
 .catalogText p:nth-of-type(1) {
@@ -511,4 +521,13 @@
   width: 10vh;
   height: 10vh;
   opacity: 0;
+}
+
+.catalogPanningRow {
+  display: flex;
+}
+
+.catalogPanningRow .catalog {
+  margin-left: 9vh;
+  scale: 2;
 }
