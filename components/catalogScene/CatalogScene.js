@@ -21,7 +21,7 @@ export default function CatalogScene() {
     }),
   );
 
-  const nextIndex = catalogs[catalogs.length - 1].index;
+  const nextIndex = catalogs[0].index;
 
   useEffect(() => {
     gsap
@@ -43,11 +43,29 @@ export default function CatalogScene() {
       )
       .fromTo(
         q(`.${styles.catalog}:first-of-type`),
-        { opacity: 0, y: '20vh' },
-        { opacity: 1, y: '0vh', duration: 1 },
+        { x: '17vh' },
+        {
+          x: '0',
+          ease: 'linear',
+          duration: 4,
+        },
         '<',
       )
-      .add(catalogSceneAnimation(q), '<+=0.5');
+      .add(catalogSceneAnimation(q), '<')
+      .fromTo(
+        q(`.${styles.catalog}:first-of-type`),
+        { opacity: 0 },
+        {
+          keyframes: {
+            '0%': { opacity: 0, scale: 1, y: '40vh' },
+            '15%': { opacity: 1, scale: 2, y: '25vh' },
+            '80%': { y: '25vh' },
+            '100%': { y: '0vh' },
+          },
+          duration: 3,
+        },
+        '<+=1',
+      );
   }, [catalogs]);
 
   return (

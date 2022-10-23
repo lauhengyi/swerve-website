@@ -534,23 +534,12 @@
   bottom: 20%;
   display: block;
   white-space: nowrap;
-  margin-left: 15vw;
 }
 
 .catalogPanningRow .catalog {
   display: inline-block;
   margin-right: 9vh;
   scale: 2;
-}
-
-.catalogPanningContainer {
-  bottom: 20%;
-  left: 15vw;
-  position: absolute;
-  width: fit-content;
-  align-items: center;
-  height: fit-content;
-  background-color: #2589bd;
 }
 
 .catalogTextContainer {
