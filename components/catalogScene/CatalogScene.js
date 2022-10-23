@@ -2,7 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import styles from '../../styles/Home.module.css';
 import gsap from 'gsap';
 import CatalogVector from './CatalogVector';
+import CatalogItemVector from './CatalogItemVector';
 import catalogItems from '../content/catalogItems';
+import PhoneVector from './PhoneVector';
+import catalogSceneAnimation from '../../animations/catalogSceneAnimation';
 
 export default function CatalogScene() {
   const numberOfCatalogs = 30;
@@ -17,6 +20,8 @@ export default function CatalogScene() {
       };
     }),
   );
+
+  const nextIndex = catalogs[catalogs.length - 1].index;
 
   useEffect(() => {
     gsap
@@ -41,8 +46,9 @@ export default function CatalogScene() {
         { opacity: 0, y: '20vh' },
         { opacity: 1, y: '0vh', duration: 1 },
         '<',
-      );
-  }, [catalogs, q]);
+      )
+      .add(catalogSceneAnimation(q), '<+=0.5');
+  }, [catalogs]);
 
   return (
     <div ref={el} className={`${styles.sceneContainer} ${styles.catalogScene}`}>
@@ -60,6 +66,8 @@ export default function CatalogScene() {
           />
         ))}
       </div>
+      <CatalogItemVector index={nextIndex} />
+      <PhoneVector index={nextIndex} />
     </div>
   );
 }

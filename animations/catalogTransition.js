@@ -2,6 +2,8 @@ import gsap from 'gsap';
 import { CustomEase } from 'gsap/dist/CustomEase';
 import styles from '../styles/Home.module.css';
 
+gsap.registerPlugin(CustomEase);
+
 export default function catalogTransition(q) {
   const collapsingDuration = 1;
 

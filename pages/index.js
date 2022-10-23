@@ -10,6 +10,7 @@ import heroScroll from '../animations/heroScroll';
 import mapScroll from '../animations/mapScroll';
 import balloonTransition from '../animations/balloonTransition';
 import catalogTransition from '../animations/catalogTransition';
+import catalog2Transition from '../animations/catalog2Transition';
 
 import Navbar from '../components/navbar/Navbar';
 import MapScene from '../components/mapScene/MapScene';
@@ -48,7 +49,8 @@ export default function Home() {
       .add(balloonTransition(q))
       .addLabel('balloonScene')
       .add(catalogTransition(q))
-      .addLabel('CatalogScene');
+      .addLabel('CatalogScene')
+      .add(catalog2Transition(q));
   });
   return (
     <div ref={el}>
