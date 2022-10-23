@@ -20,5 +20,31 @@ export default function catalog2Transition(q) {
       bottom: '75%',
       duration: 1,
       ease: 'power2.inOut',
+    })
+    .from(
+      q(`.${styles.catalogScene} .${styles.catalogItem}`),
+      {
+        top: '100%',
+        duration: 1,
+        ease: 'power2.inOut',
+      },
+      '<',
+    )
+    .fromTo(
+      q(`.${styles.catalogPhoneContainer}`),
+      {
+        top: '100%',
+      },
+      {
+        top: '60%',
+        duration: 1,
+        ease: 'power2.inOut',
+      },
+      '<+=0.5',
+    )
+    .to(q(`.${styles.catalog2TextContainer}`), {
+      filter: 'blur(0px)',
+      opacity: 1,
+      duration: 1,
     });
 }

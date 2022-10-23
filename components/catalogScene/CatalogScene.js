@@ -60,7 +60,7 @@ export default function CatalogScene() {
             '0%': { opacity: 0, scale: 1, y: '40vh' },
             '15%': { opacity: 1, scale: 2, y: '25vh' },
             '80%': { y: '25vh' },
-            '100%': { y: '0vh' },
+            '100%': { y: '0vh', ease: 'back' },
           },
           duration: 3,
         },
@@ -83,6 +83,9 @@ export default function CatalogScene() {
             key={i}
           />
         ))}
+      </div>
+      <div className={styles.catalog2TextContainer}>
+        <h1 className={styles.header}>Or add to it.</h1>
       </div>
       <CatalogItemVector index={nextIndex} />
       <PhoneVector index={nextIndex} />

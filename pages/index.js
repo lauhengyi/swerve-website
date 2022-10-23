@@ -50,7 +50,8 @@ export default function Home() {
       .addLabel('balloonScene')
       .add(catalogTransition(q))
       .addLabel('CatalogScene')
-      .add(catalog2Transition(q));
+      .add(catalog2Transition(q))
+      .addLabel('Catalog2Scene');
   });
   return (
     <div ref={el}>
