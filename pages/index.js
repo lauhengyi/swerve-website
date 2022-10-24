@@ -21,6 +21,8 @@ import BalloonTransitionScene from '../components/balloonScene/BalloonTransition
 import BalloonScene from '../components/balloonScene/BalloonScene';
 import CatalogTransitionScene from '../components/catalogScene/CatalogTransitionScene';
 import CatalogScene from '../components/catalogScene/CatalogScene';
+import navbarToBlack from '../animations/navbarToBlack';
+import navbarToWhite from '../animations/navbarToWhite';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,12 +49,15 @@ export default function Home() {
       .add(heroLoading(q))
       .addLabel('heroScene')
       .add(heroTransition(q))
+      .add(navbarToBlack(q), '<')
       .add(mapTransition(q))
       .addLabel('mapScene')
       .add(balloonTransition(q))
       .addLabel('balloonScene')
       .add(catalogTransition(q))
+      .add(navbarToWhite(q), '<')
       .addLabel('CatalogScene')
+      .add(navbarToBlack(q), '-=1')
       .add(catalog2Transition(q))
       .addLabel('Catalog2Scene');
 
