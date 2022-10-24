@@ -1,28 +1,18 @@
 import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
-import mapSceneAnimation from './mapSceneAnimation';
 
 export default function mapScroll(q) {
-  let mapSceneAnimationID = null;
-
-  const runAnimation = () => {
-    if (mapSceneAnimationID === null) {
-      mapSceneAnimationID = mapSceneAnimation(q);
-    }
-  };
-
-  const stopAnimation = () => {
-    clearInterval(mapSceneAnimationID);
-    mapSceneAnimationID = null;
-  };
-
   return gsap
     .timeline({
       default: { ease: 'power2.inOut' },
-      onReverseComplete: stopAnimation,
-      onComplete: stopAnimation,
     })
-    .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 4 })
+    .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 4 }, '<')
+    .fromTo(
+      q(`.${styles.droppers}`),
+      { opacity: 0 },
+      { opacity: 1, duration: 1 },
+      '<',
+    )
     .fromTo(
       q(`.${styles.buildings} > rect`),
       { opacity: 0, scale: 1.5, y: 100 },
@@ -43,8 +33,6 @@ export default function mapScroll(q) {
         opacity: 1,
         '--blur': '0',
         duration: 1,
-
-        onComplete: runAnimation,
       },
       '<',
     )

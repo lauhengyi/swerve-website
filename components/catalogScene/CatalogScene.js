@@ -66,7 +66,7 @@ export default function CatalogScene() {
         },
         '<+=1',
       );
-  }, [catalogs]);
+  }, [catalogs, q]);
 
   return (
     <div ref={el} className={`${styles.sceneContainer} ${styles.catalogScene}`}>

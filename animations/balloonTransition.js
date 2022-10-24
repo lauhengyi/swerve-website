@@ -1,25 +1,9 @@
 import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
-import balloonSceneAnimation from './balloonSceneAnimation';
 
 export default function balloonTransition(q) {
-  let balloonSceneAnimationID = null;
-
-  const runAnimation = () => {
-    if (balloonSceneAnimationID === null) {
-      balloonSceneAnimationID = balloonSceneAnimation(q);
-    }
-  };
-  const stopAnimation = () => {
-    clearInterval(balloonSceneAnimationID);
-    balloonSceneAnimationID = null;
-  };
-
   return gsap
-    .timeline({
-      onComplete: runAnimation,
-      onReverseComplete: stopAnimation,
-    })
+    .timeline()
     .fromTo(
       q(`.${styles.transitionContainer} .${styles.balloonVector}`),
       { y: '100vh', yPercent: 0 },

@@ -1655,41 +1655,43 @@ export default function MapVector() {
         <rect x="1519" y="939" width="37" height="18" fill="#D9D9D9" />
         <rect x="1459" y="951" width="23" height="21" fill="#D9D9D9" />
       </g>
-      {
-        // Adding droppers
-        [...Array(numberOfDroppers)].map((_, i) => (
-          <svg
-            key={i}
-            width="67"
-            height="94"
-            viewBox="0 0 67 94"
-            fill="none"
-            className={styles.dropper}
-            x="500"
-            y="500"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <ellipse
-              cx="33.5"
-              cy="33.3353"
-              rx="33.5"
-              ry="33.3353"
-              fill="white"
-            />
-            <path
-              d="M33.6107 94L14.9568 50.5264L52.2647 50.5264L33.6107 94Z"
-              fill="white"
-            />
-            <ellipse
-              cx="33.4446"
-              cy="33.3904"
-              rx="28.6826"
-              ry="28.5416"
-              fill="#ADFF00"
-            />
-          </svg>
-        ))
-      }
+      <g className={styles.droppers}>
+        {
+          // Adding droppers
+          [...Array(numberOfDroppers)].map((_, i) => (
+            <svg
+              key={i}
+              width="67"
+              height="94"
+              viewBox="0 0 67 94"
+              fill="none"
+              className={styles.dropper}
+              x="500"
+              y="500"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="33.5"
+                cy="33.3353"
+                rx="33.5"
+                ry="33.3353"
+                fill="white"
+              />
+              <path
+                d="M33.6107 94L14.9568 50.5264L52.2647 50.5264L33.6107 94Z"
+                fill="white"
+              />
+              <ellipse
+                cx="33.4446"
+                cy="33.3904"
+                rx="28.6826"
+                ry="28.5416"
+                fill="#ADFF00"
+              />
+            </svg>
+          ))
+        }
+      </g>
     </svg>
   );
 }

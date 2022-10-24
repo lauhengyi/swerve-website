@@ -12,6 +12,9 @@ import balloonTransition from '../animations/balloonTransition';
 import catalogTransition from '../animations/catalogTransition';
 import catalog2Transition from '../animations/catalog2Transition';
 
+import mapSceneAnimation from '../animations/mapSceneAnimation';
+import balloonSceneAnimation from '../animations/balloonSceneAnimation';
+
 import Navbar from '../components/navbar/Navbar';
 import MapScene from '../components/mapScene/MapScene';
 import BalloonTransitionScene from '../components/balloonScene/BalloonTransitionScene';
@@ -37,7 +40,7 @@ export default function Home() {
             snapTo: 'labelsDirectional',
             ease: 'linear',
             inertia: false,
-            duration: { min: 2, max: 3 },
+            duration: { min: 0.5, max: 6 },
           },
         },
       })
@@ -52,6 +55,15 @@ export default function Home() {
       .addLabel('CatalogScene')
       .add(catalog2Transition(q))
       .addLabel('Catalog2Scene');
+
+    // Play scene animations
+    const balloonScene = balloonSceneAnimation(q);
+    const mapScene = mapSceneAnimation(q);
+
+    return () => {
+      clearInterval(balloonScene);
+      clearInterval(mapScene);
+    };
   });
   return (
     <div ref={el}>

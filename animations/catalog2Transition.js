@@ -16,11 +16,15 @@ export default function catalog2Transition(q) {
         duration: 1,
       },
     )
-    .to(q(`.${styles.catalogPanningRow}`), {
-      bottom: '75%',
-      duration: 1,
-      ease: 'power2.inOut',
-    })
+    .to(
+      q(`.${styles.catalogPanningRow}`),
+      {
+        bottom: '75%',
+        duration: 1,
+        ease: 'power2.inOut',
+      },
+      '-=0.5',
+    )
     .from(
       q(`.${styles.catalogScene} .${styles.catalogItem}`),
       {
@@ -42,9 +46,13 @@ export default function catalog2Transition(q) {
       },
       '<+=0.5',
     )
-    .to(q(`.${styles.catalog2TextContainer}`), {
-      filter: 'blur(0px)',
-      opacity: 1,
-      duration: 1,
-    });
+    .to(
+      q(`.${styles.catalog2TextContainer}`),
+      {
+        filter: 'blur(0px)',
+        opacity: 1,
+        duration: 1,
+      },
+      '-=0.5',
+    );
 }
