@@ -34,15 +34,14 @@ export default function Home() {
       .timeline({
         scrollTrigger: {
           trigger: q(`.${styles.hero}`),
-          scrub: 1,
+          scrub: 2,
           pin: true,
-          start: 'top top',
-          end: '12000',
+          end: '10000',
           snap: {
             snapTo: 'labelsDirectional',
             ease: 'linear',
             inertia: false,
-            duration: { min: 0.5, max: 6 },
+            duration: { min: 2, max: 5 },
           },
         },
       })
