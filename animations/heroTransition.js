@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
 
-export default function heroScroll(q) {
+export default function heroTransition(q) {
   return gsap
     .timeline({
       defaults: { ease: 'power2.inOut' },

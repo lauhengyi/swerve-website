@@ -6,8 +6,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import heroLoading from '../animations/heroLoading';
-import heroScroll from '../animations/heroScroll';
-import mapScroll from '../animations/mapScroll';
+import heroTransition from '../animations/heroTransition';
+import mapTransition from '../animations/mapTransition';
 import balloonTransition from '../animations/balloonTransition';
 import catalogTransition from '../animations/catalogTransition';
 import catalog2Transition from '../animations/catalog2Transition';
@@ -46,8 +46,8 @@ export default function Home() {
       })
       .add(heroLoading(q))
       .addLabel('heroScene')
-      .add(heroScroll(q))
-      .add(mapScroll(q))
+      .add(heroTransition(q))
+      .add(mapTransition(q))
       .addLabel('mapScene')
       .add(balloonTransition(q))
       .addLabel('balloonScene')

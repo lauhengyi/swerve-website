@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import styles from '../styles/Home.module.css';
 
-export default function mapScroll(q) {
+export default function mapTransition(q) {
   return gsap
     .timeline({
       default: { ease: 'power2.inOut' },
