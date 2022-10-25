@@ -35,7 +35,7 @@
   transform: translate(-50%, 0);
 
   font-variation-settings: 'wght' 800;
-  font-size: min(18rem, 20vw);
+  font-size: min(30vh, 20vw);
   white-space: nowrap;
   z-index: 1;
 
@@ -44,7 +44,7 @@
 
 .header {
   font-variation-settings: 'wght' 500;
-  font-size: min(7rem, 11vw);
+  font-size: min(15vh, 11vw);
   color: var(--pure-black);
   text-align: center;
 
@@ -133,7 +133,7 @@
 
 .caption {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 5vh;
   color: var(--pure-black);
   opacity: 1;
   margin-top: 1rem;
@@ -181,7 +181,7 @@
   position: absolute;
   top: 20%;
   left: 8%;
-  width: min(55rem, 84vw);
+  width: min(120vh, 84vw);
   z-index: 3;
 }
 
@@ -235,7 +235,7 @@
 .balloonTextContainer {
   top: 20%;
   right: 8%;
-  width: min(52rem, 84vw);
+  width: min(100vh, 84vw);
   position: absolute;
   z-index: 1;
 }
@@ -572,7 +572,7 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 38rem) {
+@media screen and (max-width: 60vh) {
   .catalog2TextContainer {
     transform: translate(0, 0);
     width: min(40vw);
@@ -580,7 +580,7 @@
   }
 }
 
-@media screen and (max-width: 80rem) {
+@media screen and (max-width: 140vh) {
   .catalogPanningRow {
     left: -10vh;
   }
