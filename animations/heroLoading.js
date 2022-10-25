@@ -7,10 +7,10 @@ export default function heroLoading(q) {
     .fromTo(
       q(`.${styles.title}`),
       {
-        '--blur': '50px',
+        filter: 'blur(50px)',
       },
       {
-        '--blur': '0',
+        filter: 'blur(0px)',
         duration: 1,
         ease: 'power1.in',
       },
@@ -39,8 +39,8 @@ export default function heroLoading(q) {
     )
     .fromTo(
       q(`.${styles.captionContainer} .${styles.caption}`),
-      { '--blur': '10px', opacity: 0 },
-      { '--blur': '0', opacity: 1, duration: 1 },
+      { filter: 'blur(10px)', opacity: 0 },
+      { filter: 'blur(0px)', opacity: 1, duration: 1 },
       '-=0.8',
     );
 }

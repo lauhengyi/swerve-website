@@ -29,6 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   let el = useRef();
   let q = gsap.utils.selector(el);
+
   useEffect(() => {
     gsap
       .timeline({

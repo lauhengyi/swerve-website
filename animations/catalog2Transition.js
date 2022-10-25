@@ -7,11 +7,11 @@ export default function catalog2Transition(q) {
     .fromTo(
       q(`.${styles.catalogTextContainer}`),
       {
-        '--blur': '0px',
+        filter: 'blur(0px)',
         opacity: 1,
       },
       {
-        '--blur': '50px',
+        filter: 'blur(50px)',
         opacity: 0,
         duration: 1,
       },
