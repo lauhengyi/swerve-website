@@ -18,7 +18,7 @@ export default function heroTransition(q) {
     )
     .to(
       q(`.${styles.captionContainer} .${styles.caption}`),
-      { '--blur': '10px', opacity: 0, duration: 1.5 },
+      { filter: 'blur(10px)', opacity: 0, duration: 1.5 },
       '<',
     );
 }

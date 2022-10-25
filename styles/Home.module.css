@@ -39,8 +39,7 @@
   white-space: nowrap;
   z-index: 1;
 
-  --blur: 0;
-  filter: blur(var(--blur));
+  filter: blur(0);
 }
 
 .header {
@@ -49,8 +48,7 @@
   color: var(--pure-black);
   text-align: center;
 
-  --blur: 0;
-  filter: blur(var(--blur));
+  filter: blur(0);
 }
 
 .circle {
@@ -139,8 +137,7 @@
   color: var(--pure-black);
   opacity: 1;
   margin-top: 1rem;
-  --blur: 0;
-  filter: blur(var(--blur));
+  filter: blur(0);
 }
 
 .accentText {
@@ -553,8 +550,7 @@
   transform: translate(-50%, 0);
   width: min(180vh, 84vw);
   max-height: 40vh;
-  --blur: 0;
-  filter: blur(var(--blur));
+  filter: blur(0);
 }
 
 .catalog2TextContainer {
