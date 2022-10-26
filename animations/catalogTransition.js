@@ -116,7 +116,7 @@ export default function catalogTransition(q) {
     'M0,0,C0,0,0.644,0.89,0.644,0.89,0.75,1.038,0.95,1.012,1,1',
   );
 
-  const amountToSlide1 = 300;
+  const amountToSlide1 = 150;
   const slideDuration1 = 5;
   const slideDuration2 = 3;
   const amountToSlide2 = amountToSlide1 * (slideDuration2 / slideDuration1);

@@ -8,7 +8,7 @@ import PhoneVector from './PhoneVector';
 import catalogSceneAnimation from '../../animations/catalogSceneAnimation';
 
 export default function CatalogScene() {
-  const numberOfCatalogs = 30;
+  const numberOfCatalogs = 20;
   let el = useRef();
   let q = gsap.utils.selector(el);
 
