@@ -1,5 +1,6 @@
 import React from 'react';
 import NavbarButton from './NavbarButton';
+import LanguageButton from './languageButton';
 import styles from '../../styles/Navbar.module.css';
 
 const Navbar = () => {
@@ -30,6 +31,7 @@ const Navbar = () => {
         <NavbarButton text="Contact" href="/Contact" />
         <NavbarButton text="Download" href="/Download" />
       </ul>
+      <LanguageButton />
     </div>
   );
 };
