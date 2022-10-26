@@ -95,7 +95,7 @@ export default function Home() {
             <div className={`${styles.displayPhone} ${styles.phone1}`}>
               <Image
                 src="/phones/1.png"
-                alt="phone1"
+                alt="For you screen"
                 layout="fill"
                 objectFit="contain"
               />
@@ -103,7 +103,7 @@ export default function Home() {
             <div className={`${styles.displayPhone} ${styles.phone2}`}>
               <Image
                 src="/phones/2.png"
-                alt="phone1"
+                alt="Login screen"
                 layout="fill"
                 objectFit="contain"
               />
@@ -111,7 +111,7 @@ export default function Home() {
             <div className={`${styles.displayPhone} ${styles.phone3}`}>
               <Image
                 src="/phones/3.png"
-                alt="phone1"
+                alt="Catalog screen"
                 layout="fill"
                 objectFit="contain"
               />
