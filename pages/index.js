@@ -54,11 +54,11 @@ export default function Home() {
       .addLabel('mapScene')
       .add(balloonTransition(q))
       .addLabel('balloonScene')
-      .add(catalogTransition(q))
+      .add(catalogTransition(q), '+=2')
       .add(navbarToWhite(q), '<')
       .addLabel('CatalogScene')
       .add(navbarToBlack(q), '-=1')
-      .add(catalog2Transition(q))
+      .add(catalog2Transition(q), '+=2')
       .addLabel('Catalog2Scene');
 
     // Play scene animations
