@@ -94,7 +94,7 @@ export default function Home() {
           <div className={styles.displayPhoneContainer}>
             <div className={`${styles.displayPhone} ${styles.phone1}`}>
               <Image
-                src="/phones/1.svg"
+                src="/phones/1.png"
                 alt="phone1"
                 layout="fill"
                 objectFit="contain"
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <div className={`${styles.displayPhone} ${styles.phone2}`}>
               <Image
-                src="/phones/2.svg"
+                src="/phones/2.png"
                 alt="phone1"
                 layout="fill"
                 objectFit="contain"
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
             <div className={`${styles.displayPhone} ${styles.phone3}`}>
               <Image
-                src="/phones/3.svg"
+                src="/phones/3.png"
                 alt="phone1"
                 layout="fill"
                 objectFit="contain"
