@@ -39,7 +39,7 @@ export default function mapTransition(q) {
     .fromTo(
       q(`.${styles.mapTextContainer} .${styles.caption}`),
       { opacity: 0, filter: 'blur(10px)' },
-      { opacity: 1, filter: 'blur(0)', duration: 1 },
+      { opacity: 1, filter: 'blur(0px)', duration: 1 },
       '<+=0.5',
     );
 }

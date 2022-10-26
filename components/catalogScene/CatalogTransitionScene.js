@@ -6,7 +6,7 @@ import CatalogCoinVector from './CatalogCoinVector';
 import catalogItems from '../content/catalogItems';
 
 export default function CatalogTransitionScene() {
-  const numberOfItemsBetween = 40;
+  const numberOfItemsBetween = 20;
   const [catalogItemIndexes, setCatalogItemsIndexes] = useState([
     0, 1, 2, 3, 4, 5, 6, 7,
   ]);
