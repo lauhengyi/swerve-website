@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
+import AppContext from '../AppContext';
+import homeText from '../../texts/homeText';
 import styles from '../../styles/Home.module.css';
 import gsap from 'gsap';
 import CatalogVector from './CatalogVector';
@@ -8,6 +10,7 @@ import PhoneVector from './PhoneVector';
 import catalogSceneAnimation from '../../animations/catalogSceneAnimation';
 
 export default function CatalogScene() {
+  const { lang } = useContext(AppContext);
   const numberOfCatalogs = 20;
   let el = useRef();
   let q = gsap.utils.selector(el);
@@ -71,9 +74,7 @@ export default function CatalogScene() {
   return (
     <div ref={el} className={`${styles.sceneContainer} ${styles.catalogScene}`}>
       <div className={styles.catalogTextContainer}>
-        <h1 className={styles.header}>
-          Look through the catalog of shops in your area...
-        </h1>
+        <h1 className={styles.header}>{homeText.catalog.header}</h1>
       </div>
       <div className={styles.catalogPanningRow}>
         {catalogs.map((values, i) => (
@@ -85,7 +86,7 @@ export default function CatalogScene() {
         ))}
       </div>
       <div className={styles.catalog2TextContainer}>
-        <h1 className={styles.header}>Or add to it.</h1>
+        <h1 className={styles.header}>{homeText.catalog.header2}</h1>
       </div>
       <CatalogItemVector index={nextIndex} />
       <PhoneVector index={nextIndex} />

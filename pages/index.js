@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
@@ -11,6 +11,8 @@ import mapTransition from '../animations/mapTransition';
 import balloonTransition from '../animations/balloonTransition';
 import catalogTransition from '../animations/catalogTransition';
 import catalog2Transition from '../animations/catalog2Transition';
+import navbarToBlack from '../animations/navbarToBlack';
+import navbarToWhite from '../animations/navbarToWhite';
 
 import mapSceneAnimation from '../animations/mapSceneAnimation';
 import balloonSceneAnimation from '../animations/balloonSceneAnimation';
@@ -21,12 +23,14 @@ import BalloonTransitionScene from '../components/balloonScene/BalloonTransition
 import BalloonScene from '../components/balloonScene/BalloonScene';
 import CatalogTransitionScene from '../components/catalogScene/CatalogTransitionScene';
 import CatalogScene from '../components/catalogScene/CatalogScene';
-import navbarToBlack from '../animations/navbarToBlack';
-import navbarToWhite from '../animations/navbarToWhite';
 
+import AppContext from '../components/AppContext';
+import homeText from '../texts/homeText';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const { lang } = useContext(AppContext);
+  console.log({ lang });
   let el = useRef();
   let q = gsap.utils.selector(el);
 
@@ -70,21 +74,22 @@ export default function Home() {
       clearInterval(mapScene);
     };
   });
+
   return (
     <div ref={el}>
       <Head>
-        <title>Swerve</title>
+        <title>SWERVE</title>
         <link rel="icon" href="/swerve_icon.png" />
       </Head>
       <main className={styles.main}>
         <Navbar />
         <section className={styles.hero}>
-          <h1 className={styles.title}>SWERVE</h1>
+          <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
           <span className={styles.background}>
-            <h1 className={styles.title}>SWERVE</h1>
+            <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
           </span>
           <span className={styles.circle}>
-            <h1 className={styles.title}>SWERVE</h1>
+            <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
             <CatalogScene />
             <BalloonScene />
             <MapScene />
@@ -118,7 +123,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.captionContainer}>
-            <p className={styles.caption}>Connecting merchants to customers</p>
+            <p className={styles.caption}>{homeText.hero.caption[lang]}</p>
           </div>
         </section>
       </main>

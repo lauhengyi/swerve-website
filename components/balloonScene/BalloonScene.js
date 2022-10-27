@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../AppContext';
+import homeText from '../../texts/homeText';
 import BalloonVector from './BalloonVector';
 import styles from '../../styles/Home.module.css';
 
 export default function BalloonScene() {
+  const { lang } = useContext(AppContext);
   const balloonText = [
     '10%',
     '20%',
@@ -18,10 +21,10 @@ export default function BalloonScene() {
     <div className={`${styles.sceneContainer} ${styles.balloonScene}`}>
       <div className={styles.boundingContainer}>
         <div className={styles.balloonTextContainer}>
-          <h1 className={styles.header}>Good deals come and go</h1>
+          <h1 className={styles.header}>{homeText.balloon.header}</h1>
           <p className={styles.caption}>
-            We help you catch them{' '}
-            <span className={styles.accentText}>as they come</span>
+            {homeText.balloon.caption[lang]}
+            <span className={styles.accentText}>{homeText.balloon.accent}</span>
           </p>
         </div>
         <div className={styles.balloonHoldingContainer}>
