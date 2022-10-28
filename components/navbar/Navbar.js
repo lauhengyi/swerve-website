@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../AppContext';
+import navbarText from '../../texts/navbarText';
 import NavbarButton from './NavbarButton';
 import LanguageButton from './languageButton';
 import styles from '../../styles/Navbar.module.css';
 
 const Navbar = () => {
+  const { lang } = useContext(AppContext);
+
   return (
     <div className={styles.navigation}>
       <div className={styles.logoContainer}>
@@ -26,10 +30,10 @@ const Navbar = () => {
         </svg>
       </div>
       <ul>
-        <NavbarButton text="Home" href="/" />
-        <NavbarButton text="About" href="/About" />
-        <NavbarButton text="Contact" href="/Contact" />
-        <NavbarButton text="Download" href="/Download" />
+        <NavbarButton text={navbarText.home[lang]} href="/" />
+        <NavbarButton text={navbarText.about[lang]} href="/About" />
+        <NavbarButton text={navbarText.contact[lang]} href="/Contact" />
+        <NavbarButton text={navbarText.download[lang]} href="/Download" />
       </ul>
       <LanguageButton />
     </div>
