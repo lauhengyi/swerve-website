@@ -34,7 +34,7 @@ export default function Home() {
   let q = gsap.utils.selector(el);
 
   useEffect(() => {
-    gsap
+    const scrollAnimation = gsap
       .timeline({
         scrollTrigger: {
           trigger: q(`.${styles.hero}`),
@@ -61,14 +61,16 @@ export default function Home() {
       .add(navbarToWhite(q), '<')
       .addLabel('CatalogScene')
       .add(navbarToBlack(q), '-=1')
-      .add(catalog2Transition(q), '+=2')
+      .add(catalog2Transition(q), '+=1.5')
       .addLabel('Catalog2Scene');
 
+    scrollAnimation.play();
     // Play scene animations
     const balloonScene = balloonSceneAnimation(q);
     const mapScene = mapSceneAnimation(q);
 
     return () => {
+      scrollAnimation.revert();
       clearInterval(balloonScene);
       clearInterval(mapScene);
     };

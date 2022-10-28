@@ -27,8 +27,8 @@ export default function CatalogScene() {
   const nextIndex = catalogs[0].index;
 
   useEffect(() => {
-    gsap
-      .timeline()
+    const catalogAnimation = gsap
+      .timeline({ paused: true })
       .fromTo(
         q(`.${styles.catalogPanningRow}`),
         { x: '0' },
@@ -69,6 +69,11 @@ export default function CatalogScene() {
         },
         '<+=1',
       );
+
+    catalogAnimation.play();
+    return () => {
+      catalogAnimation.kill();
+    };
   }, [catalogs, q]);
 
   return (
