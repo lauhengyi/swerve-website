@@ -44,7 +44,7 @@
 
 .header {
   font-variation-settings: 'wght' 500;
-  font-size: min(15vh, 11vw);
+  font-size: min(14vh, 10vw);
   color: var(--pure-black);
   text-align: center;
 
@@ -547,9 +547,10 @@
   position: absolute;
   bottom: 50%;
   left: 50%;
+  top: 10%;
   transform: translate(-50%, 0);
   width: min(180vh, 84vw);
-  max-height: 40vh;
+  max-height: 50vh;
   filter: blur(0);
 }
 

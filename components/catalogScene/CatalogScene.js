@@ -74,7 +74,7 @@ export default function CatalogScene() {
   return (
     <div ref={el} className={`${styles.sceneContainer} ${styles.catalogScene}`}>
       <div className={styles.catalogTextContainer}>
-        <h1 className={styles.header}>{homeText.catalog.header}</h1>
+        <h1 className={styles.header}>{homeText.catalog.header[lang]}</h1>
       </div>
       <div className={styles.catalogPanningRow}>
         {catalogs.map((values, i) => (
@@ -86,7 +86,7 @@ export default function CatalogScene() {
         ))}
       </div>
       <div className={styles.catalog2TextContainer}>
-        <h1 className={styles.header}>{homeText.catalog.header2}</h1>
+        <h1 className={styles.header}>{homeText.catalog.header2[lang]}</h1>
       </div>
       <CatalogItemVector index={nextIndex} />
       <PhoneVector index={nextIndex} />

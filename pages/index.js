@@ -30,7 +30,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const { lang } = useContext(AppContext);
-  console.log({ lang });
   let el = useRef();
   let q = gsap.utils.selector(el);
 
