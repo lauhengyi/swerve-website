@@ -64,7 +64,6 @@ export default function Home() {
       .add(catalog2Transition(q), '+=1.5')
       .addLabel('Catalog2Scene');
 
-    scrollAnimation.play();
     // Play scene animations
     const balloonScene = balloonSceneAnimation(q);
     const mapScene = mapSceneAnimation(q);
