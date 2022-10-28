@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import AppContext from '../AppContext';
 import navbarText from '../../texts/navbarText';
 import NavbarButton from './NavbarButton';
-import LanguageButton from './languageButton';
+import LanguageButton from './LanguageButton';
 import styles from '../../styles/Navbar.module.css';
 
 const Navbar = () => {
