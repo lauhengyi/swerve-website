@@ -104,6 +104,7 @@ export default function Home() {
                 alt="For you screen"
                 layout="fill"
                 objectFit="contain"
+                priority
               />
             </div>
             <div className={`${styles.displayPhone} ${styles.phone2}`}>
@@ -112,6 +113,7 @@ export default function Home() {
                 alt="Login screen"
                 layout="fill"
                 objectFit="contain"
+                priority
               />
             </div>
             <div className={`${styles.displayPhone} ${styles.phone3}`}>
@@ -120,6 +122,7 @@ export default function Home() {
                 alt="Catalog screen"
                 layout="fill"
                 objectFit="contain"
+                priority
               />
             </div>
           </div>
