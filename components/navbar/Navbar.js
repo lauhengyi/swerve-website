@@ -4,6 +4,7 @@ import navbarText from '../../texts/navbarText';
 import NavbarButton from './NavbarButton';
 import LanguageButton from './LanguageButton';
 import styles from '../../styles/Navbar.module.css';
+import MenuButton from './menuButton';
 
 const Navbar = () => {
   const { lang } = useContext(AppContext);
@@ -35,6 +36,7 @@ const Navbar = () => {
         <NavbarButton text={navbarText.contact[lang]} href="/Contact" />
         <NavbarButton text={navbarText.download[lang]} href="/Download" />
       </ul>
+      <MenuButton />
       <LanguageButton />
     </div>
   );
