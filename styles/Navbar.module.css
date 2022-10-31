@@ -60,6 +60,7 @@
 
 /* Menu */
 .menu {
+  display: none;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -98,7 +99,7 @@
 
 .menuButtonContainer {
   margin-right: 3rem;
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -120,6 +121,25 @@
   height: 0.14rem;
   border-radius: 1rem;
   background-color: var(--nav-color);
+}
+
+/* Add menu instead of navbar after certain aspect ratio */
+@media screen and (max-width: 85vh) {
+  .menu {
+    display: block;
+  }
+
+  .navigation ul {
+    display: none;
+  }
+
+  .navigation .menu ul {
+    display: flex;
+  }
+
+  .menuButtonContainer {
+    display: flex;
+  }
 }
 
 /* Language Button */
