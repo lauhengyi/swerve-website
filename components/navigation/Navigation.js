@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from '../../styles/Navigation.module.css';
 import Navbar from './Navbar';
 import Menu from './Menu';
 import gsap from 'gsap';
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMenuOpen = useRef(false);
 
   const el = useRef();
   const menuOpenAnimation = useRef();
@@ -22,17 +22,17 @@ export default function Navigation() {
       );
   });
   const toggleMenu = () => {
-    if (isMenuOpen) {
+    if (isMenuOpen.current) {
       menuOpenAnimation.current.reverse();
     } else {
       menuOpenAnimation.current.play();
     }
-    setIsMenuOpen(!isMenuOpen);
+    isMenuOpen.current = !isMenuOpen.current;
   };
 
   return (
     <div ref={el} className={styles.navigation}>
-      <Menu isMenuOpen={isMenuOpen} />
+      <Menu toggleMenu={toggleMenu} />
       <Navbar toggleMenu={toggleMenu} />
     </div>
   );

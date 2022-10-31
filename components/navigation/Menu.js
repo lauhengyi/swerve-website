@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useRef } from 'react';
 import AppContext from '../AppContext';
 import navbarText from '../../texts/navbarText';
 import NavbarButton from './NavbarButton';
+import Navbar from './Navbar';
 import gsap from 'gsap';
 import styles from '../../styles/Navigation.module.css';
 
-export default function Menu() {
+export default function Menu({ toggleMenu }) {
   const { lang } = useContext(AppContext);
   let el = useRef();
 
@@ -27,6 +28,7 @@ export default function Menu() {
   });
   return (
     <div ref={el} className={styles.menu}>
+      <Navbar toggleMenu={toggleMenu} />
       <ul>
         <NavbarButton text={navbarText.home[lang]} href="/" />
         <NavbarButton text={navbarText.about[lang]} href="/About" />

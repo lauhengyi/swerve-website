@@ -75,7 +75,7 @@
   z-index: 2000;
 
   --clip: 0vh;
-  clip-path: circle(var(--clip) at 100% 0);
+  clip-path: circle(var(--clip) at 85% 5%);
 }
 
 .menu ul {
