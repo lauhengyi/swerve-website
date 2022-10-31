@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import styles from '../styles/Navigation.module.css';
 
 export default function navbarToWhite(q) {
-  return gsap.timeline().to(q(`.${styles.navbar}`), {
+  return gsap.timeline().to(q(`:not(.${styles.menu}) > .${styles.navbar}`), {
     '--nav-color': '#f6f6f6',
     duration: 1,
   });

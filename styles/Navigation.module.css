@@ -79,7 +79,8 @@
 }
 
 .menu ul {
-  height: 25vh;
+  margin-top: 5vh;
+  height: 23vh;
   list-style-type: none;
   display: flex;
   flex-direction: column;

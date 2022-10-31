@@ -18,7 +18,7 @@ export default function Navigation() {
       .fromTo(
         q(`.${styles.menu}`),
         { '--clip': '0vh' },
-        { '--clip': '150vh', duration: 1 },
+        { '--clip': '150vh', duration: 0.7 },
       );
   });
   const toggleMenu = () => {
