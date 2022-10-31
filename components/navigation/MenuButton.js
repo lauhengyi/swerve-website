@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/Navbar.module.css';
+import styles from '../../styles/Navigation.module.css';
 
 export default function MenuButton({ toggleMenu }) {
   return (

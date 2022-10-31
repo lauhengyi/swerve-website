@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import AppContext from '../AppContext';
-import styles from '../../styles/Navbar.module.css';
+import styles from '../../styles/Navigation.module.css';
 
 export default function LanguageButton() {
   const { lang, setLang } = useContext(AppContext);

@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import styles from '../styles/Navbar.module.css';
+import styles from '../styles/Navigation.module.css';
 
 export default function navbarToBlack(q) {
   return gsap.timeline().to(q(`.${styles.navigation}`), {

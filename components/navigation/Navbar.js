@@ -1,46 +1,16 @@
-import React, { useContext, useState, useRef, useEffect } from 'react';
+import React, { useContext } from 'react';
 import AppContext from '../AppContext';
 import navbarText from '../../texts/navbarText';
 import NavbarButton from './NavbarButton';
 import LanguageButton from './LanguageButton';
-import styles from '../../styles/Navbar.module.css';
+import styles from '../../styles/Navigation.module.css';
 import MenuButton from './menuButton';
-import Menu from './Menu';
-import gsap from 'gsap';
 
-const Navbar = () => {
+export default function Navbar({ toggleMenu }) {
   const { lang } = useContext(AppContext);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const el = useRef();
-  const menuOpenAnimation = useRef();
-  let q = gsap.utils.selector(el);
-
-  useEffect(() => {
-    menuOpenAnimation.current = gsap
-      .timeline({ paused: true })
-      .fromTo(
-        q(`.${styles.menu}`),
-        { '--clip': '0vh' },
-        { '--clip': '150vh', duration: 1 },
-      );
-
-    // return () => {
-    //   menuOpenAnimation.current.kill();
-    //   setIsMenuOpen(false);
-    // };
-  });
-  const toggleMenu = () => {
-    if (isMenuOpen) {
-      menuOpenAnimation.current.reverse();
-    } else {
-      menuOpenAnimation.current.play();
-    }
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
-    <div ref={el} className={styles.navigation}>
+    <div className={styles.navbar}>
       <div className={styles.logoContainer}>
         <svg
           className={styles.logo}
@@ -68,9 +38,6 @@ const Navbar = () => {
       </ul>
       <LanguageButton />
       <MenuButton toggleMenu={toggleMenu} />
-      <Menu isMenuOpen={isMenuOpen} />
     </div>
   );
-};
-
-export default Navbar;
+}

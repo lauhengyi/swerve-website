@@ -17,7 +17,7 @@ import navbarToWhite from '../animations/navbarToWhite';
 import mapSceneAnimation from '../animations/mapSceneAnimation';
 import balloonSceneAnimation from '../animations/balloonSceneAnimation';
 
-import Navbar from '../components/navbar/Navbar';
+import Navigation from '../components/navigation/Navigation';
 import MapScene from '../components/mapScene/MapScene';
 import BalloonTransitionScene from '../components/balloonScene/BalloonTransitionScene';
 import BalloonScene from '../components/balloonScene/BalloonScene';
@@ -82,7 +82,7 @@ export default function Home() {
         <link rel="icon" href="/swerve_icon.png" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
+        <Navigation />
         <section className={styles.hero}>
           <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
           <span className={styles.background}>

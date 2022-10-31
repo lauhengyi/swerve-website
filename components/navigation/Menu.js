@@ -3,20 +3,23 @@ import AppContext from '../AppContext';
 import navbarText from '../../texts/navbarText';
 import NavbarButton from './NavbarButton';
 import gsap from 'gsap';
-import styles from '../../styles/Navbar.module.css';
+import styles from '../../styles/Navigation.module.css';
 
 export default function Menu() {
   const { lang } = useContext(AppContext);
   let el = useRef();
 
   useEffect(() => {
-    const menuBackgroundAnimation = gsap
-      .timeline()
-      .fromTo(
-        el.current,
-        { '--gradientSpot': '25%' },
-        { '--gradientSpot': '75%', duration: 10, yoyo: true, repeat: -1 },
-      );
+    const menuBackgroundAnimation = gsap.timeline().fromTo(
+      el.current,
+      { '--gradientSpot': '25%' },
+      {
+        '--gradientSpot': '75%',
+        duration: 8,
+        yoyo: true,
+        repeat: -1,
+      },
+    );
 
     return () => {
       menuBackgroundAnimation.kill();
