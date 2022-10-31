@@ -30,8 +30,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const { lang } = useContext(AppContext);
-  let el = useRef();
-  let q = gsap.utils.selector(el);
+  const el = useRef();
+  const q = gsap.utils.selector(el);
 
   useEffect(() => {
     const scrollAnimation = gsap
@@ -61,7 +61,7 @@ export default function Home() {
       .add(navbarToWhite(q), '<')
       .addLabel('CatalogScene')
       .add(navbarToBlack(q), '-=1')
-      .add(catalog2Transition(q), '+=1.5')
+      .add(catalog2Transition(q), '+=1')
       .addLabel('Catalog2Scene');
 
     // Play scene animations

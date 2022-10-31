@@ -19,7 +19,7 @@ export default function catalog2Transition(q) {
     .to(
       q(`.${styles.catalogPanningRow}`),
       {
-        bottom: '75%',
+        bottom: '73%',
         duration: 1,
         ease: 'power2.inOut',
       },
