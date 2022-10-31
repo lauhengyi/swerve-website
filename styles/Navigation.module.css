@@ -1,9 +1,6 @@
 /* Navigation Bar */
-.navigation {
-  --nav-color: var(--pure-white);
-}
-
 .navbar {
+  --nav-color: var(--pure-white);
   display: flex;
   position: fixed;
   list-style: none;
@@ -30,23 +27,23 @@
   rotate: -360deg;
 }
 
-.navbar ul {
+.navigation ul {
   list-style-type: none;
   display: flex;
   align-items: center;
 }
 
-.navbar li {
+.navigation li {
   display: inline;
   padding: 0 0.5rem;
 }
 
-.navbar li a {
+.navigation li a {
   overflow: hidden;
   display: inline-block;
 }
 
-.navbar a p {
+.navigation a p {
   white-space: nowrap;
   display: inline-block;
   color: var(--nav-color);
@@ -54,7 +51,7 @@
   font-variation-settings: 'wght' 500;
 }
 
-.navbar a span {
+.navigation a span {
   background-color: var(--nav-color);
   display: block;
   height: 0.15rem;
@@ -64,7 +61,7 @@
 /* Menu */
 .menu {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   --gradientSpot: 25%;
@@ -75,6 +72,7 @@
     var(--swerve-orange) calc(var(--gradientSpot) + 5%),
     var(--accent-red) 100%
   );
+  z-index: 2000;
 
   --clip: 0vh;
   clip-path: circle(var(--clip) at 100% 0);
@@ -111,8 +109,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: transparent;
   border: none;
 }
@@ -120,8 +118,8 @@
 .menuButtonLine {
   display: block;
   width: 90%;
-  height: 0.14rem;
-  border-radius: 1rem;
+  height: 0.23rem;
+  border-radius: 0.2rem;
   background-color: var(--nav-color);
 }
 
