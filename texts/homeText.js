@@ -9,7 +9,7 @@ const homeText = {
       'Make your promotions seen by the people who ',
       '让您的优惠呈现在',
     ],
-    accent: ['wants them most', '最合适'],
+    accent: ['want them most', '最合适'],
     caption2: ['', '的顾客手中'],
   },
   balloon: {
@@ -20,7 +20,7 @@ const homeText = {
   catalog: {
     header: [
       'Look through the catalog of shops in your area...',
-      '在你手机的附近程序找到各式各样的商店...',
+      '在您手机附近程序找到各式各样的商店...',
     ],
     header2: ['Or add to it.', '并且加进去'],
   },
