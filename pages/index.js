@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
@@ -18,18 +17,16 @@ import mapSceneAnimation from '../animations/mapSceneAnimation';
 import balloonSceneAnimation from '../animations/balloonSceneAnimation';
 
 import Navigation from '../components/navigation/Navigation';
+import HeroScene from '../components/heroScene/heroScene';
 import MapScene from '../components/mapScene/MapScene';
 import BalloonTransitionScene from '../components/balloonScene/BalloonTransitionScene';
 import BalloonScene from '../components/balloonScene/BalloonScene';
 import CatalogTransitionScene from '../components/catalogScene/CatalogTransitionScene';
 import CatalogScene from '../components/catalogScene/CatalogScene';
 
-import AppContext from '../components/AppContext';
-import homeText from '../texts/homeText';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const { lang } = useContext(AppContext);
   const el = useRef();
   const q = gsap.utils.selector(el);
 
@@ -83,49 +80,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navigation />
-        <section className={`${styles.sceneContainer} ${styles.heroScene}`}>
-          <h1 className={`${styles.title} ${styles.accentText}`}>
-            {homeText.hero.title[lang]}
-          </h1>
-          <span className={styles.background}>
-            <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
-          </span>
-          <span className={styles.circle}>
-            <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
-          </span>
-          <div className={styles.displayPhoneContainer}>
-            <div className={`${styles.displayPhone} ${styles.phone1}`}>
-              <Image
-                src="/phones/1.png"
-                alt="For you screen"
-                layout="fill"
-                objectFit="contain"
-                priority
-              />
-            </div>
-            <div className={`${styles.displayPhone} ${styles.phone2}`}>
-              <Image
-                src="/phones/2.png"
-                alt="Login screen"
-                layout="fill"
-                objectFit="contain"
-                priority
-              />
-            </div>
-            <div className={`${styles.displayPhone} ${styles.phone3}`}>
-              <Image
-                src="/phones/3.png"
-                alt="Catalog screen"
-                layout="fill"
-                objectFit="contain"
-                priority
-              />
-            </div>
-          </div>
-          <div className={styles.captionContainer}>
-            <p className={styles.caption}>{homeText.hero.caption[lang]}</p>
-          </div>
-        </section>
+        <HeroScene />
         <CatalogScene />
         <BalloonScene />
         <MapScene />
