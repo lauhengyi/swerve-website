@@ -21,7 +21,7 @@ export default function mapTransition(q) {
         scale: 1,
         y: 0,
         duration: 1,
-        stagger: { amount: 3 },
+        // stagger: { amount: 3 },
         ease: 'back',
       },
       '<',
