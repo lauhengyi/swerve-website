@@ -17,7 +17,7 @@ import mapSceneAnimation from '../animations/mapSceneAnimation';
 import balloonSceneAnimation from '../animations/balloonSceneAnimation';
 
 import Navigation from '../components/navigation/Navigation';
-import HeroScene from '../components/heroScene/heroScene';
+import HeroScene from '../components/heroScene/HeroScene';
 import MapScene from '../components/mapScene/MapScene';
 import BalloonTransitionScene from '../components/balloonScene/BalloonTransitionScene';
 import BalloonScene from '../components/balloonScene/BalloonScene';
