@@ -7,7 +7,7 @@ import MapVector from './MapVector';
 export default function MapScene() {
   const { lang } = useContext(AppContext);
   return (
-    <div className={`${styles.sceneContainer} ${styles.mapScene}`}>
+    <section className={`${styles.sceneContainer} ${styles.mapScene}`}>
       <div className={styles.mapContainer}>
         <div className={styles.mapTextContainer}>
           <h1 className={styles.header}>{homeText.map.header[lang]}</h1>
@@ -21,6 +21,6 @@ export default function MapScene() {
         </div>
         <MapVector />
       </div>
-    </div>
+    </section>
   );
 }

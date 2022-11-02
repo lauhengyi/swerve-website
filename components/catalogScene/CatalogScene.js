@@ -77,7 +77,10 @@ export default function CatalogScene() {
   }, [catalogs, q]);
 
   return (
-    <div ref={el} className={`${styles.sceneContainer} ${styles.catalogScene}`}>
+    <section
+      ref={el}
+      className={`${styles.sceneContainer} ${styles.catalogScene}`}
+    >
       <div className={styles.catalogTextContainer}>
         <h1 className={styles.header}>{homeText.catalog.header[lang]}</h1>
       </div>
@@ -95,6 +98,6 @@ export default function CatalogScene() {
       </div>
       <CatalogItemVector index={nextIndex} />
       <PhoneVector index={nextIndex} />
-    </div>
+    </section>
   );
 }

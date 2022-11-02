@@ -18,7 +18,7 @@ export default function BalloonScene() {
     '90%',
   ];
   return (
-    <div className={`${styles.sceneContainer} ${styles.balloonScene}`}>
+    <section className={`${styles.sceneContainer} ${styles.balloonScene}`}>
       <div className={styles.boundingContainer}>
         <div className={styles.balloonTextContainer}>
           <h1 className={styles.header}>{homeText.balloon.header[lang]}</h1>
@@ -35,6 +35,6 @@ export default function BalloonScene() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

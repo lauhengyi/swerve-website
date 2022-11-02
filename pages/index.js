@@ -34,11 +34,10 @@ export default function Home() {
   const q = gsap.utils.selector(el);
 
   useEffect(() => {
-    console.log('activated');
     const scrollAnimation = gsap
       .timeline({
         scrollTrigger: {
-          trigger: q(`.${styles.hero}`),
+          trigger: q(`.${styles.main}`),
           scrub: 2,
           pin: true,
           end: '10000',
@@ -84,7 +83,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navigation />
-        <section className={styles.hero}>
+        <section className={`${styles.sceneContainer} ${styles.heroScene}`}>
           <h1 className={`${styles.title} ${styles.accentText}`}>
             {homeText.hero.title[lang]}
           </h1>
@@ -93,11 +92,6 @@ export default function Home() {
           </span>
           <span className={styles.circle}>
             <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
-            <CatalogScene />
-            <BalloonScene />
-            <MapScene />
-            <BalloonTransitionScene />
-            <CatalogTransitionScene />
           </span>
           <div className={styles.displayPhoneContainer}>
             <div className={`${styles.displayPhone} ${styles.phone1}`}>
@@ -132,6 +126,11 @@ export default function Home() {
             <p className={styles.caption}>{homeText.hero.caption[lang]}</p>
           </div>
         </section>
+        <CatalogScene />
+        <BalloonScene />
+        <MapScene />
+        <BalloonTransitionScene />
+        <CatalogTransitionScene />
       </main>
     </div>
   );

@@ -2,15 +2,6 @@
   min-height: 100vh;
 }
 
-.hero {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  overflow: hidden;
-  color: var(--pure-black);
-  background-color: var(--pure-white);
-}
-
 .background {
   height: 100vh;
   width: 100vw;
@@ -82,6 +73,13 @@
   height: 100vh;
   z-index: 4;
   display: grid;
+}
+
+.heroScene {
+  overflow: hidden;
+  color: var(--pure-black);
+  background-color: var(--pure-white);
+  z-index: 3;
 }
 
 /* Phones */

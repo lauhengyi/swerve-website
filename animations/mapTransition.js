@@ -6,6 +6,7 @@ export default function mapTransition(q) {
     .timeline({
       default: { ease: 'power2.inOut' },
     })
+    .to(q(`.${styles.heroScene}`), { display: 'none', duration: 0 })
     .to(q(`.${styles.mapLine}`), { strokeDashoffset: 0, duration: 4 }, '<')
     .fromTo(
       q(`.${styles.droppers}`),
