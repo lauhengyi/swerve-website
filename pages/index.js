@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-// import Image from 'next/image';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
@@ -34,6 +34,7 @@ export default function Home() {
   const q = gsap.utils.selector(el);
 
   useEffect(() => {
+    console.log('activated');
     const scrollAnimation = gsap
       .timeline({
         scrollTrigger: {
@@ -41,12 +42,12 @@ export default function Home() {
           scrub: 2,
           pin: true,
           end: '10000',
-          snap: {
-            snapTo: 'labelsDirectional',
-            ease: 'linear',
-            inertia: false,
-            duration: { min: 2, max: 5 },
-          },
+          // snap: {
+          //   snapTo: 'labelsDirectional',
+          //   ease: 'linear',
+          //   inertia: false,
+          //   duration: { min: 2, max: 5 },
+          // },
         },
       })
       .add(heroLoading(q))
@@ -99,7 +100,7 @@ export default function Home() {
             <CatalogTransitionScene />
           </span>
           <div className={styles.displayPhoneContainer}>
-            {/* <div className={`${styles.displayPhone} ${styles.phone1}`}>
+            <div className={`${styles.displayPhone} ${styles.phone1}`}>
               <Image
                 src="/phones/1.png"
                 alt="For you screen"
@@ -125,7 +126,7 @@ export default function Home() {
                 objectFit="contain"
                 priority
               />
-            </div> */}
+            </div>
           </div>
           <div className={styles.captionContainer}>
             <p className={styles.caption}>{homeText.hero.caption[lang]}</p>
