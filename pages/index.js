@@ -99,7 +99,7 @@ export default function Home() {
             <CatalogTransitionScene />
           </span>
           <div className={styles.displayPhoneContainer}>
-            <div className={`${styles.displayPhone} ${styles.phone1}`}>
+            {/* <div className={`${styles.displayPhone} ${styles.phone1}`}>
               <Image
                 src="/phones/1.png"
                 alt="For you screen"
@@ -125,7 +125,7 @@ export default function Home() {
                 objectFit="contain"
                 priority
               />
-            </div>
+            </div> */}
           </div>
           <div className={styles.captionContainer}>
             <p className={styles.caption}>{homeText.hero.caption[lang]}</p>
