@@ -13,7 +13,7 @@ const homeText = {
     caption2: ['', '的顾客手中'],
   },
   balloon: {
-    header: ['Good deals come and go', '机会有限，先到先得'],
+    header: ['Good deals come and go', '机会有限,先到先得'],
     caption: ['We help you catch them '],
     accent: ['as they come', '但我们会帮你搜索'],
   },
