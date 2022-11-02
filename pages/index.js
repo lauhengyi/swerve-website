@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Image from 'next/image';
+// import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
