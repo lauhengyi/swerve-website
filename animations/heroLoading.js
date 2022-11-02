@@ -5,17 +5,6 @@ export default function heroLoading(q) {
   return gsap
     .timeline({ defaults: { ease: 'power2' } })
     .fromTo(
-      q(`.${styles.title}`),
-      {
-        filter: 'blur(50px)',
-      },
-      {
-        filter: 'blur(0px)',
-        duration: 1,
-        ease: 'power1.in',
-      },
-    )
-    .fromTo(
       q(`.${styles.background}`),
       { '--clip': '0%' },
       { '--clip': '150%', duration: 1.2 },

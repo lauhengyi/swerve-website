@@ -84,7 +84,9 @@ export default function Home() {
       <main className={styles.main}>
         <Navigation />
         <section className={styles.hero}>
-          <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
+          <h1 className={`${styles.title} ${styles.accentText}`}>
+            {homeText.hero.title[lang]}
+          </h1>
           <span className={styles.background}>
             <h1 className={styles.title}>{homeText.hero.title[lang]}</h1>
           </span>
