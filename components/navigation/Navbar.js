@@ -4,7 +4,7 @@ import navbarText from '../../texts/navbarText';
 import NavbarButton from './NavbarButton';
 import LanguageButton from './LanguageButton';
 import styles from '../../styles/Navigation.module.css';
-import MenuButton from './menuButton';
+import MenuButton from './MenuButton';
 
 export default function Navbar({ toggleMenu }) {
   const { lang } = useContext(AppContext);
