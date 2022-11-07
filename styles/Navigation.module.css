@@ -75,7 +75,7 @@
   z-index: 2000;
 
   --clip: 0vh;
-  clip-path: circle(var(--clip) at 85% 5%);
+  clip-path: circle(var(--clip) at 90% 5%);
 }
 
 .menu ul {
@@ -100,7 +100,7 @@
 }
 
 .menuButtonContainer {
-  margin-right: 3rem;
+  margin-right: 2rem;
   display: none;
   align-items: center;
 }
@@ -123,6 +123,7 @@
   height: 0.23rem;
   border-radius: 0.2rem;
   background-color: var(--nav-color);
+  transform-origin: 0;
 }
 
 /* Add menu instead of navbar after certain aspect ratio */
