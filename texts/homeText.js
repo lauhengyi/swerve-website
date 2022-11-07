@@ -20,9 +20,9 @@ const homeText = {
   catalog: {
     header: [
       'Look through the catalog of shops in your area...',
-      '在您手机附近程序找到各式各样的商店...',
+      '在目录中找到您附近各式各样的商店...',
     ],
-    header2: ['Or add to it.', '并且加进去'],
+    header2: ['Or add to it.', '或帮助丰富目录'],
   },
 };
 
