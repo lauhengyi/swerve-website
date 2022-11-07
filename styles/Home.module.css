@@ -132,6 +132,7 @@
 /* Caption */
 
 .captionContainer {
+  opacity: 0;
   top: 80%;
   position: absolute;
   z-index: 3;
@@ -145,7 +146,7 @@
   text-align: center;
   font-size: 5vh;
   color: var(--pure-black);
-  opacity: 0;
+  opacity: 1;
   margin-top: 1rem;
   filter: blur(0);
 }
