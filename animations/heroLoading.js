@@ -4,6 +4,15 @@ import styles from '../styles/Home.module.css';
 export default function heroLoading(q) {
   return gsap
     .timeline({ defaults: { ease: 'power2' } })
+    .to(q(`.${styles.title}, .${styles.background}, .${styles.displayPhone}`), {
+      opacity: 1,
+      duration: 0,
+    })
+    .fromTo(
+      q(`.${styles.title}`),
+      { opacity: 0, filter: 'blur(50px)' },
+      { opacity: 1, filter: 'blur(0px)', duration: 1 },
+    )
     .fromTo(
       q(`.${styles.background}`),
       { '--clip': '0%' },
