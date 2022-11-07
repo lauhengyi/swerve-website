@@ -34,16 +34,16 @@ export default function Home() {
     const scrollAnimation = gsap
       .timeline({
         scrollTrigger: {
-          trigger: q(`.${styles.main}`),
-          scrub: 2,
+          trigger: q(`.${styles.scenesContainer}`),
+          scrub: 1,
           pin: true,
-          end: '10000',
-          // snap: {
-          //   snapTo: 'labelsDirectional',
-          //   ease: 'linear',
-          //   inertia: false,
-          //   duration: { min: 2, max: 5 },
-          // },
+          end: '8000 bottom',
+          snap: {
+            snapTo: 'labelsDirectional',
+            ease: 'linear',
+            inertia: false,
+            duration: { min: 2, max: 5 },
+          },
         },
       })
       .add(heroLoading(q))
@@ -80,12 +80,14 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navigation />
-        <HeroScene />
-        <CatalogScene />
-        <BalloonScene />
-        <MapScene />
-        <BalloonTransitionScene />
-        <CatalogTransitionScene />
+        <div className={styles.scenesContainer}>
+          <HeroScene />
+          <CatalogScene />
+          <BalloonScene />
+          <MapScene />
+          <BalloonTransitionScene />
+          <CatalogTransitionScene />
+        </div>
       </main>
     </div>
   );
