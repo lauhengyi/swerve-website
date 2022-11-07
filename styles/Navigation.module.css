@@ -91,6 +91,7 @@
 }
 
 .menu li a p {
+  font-size: 4.5vw;
   color: var(--pure-white);
 }
 
