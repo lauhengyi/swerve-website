@@ -12,8 +12,7 @@ import catalogSceneAnimation from '../../animations/catalogSceneAnimation';
 export default function CatalogScene() {
   const { lang } = useContext(AppContext);
   const numberOfCatalogs = 20;
-  let el = useRef();
-  let q = gsap.utils.selector(el);
+  const el = useRef();
 
   const [catalogs, setCatalogs] = useState(
     [...Array(numberOfCatalogs)].map(() => {
@@ -27,6 +26,7 @@ export default function CatalogScene() {
   const nextIndex = catalogs[0].index;
 
   useEffect(() => {
+    const q = gsap.utils.selector(el);
     const catalogAnimation = gsap
       .timeline({ paused: true })
       .fromTo(
@@ -74,7 +74,7 @@ export default function CatalogScene() {
     return () => {
       catalogAnimation.kill();
     };
-  }, [catalogs, q]);
+  }, [catalogs]);
 
   return (
     <section

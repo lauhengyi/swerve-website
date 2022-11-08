@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import gsap from 'gsap';
@@ -28,9 +28,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const el = useRef();
-  const q = gsap.utils.selector(el);
 
   useEffect(() => {
+    const q = gsap.utils.selector(el);
     const scrollAnimation = gsap
       .timeline({
         scrollTrigger: {
@@ -68,10 +68,11 @@ export default function Home() {
 
     return () => {
       scrollAnimation.revert();
+
       clearInterval(balloonScene);
       clearInterval(mapScene);
     };
-  });
+  }, []);
 
   return (
     <div ref={el}>
