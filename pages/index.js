@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
+import AppContext from '../components/AppContext';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import gsap from 'gsap';
@@ -24,9 +25,12 @@ import BalloonScene from '../components/balloonScene/BalloonScene';
 import CatalogTransitionScene from '../components/catalogScene/CatalogTransitionScene';
 import CatalogScene from '../components/catalogScene/CatalogScene';
 
+import navbarText from '../texts/navbarText';
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const { lang } = useContext(AppContext);
   const el = useRef();
 
   useEffect(() => {
@@ -77,7 +81,7 @@ export default function Home() {
   return (
     <div ref={el}>
       <Head>
-        <title>SWERVE</title>
+        <title>{navbarText.home[lang]}</title>
         <link rel="icon" href="/swerve_icon.png" />
       </Head>
       <main className={styles.main}>
