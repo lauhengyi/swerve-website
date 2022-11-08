@@ -1,37 +1,13 @@
-.section {
+.main {
   width: 100vw;
   height: 100vh;
+  background-color: var(--pure-white);
+  display: grid;
+}
+
+.innerContainer {
+  place-self: start center;
+  width: min(150vh, 100vw);
+  height: 100vh;
   background-color: aqua;
-  overflow: hidden;
-  position: absolute;
-}
-
-.wrapper {
-  height: 100%;
-  width: 50%;
-  background-color: brown;
-  overflow: hidden;
-  color: blue;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.sliding {
-  position: absolute;
-  top: 10%;
-  font-size: 12em;
-  line-height: 220px;
-  overflow: hidden;
-  font-family: 'Inter';
-  animation: animate 20s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: translate(0, 50%);
-  }
-  100% {
-    transform: translate(50%, 50%);
-  }
 }

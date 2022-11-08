@@ -1,29 +1,34 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-
-function Box({ children }) {
-  return <div className="box">{children}</div>;
-}
+import React, { useContext, useEffect, useRef } from 'react';
+import AppContext from '../components/AppContext';
+import styles from '../styles/About.module.css';
+import aboutText from '../texts/aboutText';
+import navbarText from '../texts/navbarText';
+import Head from 'next/head';
+import Navigation from '../components/navigation/Navigation';
 
 export default function About() {
-  const el = useRef();
-  const q = gsap.utils.selector(el);
-
-  useEffect(() => {
-    // Target any descendant with the class of .box - no matter how far down the descendant tree. Uses el.current.querySelectorAll() internally
-    gsap.to(q('.box'), {
-      x: 100,
-      stagger: 0.33,
-      repeat: -1,
-      repeatDelay: 1,
-      yoyo: true,
-    });
-  });
+  const { lang } = useContext(AppContext);
 
   return (
-    <div className="app" ref={el}>
-      <div className="box">help</div>
-      <Box>Box</Box>
+    <div>
+      <Head>
+        <title>{navbarText.about[lang]}</title>
+        <link rel="icon" href="/swerve_icon.png" />
+      </Head>
+      <main className={styles.main}>
+        <Navigation />
+        <article className={styles.innerContainer}>
+          <section className={styles.aboutUs}>
+            <h1 className={styles.header}>
+              {aboutText.aboutUs.header[lang]}
+              <span className="accentText">
+                {aboutText.aboutUs.headerAccent[lang]}
+              </span>
+            </h1>
+            <p></p>
+          </section>
+        </article>
+      </main>
     </div>
   );
 }
