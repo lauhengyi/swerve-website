@@ -25,7 +25,9 @@ export default function About() {
                 {aboutText.aboutUs.headerAccent[lang]}
               </span>
             </h1>
-            <p></p>
+            <p className={styles.text}>{aboutText.aboutUs.text1[lang]}</p>
+            <p className={styles.text}>{aboutText.aboutUs.text2[lang]}</p>
+            <p className={styles.text}>{aboutText.aboutUs.text3[lang]}</p>
           </section>
         </article>
       </main>
