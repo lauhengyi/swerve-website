@@ -47,6 +47,7 @@ export default function Home() {
         },
       })
       .add(heroLoading(q))
+      .add(navbarToWhite(q), '<+=1')
       .addLabel('heroScene')
       .add(heroTransition(q))
       .add(navbarToBlack(q), '<')
