@@ -9,7 +9,7 @@ export default function HeroScene() {
 
   return (
     <section className={`${styles.sceneContainer} ${styles.heroScene}`}>
-      <h1 className={`${styles.title} ${styles.accentText}`}>
+      <h1 className={`${styles.title} accentText`}>
         {homeText.hero.title[lang]}
       </h1>
       <span className={styles.background}>

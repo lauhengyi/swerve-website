@@ -151,23 +151,6 @@
   filter: blur(0);
 }
 
-.accentText {
-  background: linear-gradient(
-    45deg,
-    var(--accent-red),
-    var(--swerve-orange),
-    var(--accent-red),
-    var(--swerve-orange),
-    var(--accent-red)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-
-  background-size: 400% 400%;
-  animation: swirl 15s ease-in-out infinite;
-}
-
 @keyframes swirl {
   0% {
     background-position: 0 50%;

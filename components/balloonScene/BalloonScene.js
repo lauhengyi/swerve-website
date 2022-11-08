@@ -24,9 +24,7 @@ export default function BalloonScene() {
           <h1 className={styles.header}>{homeText.balloon.header[lang]}</h1>
           <p className={styles.caption}>
             {homeText.balloon.caption[lang]}
-            <span className={styles.accentText}>
-              {homeText.balloon.accent[lang]}
-            </span>
+            <span className="accentText">{homeText.balloon.accent[lang]}</span>
           </p>
         </div>
         <div className={styles.balloonHoldingContainer}>

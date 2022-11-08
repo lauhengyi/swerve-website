@@ -13,9 +13,7 @@ export default function MapScene() {
           <h1 className={styles.header}>{homeText.map.header[lang]}</h1>
           <p className={styles.caption}>
             {homeText.map.caption1[lang]}
-            <span className={styles.accentText}>
-              {homeText.map.accent[lang]}
-            </span>
+            <span className="accentText">{homeText.map.accent[lang]}</span>
             {homeText.map.caption2[lang]}
           </p>
         </div>
