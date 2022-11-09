@@ -41,12 +41,12 @@ export default function Home() {
           trigger: q(`.${styles.scenesContainer}`),
           scrub: 1,
           pin: true,
-          end: '8000 bottom',
+          end: '10000 bottom',
           snap: {
             snapTo: 'labelsDirectional',
             ease: 'linear',
             inertia: false,
-            duration: { min: 2, max: 5 },
+            duration: { min: 1, max: 4 },
           },
         },
       })
