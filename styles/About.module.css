@@ -17,7 +17,7 @@
 
 .sectionContainer {
   min-height: 40rem;
-  width: min(160vh, 85vw);
+  width: min(150vh, 85vw);
   padding-top: 5rem;
   display: flex;
 }
@@ -30,7 +30,7 @@
 .header {
   font-size: 4rem;
   font-variation-settings: 'wght' 500;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .text {
@@ -71,6 +71,7 @@
   display: grid;
   grid-template-columns: 2fr 5fr;
   grid-template-rows: 6rem 1fr;
+  margin-bottom: 4rem;
 }
 
 .headshotContainer {
@@ -79,6 +80,7 @@
 }
 
 .headshot {
+  display: inline;
   width: 100%;
   height: 100%;
   border-radius: 1000vw;

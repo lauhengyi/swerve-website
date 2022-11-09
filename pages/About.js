@@ -74,6 +74,39 @@ export default function About() {
                   </p>
                 </div>
               </div>
+              <div className={styles.memberContainer}>
+                <div className={styles.headshotContainer}>
+                  <Image
+                    className={styles.headshot}
+                    height={300}
+                    width={300}
+                    src={'/headshots/roydon.jpg'}
+                    alt={"Roydon Tay's Headshot"}
+                  />
+                </div>
+                <div className={styles.memberHeaderContainer}>
+                  <h2 className={styles.memberName}>
+                    {aboutText.ourTeam.roydon[lang]}
+                  </h2>
+                  <h3 className={styles.memberTitle}>
+                    {aboutText.ourTeam.roydonTitle[lang]}
+                  </h3>
+                </div>
+                <div className={styles.memberDescription}>
+                  <p className={styles.text}>
+                    {aboutText.ourTeam.roydonText1[lang]}
+                  </p>
+                  <p className={styles.text}>
+                    {aboutText.ourTeam.roydonText2[lang]}
+                  </p>
+                  <p className={styles.text}>
+                    {aboutText.ourTeam.roydonText3[lang]}
+                  </p>
+                  <p className={styles.text}>
+                    {aboutText.ourTeam.roydonText4[lang]}
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
         </article>
