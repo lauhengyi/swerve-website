@@ -468,7 +468,7 @@
   border-radius: 0.5vh;
   border-width: 0.35vh;
   border-style: solid;
-  border-color: #c8c8c8;
+  border-color: var(--grey);
 }
 
 .catalogRow {
@@ -484,7 +484,7 @@
 }
 
 .catalogWindow {
-  background-color: var(--grey);
+  background-color: var(--lightGrey);
   height: 5vh;
   padding: 0.3vh;
 }
@@ -510,7 +510,7 @@
 
 .catalogDescription {
   height: 0.3vh;
-  background-color: var(--grey);
+  background-color: var(--lightGrey);
   margin-top: 0.2vh;
 }
 
