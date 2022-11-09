@@ -1,13 +1,63 @@
 .main {
+  display: block;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--pure-white);
-  display: grid;
 }
 
 .innerContainer {
-  place-self: start center;
-  width: min(150vh, 100vw);
-  height: 100vh;
-  background-color: aqua;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionContainer {
+  width: min(150vh, 85vw);
+  padding-top: 5rem;
+  display: flex;
+}
+
+.textBox {
+  flex: 1;
+  flex-basis: 20rem;
+}
+
+.header {
+  font-size: 4rem;
+  font-variation-settings: 'wght' 500;
+}
+
+.text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-variation-settings: 'wght' 500;
+}
+
+.orbsBox {
+  position: relative;
+  flex: 1;
+}
+
+.orb {
+  --orbSize: 10rem;
+  width: var(--orbSize);
+  height: var(--orbSize);
+  position: absolute;
+  border-radius: 1000vw;
+  background-image: linear-gradient(
+    45deg,
+    var(--swerve-orange) 0%,
+    var(--swerve-yellow) 100%
+  );
+}
+
+.orbsBox .orb:nth-of-type(1) {
+  --orbSize: 10vw;
+}
+
+.orbsBox .orb:nth-of-type(2) {
+  --orbSize: 35vw;
+  bottom: 0;
+  left: 5vw;
 }
