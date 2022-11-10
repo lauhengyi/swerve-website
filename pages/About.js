@@ -149,6 +149,10 @@ export default function About() {
                 </div>
               </div>
             </div>
+            <span className={styles.orb} />
+            <span className={styles.orb} />
+            <span className={styles.orb} />
+            <span className={styles.orb} />
           </section>
         </article>
       </main>
