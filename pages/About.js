@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import AppContext from '../components/AppContext';
+import Image from 'next/image';
+import Head from 'next/head';
+
 import gsap from 'gsap';
 import styles from '../styles/About.module.css';
 import aboutText from '../texts/aboutText';
 import navbarText from '../texts/navbarText';
-import Image from 'next/image';
-import Head from 'next/head';
 import Navigation from '../components/navigation/Navigation';
+import MemberHeader from '../components/about/memberHeaders';
 
 export default function About() {
   const { lang } = useContext(AppContext);
@@ -15,24 +17,26 @@ export default function About() {
 
   useEffect(() => {
     const q = gsap.utils.selector(el);
+
     const orbPulsatingAnimation = gsap
       .timeline({
+        paused: true,
         defaults: {
           repeat: -1,
-          repeatRefresh: true,
           yoyo: true,
+          repeatRefresh: true,
           ease: 'power1.inOut',
         },
       })
       .to(q(`.${styles.orb}`), {
         scale: 'random(0.9, 1.1)',
-        duration: 'random(2s, 4s)',
+        duration: 'random(1s, 5s)',
       })
       .to(
         q(`.${styles.orb}`),
         {
           rotate: 'random(-30, 30)',
-          duration: 'random(2s, 4s)',
+          duration: 'random(2s, 5s)',
         },
         '<',
       )
@@ -46,8 +50,19 @@ export default function About() {
         '<',
       );
 
+    const orbPop = gsap
+      .timeline({ delay: 0.5 })
+      .from(q(`.${styles.orbsBox} .${styles.orb}`), {
+        scale: 0,
+        duration: 0.6,
+        stagger: 0.5,
+        ease: 'back',
+        onComplete: () => orbPulsatingAnimation.play(),
+      });
+
     return () => {
       orbPulsatingAnimation.kill();
+      orbPop.kill();
     };
   });
 
@@ -95,14 +110,10 @@ export default function About() {
                     alt={"Lau Heng Yi's Headshot"}
                   />
                 </div>
-                <div className={styles.memberHeaderContainer}>
-                  <h2 className={styles.memberName}>
-                    {aboutText.ourTeam.hengYi[lang]}
-                  </h2>
-                  <h3 className={styles.memberTitle}>
-                    {aboutText.ourTeam.hengYiTitle[lang]}
-                  </h3>
-                </div>
+                <MemberHeader
+                  name={aboutText.ourTeam.hengYi[lang]}
+                  title={aboutText.ourTeam.hengYiTitle[lang]}
+                />
                 <div className={styles.memberDescription}>
                   <p className={styles.text}>
                     {aboutText.ourTeam.hengYiText1[lang]}
@@ -125,14 +136,10 @@ export default function About() {
                     alt={"Roydon Tay's Headshot"}
                   />
                 </div>
-                <div className={styles.memberHeaderContainer}>
-                  <h2 className={styles.memberName}>
-                    {aboutText.ourTeam.roydon[lang]}
-                  </h2>
-                  <h3 className={styles.memberTitle}>
-                    {aboutText.ourTeam.roydonTitle[lang]}
-                  </h3>
-                </div>
+                <MemberHeader
+                  name={aboutText.ourTeam.roydon[lang]}
+                  title={aboutText.ourTeam.roydonTitle[lang]}
+                />
                 <div className={styles.memberDescription}>
                   <p className={styles.text}>
                     {aboutText.ourTeam.roydonText1[lang]}
