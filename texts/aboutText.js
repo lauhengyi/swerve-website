@@ -32,7 +32,7 @@ const aboutText = {
 
     // Lau Heng Yi
     hengYi: ['Lau Heng Yi', '刘恒奕'],
-    hengYiTitle: ['Founder', '寻机的创始人'],
+    hengYiTitle: ['Founder', '创始人'],
     hengYiText1: [
       `Since young, Heng Yi had the passion to create and use his talents to make the world a better place.`,
       `恒奕在很小的时候就热爱创造，凭着他对世界的认知与天赋，创造了许多物品让这世界变得更美好。`,

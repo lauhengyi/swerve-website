@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import AppContext from '../components/AppContext';
+import gsap from 'gsap';
 import styles from '../styles/About.module.css';
 import aboutText from '../texts/aboutText';
 import navbarText from '../texts/navbarText';
@@ -10,13 +11,53 @@ import Navigation from '../components/navigation/Navigation';
 export default function About() {
   const { lang } = useContext(AppContext);
 
+  const el = useRef();
+
+  useEffect(() => {
+    const q = gsap.utils.selector(el);
+    const orbPulsatingAnimation = gsap
+      .timeline({
+        defaults: {
+          repeat: -1,
+          repeatRefresh: true,
+          yoyo: true,
+          ease: 'power1.inOut',
+        },
+      })
+      .to(q(`.${styles.orb}`), {
+        scale: 'random(0.9, 1.1)',
+        duration: 'random(2s, 4s)',
+      })
+      .to(
+        q(`.${styles.orb}`),
+        {
+          rotate: 'random(-30, 30)',
+          duration: 'random(2s, 4s)',
+        },
+        '<',
+      )
+      .to(
+        q(`.${styles.orb}`),
+        {
+          y: 'random(-20, 20)',
+          x: 'random(-20, 20)',
+          duration: 'random(2s, 4s)',
+        },
+        '<',
+      );
+
+    return () => {
+      orbPulsatingAnimation.kill();
+    };
+  });
+
   return (
     <div>
       <Head>
         <title>{navbarText.about[lang]}</title>
         <link rel="icon" href="/swerve_icon.png" />
       </Head>
-      <main className={styles.main}>
+      <main ref={el} className={styles.main}>
         <Navigation />
         <article className={styles.innerContainer}>
           <section className={styles.sectionContainer}>
