@@ -28,18 +28,6 @@
   flex-basis: 20rem;
 }
 
-.header {
-  font-size: 4rem;
-  font-variation-settings: 'wght' 500;
-  margin-bottom: 3rem;
-}
-
-.text {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  font-variation-settings: 'wght' 450;
-}
-
 .orbsBox {
   position: relative;
   flex: 1;
@@ -152,5 +140,5 @@
 .sectionContainer > .orb:nth-of-type(4) {
   --orbSize: 30vw;
   bottom: -5vw;
-  left: 75vw;
+  left: 80vw;
 }

@@ -77,15 +77,15 @@ export default function About() {
         <article className={styles.innerContainer}>
           <section className={styles.sectionContainer}>
             <div className={styles.textBox}>
-              <h1 className={styles.header}>
+              <h1 className="header">
                 {aboutText.aboutUs.header[lang]}
                 <span className="accentText">
                   {aboutText.aboutUs.headerAccent[lang]}
                 </span>
               </h1>
-              <p className={styles.text}>{aboutText.aboutUs.text1[lang]}</p>
-              <p className={styles.text}>{aboutText.aboutUs.text2[lang]}</p>
-              <p className={styles.text}>{aboutText.aboutUs.text3[lang]}</p>
+              <p className="text">{aboutText.aboutUs.text1[lang]}</p>
+              <p className="text">{aboutText.aboutUs.text2[lang]}</p>
+              <p className="text">{aboutText.aboutUs.text3[lang]}</p>
             </div>
             <div className={styles.orbsBox}>
               <span className={styles.orb} />
@@ -94,7 +94,7 @@ export default function About() {
           </section>
           <section className={styles.sectionContainer}>
             <div className={styles.textBox}>
-              <h1 className={styles.header}>
+              <h1 className="header">
                 {aboutText.ourTeam.header[lang]}
                 <span className="accentText">
                   {aboutText.ourTeam.headerAccent[lang]}
@@ -115,15 +115,9 @@ export default function About() {
                   title={aboutText.ourTeam.hengYiTitle[lang]}
                 />
                 <div className={styles.memberDescription}>
-                  <p className={styles.text}>
-                    {aboutText.ourTeam.hengYiText1[lang]}
-                  </p>
-                  <p className={styles.text}>
-                    {aboutText.ourTeam.hengYiText2[lang]}
-                  </p>
-                  <p className={styles.text}>
-                    {aboutText.ourTeam.hengYiText3[lang]}
-                  </p>
+                  <p className="text">{aboutText.ourTeam.hengYiText1[lang]}</p>
+                  <p className="text">{aboutText.ourTeam.hengYiText2[lang]}</p>
+                  <p className="text">{aboutText.ourTeam.hengYiText3[lang]}</p>
                 </div>
               </div>
               <div className={styles.memberContainer}>
@@ -141,18 +135,10 @@ export default function About() {
                   title={aboutText.ourTeam.roydonTitle[lang]}
                 />
                 <div className={styles.memberDescription}>
-                  <p className={styles.text}>
-                    {aboutText.ourTeam.roydonText1[lang]}
-                  </p>
-                  <p className={styles.text}>
-                    {aboutText.ourTeam.roydonText2[lang]}
-                  </p>
-                  <p className={styles.text}>
-                    {aboutText.ourTeam.roydonText3[lang]}
-                  </p>
-                  <p className={styles.text}>
-                    {aboutText.ourTeam.roydonText4[lang]}
-                  </p>
+                  <p className="text">{aboutText.ourTeam.roydonText1[lang]}</p>
+                  <p className="text">{aboutText.ourTeam.roydonText2[lang]}</p>
+                  <p className="text">{aboutText.ourTeam.roydonText3[lang]}</p>
+                  <p className="text">{aboutText.ourTeam.roydonText4[lang]}</p>
                 </div>
               </div>
             </div>

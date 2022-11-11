@@ -32,6 +32,18 @@ a {
   text-decoration: none;
 }
 
+.header {
+  font-size: 4rem;
+  font-variation-settings: 'wght' 500;
+  margin-bottom: 3rem;
+}
+
+.text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-variation-settings: 'wght' 450;
+}
+
 .accentText {
   background: linear-gradient(
     45deg,
