@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+.standardWidth {
+  width: min(150vh, 85vw);
+}
+
 .header {
   font-size: 4rem;
   font-variation-settings: 'wght' 500;

@@ -75,7 +75,7 @@ export default function About() {
       <main ref={el} className={styles.main}>
         <Navigation />
         <article className={styles.innerContainer}>
-          <section className={styles.sectionContainer}>
+          <section className={`${styles.sectionContainer} standardWidth`}>
             <div className={styles.textBox}>
               <h1 className="header">
                 {aboutText.aboutUs.header[lang]}
@@ -92,7 +92,7 @@ export default function About() {
               <span className={styles.orb} />
             </div>
           </section>
-          <section className={styles.sectionContainer}>
+          <section className={`${styles.sectionContainer} standardWidth`}>
             <div className={styles.textBox}>
               <h1 className="header">
                 {aboutText.ourTeam.header[lang]}
