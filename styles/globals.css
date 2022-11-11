@@ -32,6 +32,23 @@ a {
   text-decoration: none;
 }
 
+.main {
+  display: block;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--pure-white);
+}
+
+.innerContainer {
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .standardWidth {
   width: min(150vh, 85vw);
 }

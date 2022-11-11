@@ -72,9 +72,9 @@ export default function About() {
         <title>{navbarText.about[lang]}</title>
         <link rel="icon" href="/swerve_icon.png" />
       </Head>
-      <main ref={el} className={styles.main}>
+      <main ref={el} className="main">
         <Navigation />
-        <article className={styles.innerContainer}>
+        <article className="innerContainer">
           <section className={`${styles.sectionContainer} standardWidth`}>
             <div className={styles.textBox}>
               <h1 className="header">
