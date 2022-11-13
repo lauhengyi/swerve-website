@@ -61,16 +61,16 @@
 }
 
 .memberName {
-  font-size: 4rem;
+  font-size: min(4rem, 11vw);
   font-variation-settings: 'wght' 700;
   color: var(--grey);
 }
 
 .memberTitle {
-  font-size: 2.5rem;
+  font-size: min(2.5rem, 7vw);
   font-variation-settings: 'wght' 500;
-  margin-left: 15rem;
-  transform: translate(0, -60%);
+  margin-left: min(15rem, 40vw);
+  transform: translate(0, -80%);
   color: var(--pure-black);
 }
 
