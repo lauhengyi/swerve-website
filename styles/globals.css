@@ -34,9 +34,10 @@ a {
 
 .main {
   display: flex;
-  width: 100vw;
-  height: fit-content;
+  flex: 1;
   min-height: 100vh;
+  height: min-content;
+  overflow: hidden;
   background-color: var(--pure-white);
 }
 
