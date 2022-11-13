@@ -58,12 +58,14 @@ a {
   font-size: 4rem;
   font-variation-settings: 'wght' 500;
   margin-bottom: 3rem;
+  color: var(--pure-black);
 }
 
 .text {
   margin-top: 1rem;
   font-size: 1.1rem;
   font-variation-settings: 'wght' 450;
+  color: var(--pure-black);
 }
 
 .accentText {
