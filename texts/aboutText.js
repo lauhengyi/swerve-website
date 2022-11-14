@@ -53,7 +53,7 @@ const aboutText = {
     ],
 
     // Roydon Tay
-    roydon: ['Roydon Tay', '陈瑞东'],
+    roydon: ['Roydon Tay', '郑楷颖'],
     roydonTitle: ['Co-Founder', '副董事长'],
     roydonText1: [
       `An avid learner, Roydon never misses any opportunity to expand his knowledge.`,
