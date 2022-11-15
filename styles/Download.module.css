@@ -1,0 +1,36 @@
+.header {
+  margin-bottom: 0.5rem;
+}
+
+.header2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  width: 100%;
+  color: var(--pure-black);
+  font-size: min(7vw, 5rem);
+  font-variation-settings: 'wght' 500;
+  background-color: var(--pure-white);
+  border-width: 0 0 0.25rem 0;
+  border-color: var(--grey);
+  transition: border-color 0.2s ease-in-out 0s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--swerve-orange);
+}
+
+.input::placeholder {
+  color: var(--grey);
+}
+
+.caption {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-variation-settings: 'wght' 300;
+  color: var(--pure-black);
+}
