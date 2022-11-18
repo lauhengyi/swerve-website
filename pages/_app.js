@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AppContext.Provider value={{ lang, setLang }}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </AppContext.Provider>
   );
 }
