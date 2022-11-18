@@ -127,7 +127,7 @@
 }
 
 /* Add menu instead of navbar after certain aspect ratio */
-@media screen and (max-width: 85vh) {
+@media screen and (max-width: 33rem) {
   .menu {
     display: block;
   }
