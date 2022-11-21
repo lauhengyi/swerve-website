@@ -88,8 +88,8 @@ export default function About() {
               <p className="text">{aboutText.aboutUs.text3[lang]}</p>
             </div>
             <div className={styles.orbsBox}>
-              <span className={styles.orb} />
-              <span className={styles.orb} />
+              <span className="orb" />
+              <span className="orb" />
             </div>
           </section>
           <section className={`${styles.sectionContainer} standardWidth`}>
@@ -142,10 +142,10 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <span className={styles.orb} />
-            <span className={styles.orb} />
-            <span className={styles.orb} />
-            <span className={styles.orb} />
+            <span className="orb" />
+            <span className="orb" />
+            <span className="orb" />
+            <span className="orb" />
           </section>
         </article>
       </main>
