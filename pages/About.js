@@ -28,12 +28,12 @@ export default function About() {
           ease: 'power1.inOut',
         },
       })
-      .to(q(`.${styles.orb}`), {
+      .to('.orb', {
         scale: 'random(0.9, 1.1)',
         duration: 'random(1s, 5s)',
       })
       .to(
-        q(`.${styles.orb}`),
+        '.orb',
         {
           rotate: 'random(-30, 30)',
           duration: 'random(2s, 5s)',
@@ -41,7 +41,7 @@ export default function About() {
         '<',
       )
       .to(
-        q(`.${styles.orb}`),
+        q(`.orb`),
         {
           y: 'random(-20, 20)',
           x: 'random(-20, 20)',
@@ -50,15 +50,13 @@ export default function About() {
         '<',
       );
 
-    const orbPop = gsap
-      .timeline({ delay: 0.5 })
-      .from(q(`.${styles.orbsBox} .${styles.orb}`), {
-        scale: 0,
-        duration: 0.6,
-        stagger: 0.5,
-        ease: 'back',
-        onComplete: () => orbPulsatingAnimation.play(),
-      });
+    const orbPop = gsap.timeline({ delay: 0.5 }).from(`.orb`, {
+      scale: 0,
+      duration: 0.6,
+      stagger: 0.3,
+      ease: 'back',
+      onComplete: () => orbPulsatingAnimation.play(),
+    });
 
     return () => {
       orbPulsatingAnimation.kill();
