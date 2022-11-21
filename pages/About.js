@@ -10,6 +10,8 @@ import navbarText from '../texts/navbarText';
 import Navigation from '../components/navigation/Navigation';
 import MemberHeader from '../components/about/MemberHeaders';
 
+import orbAnimation from '../animations/orbAnimation';
+
 export default function About() {
   const { lang } = useContext(AppContext);
 
@@ -18,49 +20,10 @@ export default function About() {
   useEffect(() => {
     const q = gsap.utils.selector(el);
 
-    const orbPulsatingAnimation = gsap
-      .timeline({
-        paused: true,
-        defaults: {
-          repeat: -1,
-          yoyo: true,
-          repeatRefresh: true,
-          ease: 'power1.inOut',
-        },
-      })
-      .to('.orb', {
-        scale: 'random(0.9, 1.1)',
-        duration: 'random(1s, 5s)',
-      })
-      .to(
-        '.orb',
-        {
-          rotate: 'random(-30, 30)',
-          duration: 'random(2s, 5s)',
-        },
-        '<',
-      )
-      .to(
-        q(`.orb`),
-        {
-          y: 'random(-20, 20)',
-          x: 'random(-20, 20)',
-          duration: 'random(2s, 4s)',
-        },
-        '<',
-      );
-
-    const orbPop = gsap.timeline({ delay: 0.5 }).from(`.orb`, {
-      scale: 0,
-      duration: 0.6,
-      stagger: 0.3,
-      ease: 'back',
-      onComplete: () => orbPulsatingAnimation.play(),
-    });
+    const orbAnimationInstance = orbAnimation(q);
 
     return () => {
-      orbPulsatingAnimation.kill();
-      orbPop.kill();
+      orbAnimationInstance();
     };
   });
 
