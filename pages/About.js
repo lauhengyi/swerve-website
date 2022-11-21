@@ -25,7 +25,7 @@ export default function About() {
     return () => {
       orbAnimationInstance();
     };
-  });
+  }, []);
 
   return (
     <div>
