@@ -8,7 +8,7 @@ import styles from '../styles/About.module.css';
 import aboutText from '../texts/aboutText';
 import navbarText from '../texts/navbarText';
 import Navigation from '../components/navigation/Navigation';
-import MemberHeader from '../components/about/memberHeaders';
+import MemberHeader from '../components/about/MemberHeaders';
 
 export default function About() {
   const { lang } = useContext(AppContext);
