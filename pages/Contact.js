@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import AppContext from '../components/AppContext';
 import Head from 'next/head';
@@ -7,8 +7,22 @@ import Navigation from '../components/navigation/Navigation';
 import navbarText from '../texts/navbarText';
 import contactText from '../texts/contactText';
 
+import gsap from 'gsap';
+import orbAnimation from '../animations/orbAnimation';
+
 export default function Contact() {
   const { lang } = useContext(AppContext);
+  const el = useRef();
+
+  useEffect(() => {
+    const q = gsap.utils.selector(el);
+
+    const orbAnimationInstance = orbAnimation(q);
+
+    return () => {
+      orbAnimationInstance();
+    };
+  }, []);
   return (
     <div>
       <Head>
@@ -18,7 +32,10 @@ export default function Contact() {
       <main className="main">
         <Navigation />
         <article className="innerContainer">
-          <section className={`${styles.sectionContainer} standardWidth`}>
+          <section
+            ref={el}
+            className={`${styles.sectionContainer} standardWidth`}
+          >
             <h1 className="header">
               {contactText.header[lang]}
               <span className="accentText">
@@ -63,6 +80,12 @@ export default function Contact() {
                 <p className="text">{contactText.supportEmailAddress}</p>
               </div>
             </div>
+            <span className="orb" />
+            <span className="orb" />
+            <span className="orb" />
+            <span className="orb" />
+            <span className="orb" />
+            <span className="orb" />
           </section>
         </article>
       </main>
