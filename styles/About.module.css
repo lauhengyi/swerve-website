@@ -6,6 +6,7 @@
 }
 
 .textBox {
+  z-index: 1;
   flex: 1;
   flex-basis: 20rem;
 }
@@ -16,7 +17,7 @@
 }
 
 .orb {
-  z-index: 1;
+  z-index: 0;
   --orbSize: 10rem;
   width: var(--orbSize);
   height: var(--orbSize);
@@ -30,11 +31,11 @@
 }
 
 .orbsBox .orb:nth-of-type(1) {
-  --orbSize: 10vw;
+  --orbSize: min(10vw, 8rem);
 }
 
 .orbsBox .orb:nth-of-type(2) {
-  --orbSize: 35vw;
+  --orbSize: min(35vw, 30rem);
   bottom: 0;
   left: 5vw;
 }
@@ -102,25 +103,25 @@
 }
 
 .sectionContainer > .orb:nth-of-type(1) {
-  --orbSize: 5vw;
+  --orbSize: min(5vw, 5rem);
   top: 0%;
   left: -10vw;
 }
 
 .sectionContainer > .orb:nth-of-type(2) {
-  --orbSize: 20vw;
+  --orbSize: min(15vw, 15rem);
   top: 10%;
   left: 70vw;
 }
 
 .sectionContainer > .orb:nth-of-type(3) {
-  --orbSize: 15vw;
+  --orbSize: min(15vw, 10rem);
   top: 55%;
   left: -15vw;
 }
 
 .sectionContainer > .orb:nth-of-type(4) {
-  --orbSize: 30vw;
+  --orbSize: min(25vw, 22rem);
   bottom: -5vw;
-  left: 80vw;
+  right: -25vw;
 }
