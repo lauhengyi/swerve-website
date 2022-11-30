@@ -1,5 +1,5 @@
 const downloadText = {
-  header: ['The app is still in development', '应用程序仍在开发中'],
+  header: ['The app is still being made', '应用程序仍在开发中'],
   headerAccent: ['Get notified about its release', '获取有关其发布的通知'],
   emailPlaceholder: ['Enter your email', '输入您的电子邮件'],
   caption: [
