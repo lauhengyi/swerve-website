@@ -6,8 +6,10 @@ import styles from '../styles/Download.module.css';
 import Navigation from '../components/navigation/Navigation';
 import navbarText from '../texts/navbarText';
 import downloadText from '../texts/downloadText';
+import { google } from 'googleapis';
 
 const Download = () => {
+  console.log({ google });
   const { lang } = useContext(AppContext);
   const [email, setEmail] = useState();
 

@@ -9,6 +9,7 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "googleapis": "^109.0.1",
     "gsap": "^3.11.2",
     "next": "^12.2.3",
     "react": "18.2.0",
