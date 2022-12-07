@@ -6,15 +6,39 @@ import styles from '../styles/Download.module.css';
 import Navigation from '../components/navigation/Navigation';
 import navbarText from '../texts/navbarText';
 import downloadText from '../texts/downloadText';
-import { google } from 'googleapis';
 
 const Download = () => {
-  console.log({ google });
   const { lang } = useContext(AppContext);
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState(0);
 
   const handleChange = (e) => {
     setEmail(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      email,
+    };
+
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    // 0 = not submitted, 1 = success, 2 = error
+    if (response.ok) {
+      setStatus(1);
+    } else {
+      setStatus(2);
+    }
+    setEmail('');
   };
 
   return (
@@ -33,7 +57,7 @@ const Download = () => {
             <h2 className={`${styles.header2} accentText`}>
               {downloadText.headerAccent[lang]}
             </h2>
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit}>
               <input
                 type="email"
                 placeholder={downloadText.emailPlaceholder[lang]}
@@ -51,12 +75,12 @@ const Download = () => {
               </button>
             </form>
             <h3 className={styles.caption}>{downloadText.caption[lang]}</h3>
+            {/* <span className="orb" />
             <span className="orb" />
             <span className="orb" />
             <span className="orb" />
             <span className="orb" />
-            <span className="orb" />
-            <span className="orb" />
+            <span className="orb" /> */}
           </section>
         </article>
       </main>
