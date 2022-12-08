@@ -11,6 +11,7 @@ import mapTransition from '../animations/mapTransition';
 import balloonTransition from '../animations/balloonTransition';
 import catalogTransition from '../animations/catalogTransition';
 import catalog2Transition from '../animations/catalog2Transition';
+import outroTransition from '../animations/outroTransition';
 import navbarToBlack from '../animations/navbarToBlack';
 import navbarToWhite from '../animations/navbarToWhite';
 
@@ -24,6 +25,7 @@ import BalloonTransitionScene from '../components/balloonScene/BalloonTransition
 import BalloonScene from '../components/balloonScene/BalloonScene';
 import CatalogTransitionScene from '../components/catalogScene/CatalogTransitionScene';
 import CatalogScene from '../components/catalogScene/CatalogScene';
+import OutroScene from '../components/outroScene/OutroScene';
 
 import navbarText from '../texts/navbarText';
 
@@ -64,7 +66,9 @@ export default function Home() {
       .addLabel('CatalogScene')
       .add(navbarToBlack(q), '-=1')
       .add(catalog2Transition(q), '+=1')
-      .addLabel('Catalog2Scene');
+      .addLabel('Catalog2Scene')
+      .add(outroTransition(q), '+=1')
+      .addLabel('outroScene');
 
     // Play scene animations
     const balloonScene = balloonSceneAnimation(q);
@@ -88,6 +92,7 @@ export default function Home() {
         <Navigation />
         <div className={styles.scenesContainer}>
           <HeroScene />
+          <OutroScene />
           <CatalogScene />
           <BalloonScene />
           <MapScene />

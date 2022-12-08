@@ -612,3 +612,39 @@
 .catalogPhoneButton {
   scale: 1;
 }
+
+/* Outro */
+
+.outroScene {
+}
+
+.navigation {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigation li {
+  display: inline;
+  padding: 0 0.5rem;
+}
+
+.navigation li a {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.navigation a p {
+  white-space: nowrap;
+  display: inline-block;
+  color: var(--pure-black);
+  font-size: 1.2rem;
+  font-variation-settings: 'wght' 500;
+}
+
+.navigation a span {
+  background-color: var(--pure-black);
+  display: block;
+  height: 0.15rem;
+  width: 0%;
+}

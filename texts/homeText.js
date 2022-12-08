@@ -24,6 +24,9 @@ const homeText = {
     ],
     header2: ['Or add to it.', '或帮助丰富目录'],
   },
+  outro: {
+    header: ['Learn more!', '了解更多!'],
+  },
 };
 
 export default homeText;
