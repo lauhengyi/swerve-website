@@ -125,9 +125,9 @@ export default function catalogTransition(q) {
   return gsap
     .timeline()
     .fromTo(
-      q(`.${styles.catalogRowGroup}`),
-      { visibility: 'hidden' },
-      { visibility: 'visible', duration: 0 },
+      q(`.${styles.catalogTransition}`),
+      { display: 'none' },
+      { display: 'grid', duration: 0 },
     )
     .fromTo(
       q(`.${styles.catalogRow}:nth-of-type(1)`),
@@ -200,5 +200,5 @@ export default function catalogTransition(q) {
       },
       '<-=0.03',
     )
-    .to(q(`.${styles.catalogRowGroup}`), { visibility: 'hidden', duration: 0 });
+    .to(q(`.${styles.catalogTransition}`), { display: 'none', duration: 0 });
 }
