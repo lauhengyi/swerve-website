@@ -618,7 +618,6 @@
 }
 
 .outroInnerContainer {
-  background-color: pink;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -662,4 +661,27 @@
   font-variation-settings: 'wght' 300;
   color: var(--pure-black);
   text-align: center;
+}
+
+.outroInnerContainer > :global(.orb):nth-of-type(1) {
+  --orbSize: min(25rem, 22vw);
+  top: 70%;
+  left: 5rem;
+}
+
+.outroInnerContainer > :global(.orb):nth-of-type(2) {
+  --orbSize: min(10rem, 8vw);
+  top: 70%;
+  left: max(35vw, 18rem);
+}
+
+.outroInnerContainer > :global(.orb):nth-of-type(3) {
+  --orbSize: min(35rem, 30vw);
+  bottom: 75%;
+  right: 8rem;
+}
+
+.outroInnerContainer > :global(.orb):nth-of-type(4) {
+  --orbSize: min(15rem, 12vw);
+  right: 2rem;
 }
