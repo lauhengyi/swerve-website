@@ -26,6 +26,10 @@ const homeText = {
   },
   outro: {
     header: ['Learn more!', '了解更多!'],
+    prompt: [
+      'Click on one of the links above to know more',
+      '点击上方链接了解更多',
+    ],
   },
 };
 

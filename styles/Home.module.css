@@ -617,15 +617,23 @@
 .outroScene {
 }
 
+.outroInnerContainer {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .navigation {
   list-style-type: none;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  width: min(50rem, 90vw);
+  margin-top: 2rem;
 }
 
 .navigation li {
   display: inline;
-  padding: 0 0.5rem;
 }
 
 .navigation li a {
@@ -637,7 +645,7 @@
   white-space: nowrap;
   display: inline-block;
   color: var(--pure-black);
-  font-size: 1.2rem;
+  font-size: min(2rem, 5vw);
   font-variation-settings: 'wght' 500;
 }
 
@@ -646,4 +654,12 @@
   display: block;
   height: 0.15rem;
   width: 0%;
+}
+
+.promptText {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-variation-settings: 'wght' 300;
+  color: var(--pure-black);
+  text-align: center;
 }
