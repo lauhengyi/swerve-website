@@ -11,6 +11,11 @@ const Download = () => {
   const { lang } = useContext(AppContext);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState(0);
+  const statusText = {
+    0: '',
+    1: downloadText.success[lang],
+    2: downloadText.error[lang],
+  };
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -39,6 +44,9 @@ const Download = () => {
       setStatus(2);
     }
     setEmail('');
+    setTimeout(() => {
+      setStatus(0);
+    }, 5000);
   };
 
   return (
@@ -74,6 +82,12 @@ const Download = () => {
                 />
               </button>
             </form>
+            <p
+              className={styles.statusText}
+              style={{ color: status == 1 ? 'green' : 'red' }}
+            >
+              {statusText[status]}
+            </p>
             <h3 className={styles.caption}>{downloadText.caption[lang]}</h3>
             {/* <span className="orb" />
             <span className="orb" />

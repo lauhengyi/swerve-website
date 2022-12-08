@@ -13,6 +13,7 @@
 }
 
 .input {
+  --formSubmit: rgb(20, 247, 50);
   width: 100%;
   color: var(--pure-black);
   font-size: min(7vw, 5rem);
@@ -39,9 +40,16 @@
   background-color: transparent;
 }
 
+.statusText {
+  margin-top: 0.8rem;
+  font-size: 1.25rem;
+  font-variation-settings: 'wght' 400;
+  height: 1.5rem;
+}
+
 .caption {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   font-size: 1.25rem;
   font-variation-settings: 'wght' 300;
   color: var(--pure-black);

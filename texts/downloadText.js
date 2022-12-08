@@ -6,9 +6,8 @@ const downloadText = {
     "We'll send you updates about the app",
     '我们将向您发送有关应用程序的更新',
   ],
-  inputError: ['Please enter a valid email', '请输入有效的电子邮件'],
-  serverError: ['Something went wrong', '出了点问题'],
-  success: ['Thank you for your interest', '感谢您的关注'],
+  error: ['Something went wrong!', '出了点问题!'],
+  success: ['Thank you for your interest!', '感谢您的关注!'],
 };
 
 export default downloadText;
