@@ -1,7 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import AppContext from '../components/AppContext';
 import Head from 'next/head';
 import Image from 'next/image';
+import gsap from 'gsap';
+import orbAnimation from '../animations/orbAnimation';
 import styles from '../styles/Download.module.css';
 import Navigation from '../components/navigation/Navigation';
 import navbarText from '../texts/navbarText';
@@ -16,6 +18,18 @@ const Download = () => {
     1: downloadText.success[lang],
     2: downloadText.error[lang],
   };
+
+  // Orb animation
+  const el = useRef();
+  useEffect(() => {
+    const q = gsap.utils.selector(el);
+
+    const orbAnimationInstance = orbAnimation(q);
+
+    return () => {
+      orbAnimationInstance();
+    };
+  }, []);
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -55,7 +69,7 @@ const Download = () => {
         <title>{navbarText.download[lang]}</title>
         <link rel="icon" href="/swerve_icon.png" />
       </Head>
-      <main className="main">
+      <main ref={el} className="main">
         <Navigation />
         <article className="innerContainer">
           <section className={`${styles.sectionContainer} standardWidth`}>

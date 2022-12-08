@@ -35,8 +35,8 @@ export default function orbAnimation(q) {
 
   const orbPopAnimation = gsap.timeline({ delay: 0.5 }).from(q(`.orb`), {
     scale: 0,
-    duration: 0.6,
-    stagger: 0.3,
+    duration: 0.5,
+    stagger: 0.2,
     ease: 'back',
     onComplete: () => orbPulsatingAnimation.play(),
   });
