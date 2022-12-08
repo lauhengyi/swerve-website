@@ -18,6 +18,12 @@ export default function OutroScene() {
           <NavbarButton text={navbarText.download[lang]} href="/Download" />
         </ul>
         <h3 className={styles.promptText}>{homeText.outro.prompt[lang]}</h3>
+        {/* <span className="orb" />
+        <span className="orb" />
+        <span className="orb" />
+        <span className="orb" />
+        <span className="orb" />
+        <span className="orb" /> */}
       </div>
     </section>
   );

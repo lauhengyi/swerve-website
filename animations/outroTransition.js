@@ -43,5 +43,30 @@ export default function outroTransition(q) {
         filter: 'blur(0px)',
         opacity: 1,
       },
+    )
+    .fromTo(
+      q(`.${styles.outroScene} .${styles.navigation} li`),
+      {
+        filter: 'blur(20px)',
+        opacity: 0,
+      },
+      {
+        filter: 'blur(0px)',
+        opacity: 1,
+        stagger: 0.5,
+        duration: 1,
+      },
+    )
+    .fromTo(
+      q(`.${styles.outroScene} .${styles.promptText}`),
+      {
+        filter: 'blur(20px)',
+        opacity: 0,
+      },
+      {
+        filter: 'blur(0px)',
+        opacity: 1,
+        duration: 1,
+      },
     );
 }
