@@ -68,5 +68,15 @@ export default function outroTransition(q) {
         opacity: 1,
         duration: 1,
       },
+    )
+    .from(
+      q(`.${styles.outroScene} .orb`),
+      {
+        scale: 0,
+        duration: 1,
+        stagger: 0.5,
+        ease: 'back',
+      },
+      '-=3',
     );
 }
