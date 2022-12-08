@@ -89,12 +89,12 @@ const Download = () => {
               {statusText[status]}
             </p>
             <h3 className={styles.caption}>{downloadText.caption[lang]}</h3>
-            {/* <span className="orb" />
             <span className="orb" />
             <span className="orb" />
             <span className="orb" />
             <span className="orb" />
-            <span className="orb" /> */}
+            <span className="orb" />
+            <span className="orb" />
           </section>
         </article>
       </main>

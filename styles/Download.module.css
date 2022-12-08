@@ -1,3 +1,9 @@
+.sectionContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   margin-bottom: 0.5rem;
 }
@@ -53,4 +59,40 @@
   font-size: 1.25rem;
   font-variation-settings: 'wght' 300;
   color: var(--pure-black);
+}
+
+.sectionContainer > :global(.orb):nth-of-type(1) {
+  --orbSize: min(10vw, 8rem);
+  top: -20vh;
+  left: 15vw;
+}
+
+.sectionContainer > :global(.orb):nth-of-type(2) {
+  --orbSize: min(40vw, 35rem);
+  bottom: 100%;
+  right: -5vw;
+}
+
+.sectionContainer > :global(.orb):nth-of-type(3) {
+  --orbSize: min(30vw, 25rem);
+  bottom: 50%;
+  right: 102%;
+}
+
+.sectionContainer > :global(.orb):nth-of-type(4) {
+  --orbSize: min(20vw, 18rem);
+  top: 50%;
+  left: min(88vw, 150vh);
+}
+
+.sectionContainer > :global(.orb):nth-of-type(5) {
+  --orbSize: min(18vw, 14rem);
+  top: 100%;
+  right: min(70vw, 100rem);
+}
+
+.sectionContainer > :global(.orb):nth-of-type(6) {
+  --orbSize: min(35vw, 30rem);
+  top: 110%;
+  right: 5vw;
 }
