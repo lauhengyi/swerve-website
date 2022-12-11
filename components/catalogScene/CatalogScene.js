@@ -28,7 +28,15 @@ export default function CatalogScene() {
   useEffect(() => {
     const q = gsap.utils.selector(el);
     const catalogAnimation = gsap
-      .timeline({ paused: true })
+      .timeline({
+        paused: true,
+        onComplete: () => {
+          const newCatalogs = [...catalogs];
+          const lastCatalog = newCatalogs.pop();
+          newCatalogs.unshift(lastCatalog);
+          setCatalogs(newCatalogs);
+        },
+      })
       .fromTo(
         q(`.${styles.catalogPanningRow}`),
         { x: '0' },
@@ -36,12 +44,6 @@ export default function CatalogScene() {
           x: '17vh',
           ease: 'linear',
           duration: 4,
-          onComplete: () => {
-            const newCatalogs = [...catalogs];
-            const lastCatalog = newCatalogs.pop();
-            newCatalogs.unshift(lastCatalog);
-            setCatalogs(newCatalogs);
-          },
         },
       )
       .fromTo(
