@@ -5,7 +5,7 @@ export default function balloonTransition(q) {
   return gsap
     .timeline()
     .fromTo(
-      q(`.${styles.transitionContainer}`),
+      q(`.${styles.balloonTransition}`),
       { display: 'none' },
       {
         display: 'grid',
@@ -28,5 +28,5 @@ export default function balloonTransition(q) {
       { '--wipe': '100%', duration: 0.3, ease: 'linear' },
       '<+=1.8',
     )
-    .to(q(`.${styles.transitionContainer}`), { display: 'none', duration: 0 });
+    .to(q(`.${styles.balloonTransition}`), { display: 'none', duration: 0 });
 }

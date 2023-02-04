@@ -46,6 +46,13 @@ export default function catalogTransition(q) {
       q(`.${styles.catalogText} p:not(:nth-of-type(1)):not(.${styles.anchor})`),
       { width: 'auto', duration: 0 },
     )
+    // Setting transforms for the catalogRowGroup
+    .to(q(`.${styles.catalogRowGroup}`), {
+      rotate: -90,
+      translate: '-50% -50%',
+      transformOrigin: 'center',
+      duration: 0,
+    })
     .to(q(`.${styles.catalogRowGroup}`), {
       width: '16vh',
       duration: closingDuration,
@@ -66,7 +73,11 @@ export default function catalogTransition(q) {
     .add(textCollapsing)
     .to(
       q(`.${styles.catalogRowGroup}`),
-      { rotate: 0, duration: rotatingDuration, ease: 'power4.inOut' },
+      {
+        rotate: 0,
+        duration: rotatingDuration,
+        ease: 'power4.inOut',
+      },
       '<+0.5',
     )
     .to(
@@ -122,83 +133,86 @@ export default function catalogTransition(q) {
   const amountToSlide2 = amountToSlide1 * (slideDuration2 / slideDuration1);
   const openingDuration = 1.5;
   const openingEase = 'power2.in';
-  return gsap
-    .timeline()
-    .fromTo(
-      q(`.${styles.catalogTransition}`),
-      { display: 'none' },
-      { display: 'grid', duration: 0 },
-    )
-    .fromTo(
-      q(`.${styles.catalogRow}:nth-of-type(1)`),
-      { y: `-${amountToSlide1}vh` },
-      {
-        y: `0vh`,
-        duration: slideDuration1,
-        ease: slideEase,
-      },
-    )
-    .fromTo(
-      q(`.${styles.catalogRow}:nth-of-type(2)`),
-      { y: `${amountToSlide1}vh` },
-      { y: `0vh`, duration: slideDuration1, ease: slideEase },
-      '<',
-    )
-    .add(mainMovements, '<')
-    .fromTo(
-      q(`.${styles.catalogRow}:nth-of-type(1)`),
-      { y: `0vh` },
-      {
-        y: `${amountToSlide2}vh`,
-        duration: slideDuration2,
-        ease: 'power1.in',
-      },
-    )
-    .fromTo(
-      q(`.${styles.catalogRow}:nth-of-type(2)`),
-      { y: `0vh` },
-      {
-        y: `-${amountToSlide2}vh`,
-        duration: slideDuration2,
-        ease: 'power1.in',
-      },
-      '<',
-    )
-    .to(
-      q(`.${styles.catalogRowGroup}`),
-      {
-        width: 'calc(100vw + 20vh)',
-        duration: openingDuration,
-        ease: openingEase,
-      },
-      '<+=1',
-    )
-    .to(
-      q(`.${styles.customer}`),
-      {
-        translateX: '50vw',
-        duration: openingDuration,
-        ease: openingEase,
-      },
-      '<',
-    )
-    .to(
-      q(`.${styles.merchant}`),
-      {
-        translateX: '-50vw',
-        duration: openingDuration,
-        ease: openingEase,
-      },
-      '<',
-    )
-    .to(
-      q(`.${styles.catalogTransitionBackground}`),
-      {
-        '--wipe': '50%',
-        duration: openingDuration,
-        ease: 'power2.in',
-      },
-      '<-=0.03',
-    )
-    .to(q(`.${styles.catalogTransition}`), { display: 'none', duration: 0 });
+  return (
+    gsap
+      .timeline()
+      // Set up
+      .fromTo(
+        q(`.${styles.catalogTransition}`),
+        { display: 'none' },
+        { display: 'grid', duration: 0 },
+      )
+      .fromTo(
+        q(`.${styles.catalogRow}:nth-of-type(1)`),
+        { y: `-${amountToSlide1}vh` },
+        {
+          y: `0vh`,
+          duration: slideDuration1,
+          ease: slideEase,
+        },
+      )
+      .fromTo(
+        q(`.${styles.catalogRow}:nth-of-type(2)`),
+        { y: `${amountToSlide1}vh` },
+        { y: `0vh`, duration: slideDuration1, ease: slideEase },
+        '<',
+      )
+      .add(mainMovements, '<')
+      .fromTo(
+        q(`.${styles.catalogRow}:nth-of-type(1)`),
+        { y: `0vh` },
+        {
+          y: `${amountToSlide2}vh`,
+          duration: slideDuration2,
+          ease: 'power1.in',
+        },
+      )
+      .fromTo(
+        q(`.${styles.catalogRow}:nth-of-type(2)`),
+        { y: `0vh` },
+        {
+          y: `-${amountToSlide2}vh`,
+          duration: slideDuration2,
+          ease: 'power1.in',
+        },
+        '<',
+      )
+      .to(
+        q(`.${styles.catalogRowGroup}`),
+        {
+          width: 'calc(100vw + 20vh)',
+          duration: openingDuration,
+          ease: openingEase,
+        },
+        '<+=1',
+      )
+      .to(
+        q(`.${styles.customer}`),
+        {
+          translateX: '50vw',
+          duration: openingDuration,
+          ease: openingEase,
+        },
+        '<',
+      )
+      .to(
+        q(`.${styles.merchant}`),
+        {
+          translateX: '-50vw',
+          duration: openingDuration,
+          ease: openingEase,
+        },
+        '<',
+      )
+      .to(
+        q(`.${styles.catalogTransitionBackground}`),
+        {
+          '--wipe': '50%',
+          duration: openingDuration,
+          ease: 'power2.in',
+        },
+        '<-=0.03',
+      )
+      .to(q(`.${styles.catalogTransition}`), { display: 'none', duration: 0 })
+  );
 }

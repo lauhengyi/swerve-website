@@ -24,7 +24,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 4;
-  display: grid;
+  display: none;
 }
 
 /* Hero Scene */
@@ -248,6 +248,10 @@
   position: relative;
 }
 
+.balloonTransition {
+  display: none;
+}
+
 .transitionContainer .balloonVector:nth-last-of-type(1) {
   height: 250vw;
   right: 10%;
@@ -426,8 +430,6 @@
   justify-content: space-between;
   transform-origin: center;
   width: 125vh;
-  transform-origin: center;
-  transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 .catalogItemContainer {
